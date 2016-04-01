@@ -35,16 +35,53 @@ class ViewController1AC: UIViewController {
     
     
     @IBAction func resetTimer(sender: AnyObject) {
-        
-        newTimer.seconds = 60
-        newTimer.minutes = 7
-        
-        newTimer.stopWatchString = "8:00"
-        timerText.text = newTimer.stopWatchString
-        newTimer.timer.invalidate()
-        
-        newTimer.startStopwatch = true
+    
+        if newTimer.startStopwatch == true {
+            
+            newTimer.seconds = 60
+            newTimer.minutes = 7
+            
+            newTimer.stopWatchString = "8:00"
+            timerText.text = newTimer.stopWatchString
+            newTimer.timer.invalidate()
+            
+            newTimer.startStopwatch = true
 
+            startStopButton.setTitle("Start", forState: .Normal)
+
+        } else {
+            
+            var alertController:UIAlertController?
+            alertController = UIAlertController(title: "Alert",
+                message: "Are you sure you want to reset?",
+                preferredStyle: .Alert)
+            
+            let firstAction = UIAlertAction(title: "No",
+                style: UIAlertActionStyle.Cancel,
+                handler: nil
+            )
+            
+            let secondAction = UIAlertAction(title: "Yes",
+                style: UIAlertActionStyle.Default,
+                handler: {(paramAction:UIAlertAction!) in
+                    self.newTimer.seconds = 60
+                    self.newTimer.minutes = 7
+                    
+                    self.newTimer.stopWatchString = "8:00"
+                    self.timerText.text = self.newTimer.stopWatchString
+                    self.newTimer.timer.invalidate()
+                    
+                    self.newTimer.startStopwatch = true
+                    
+                    self.startStopButton.setTitle("Start", forState: .Normal)
+            })
+            
+            alertController!.addAction(firstAction)
+            alertController!.addAction(secondAction)
+            self.presentViewController(alertController!,
+                animated: true,
+                completion: nil)
+        }
     }
     
     @IBAction func startStopTimer(sender: AnyObject) {
