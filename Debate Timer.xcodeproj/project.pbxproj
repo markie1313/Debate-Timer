@@ -13,6 +13,7 @@
 		EBDBA8FC1CAD404B00F865A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBDBA8FB1CAD404B00F865A4 /* Assets.xcassets */; };
 		EBDBA8FF1CAD404B00F865A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBDBA8FD1CAD404B00F865A4 /* LaunchScreen.storyboard */; };
 		EBDBA9071CAD44D800F865A4 /* StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBA9061CAD44D800F865A4 /* StopWatch.swift */; };
+		EBF8F4E81CB2D65B00BF317B /* StopWatch2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF8F4E71CB2D65B00BF317B /* StopWatch2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		EBDBA8FE1CAD404B00F865A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBDBA9001CAD404B00F865A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBDBA9061CAD44D800F865A4 /* StopWatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopWatch.swift; sourceTree = "<group>"; };
+		EBF8F4E71CB2D65B00BF317B /* StopWatch2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopWatch2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				EBDBA8FB1CAD404B00F865A4 /* Assets.xcassets */,
 				EBDBA8FD1CAD404B00F865A4 /* LaunchScreen.storyboard */,
 				EBDBA9001CAD404B00F865A4 /* Info.plist */,
+				EBF8F4E71CB2D65B00BF317B /* StopWatch2.swift */,
 				EBDBA9061CAD44D800F865A4 /* StopWatch.swift */,
 			);
 			path = "Debate Timer";
@@ -142,6 +145,7 @@
 				EBDBA9071CAD44D800F865A4 /* StopWatch.swift in Sources */,
 				EBDBA8F71CAD404B00F865A4 /* ViewController.swift in Sources */,
 				EBDBA8F51CAD404B00F865A4 /* AppDelegate.swift in Sources */,
+				EBF8F4E81CB2D65B00BF317B /* StopWatch2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +293,7 @@
 				EBDBA9051CAD404B00F865A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
