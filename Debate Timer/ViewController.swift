@@ -97,7 +97,8 @@ class ViewController1AC: UIViewController {
     }
     
     
-    
+    //Now, I’m going to have to add parameters to updateStopwatch so I can do the different times.
+    //Actually, it looks good - all it does is update the existing values
     func updateStopwatch() {
         
             timerText.text = newTimer.updateStopwatch()
