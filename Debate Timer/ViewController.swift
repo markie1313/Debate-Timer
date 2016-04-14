@@ -26,7 +26,7 @@ class ViewController: UIViewController {
 
 class ViewController1AC: UIViewController {
     
-    var newTimer = StopWatch()
+    var newTimer = StopWatch2()
     @IBOutlet var timerText: UILabel!
     @IBOutlet var resetButton: UIButton!
     @IBOutlet var startStopButton: UIButton!
@@ -100,36 +100,8 @@ class ViewController1AC: UIViewController {
     
     func updateStopwatch() {
         
-            newTimer.seconds -= 1
-        
-        if newTimer.seconds == 0 {
-            
-            timerText.text = "\(newTimer.minutes):00"
-            print(timerText.text)
-            newTimer.minutes -= 1
-            newTimer.seconds = 60
-            
-        }
-
-      //  let fractionsString = newTimer.fractions > 9 ? "\(newTimer.fractions)" : "0\(newTimer.fractions)"
-        var secondsString = newTimer.seconds > 9 ? "\(newTimer.seconds)" : "0\(newTimer.seconds)"
-        var minutesString = newTimer.minutes > 9 ? "\(newTimer.minutes)" : "\(newTimer.minutes)"
-        if newTimer.seconds == 60 {
-            
-            secondsString = "00"
-            minutesString = "\(newTimer.minutes + 1)"
-            
-        }
-
-        if newTimer.seconds == 0 && newTimer.minutes == 0 {
-            
-            newTimer.timer.invalidate()
-            
-        }
-            newTimer.stopWatchString = "\(minutesString):\(secondsString)"
-            timerText.text = newTimer.stopWatchString
-            print(newTimer.stopWatchString)
-        
+            timerText.text = newTimer.updateStopwatch()
+   
     }
 
     override func viewDidLoad() {
@@ -137,6 +109,7 @@ class ViewController1AC: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         newTimer.minutes = 7
         newTimer.seconds = 60
+        timerText.text = "8:00"
     }
   
     /*
