@@ -122,7 +122,7 @@ class ViewController1AC: UIViewController {
 }
 
 class ViewController1CX: UIViewController {
-    var newTimer = StopWatch()
+    var newTimer = StopWatch2()
     @IBOutlet var timerText: UILabel!
     @IBOutlet var resetButton: UIButton!
     @IBOutlet var startStopButton: UIButton!
@@ -193,38 +193,7 @@ class ViewController1CX: UIViewController {
     
     func updateStopwatch() {
         
-        newTimer.seconds -= 1
-        
-        if newTimer.seconds == 0 && newTimer.minutes == 0 {
-            
-            newTimer.timer.invalidate()
-            timerText.text = "0:00"
-            return
-            
-        }
-        
-        if newTimer.seconds == 0 {
-            
-            timerText.text = "\(newTimer.minutes):00"
-            print(timerText.text)
-            newTimer.minutes -= 1
-            newTimer.seconds = 60
-            
-        }
-        
-        var secondsString = newTimer.seconds > 9 ? "\(newTimer.seconds)" : "0\(newTimer.seconds)"
-        var minutesString = newTimer.minutes > 9 ? "\(newTimer.minutes)" : "\(newTimer.minutes)"
-        
-        if newTimer.seconds == 60 {
-            
-            secondsString = "00"
-            minutesString = "\(newTimer.minutes + 1)"
-            
-        }
-        
-        newTimer.stopWatchString = "\(minutesString):\(secondsString)"
-        timerText.text = newTimer.stopWatchString
-        print(newTimer.stopWatchString)
+        timerText.text = newTimer.updateStopwatch()
         
     }
     
@@ -233,6 +202,7 @@ class ViewController1CX: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         newTimer.minutes = 2
         newTimer.seconds = 60
+        timerText.text = "3:00"
     }
     
 }
