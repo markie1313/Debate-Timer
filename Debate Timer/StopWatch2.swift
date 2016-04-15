@@ -30,6 +30,14 @@ class StopWatch2 : NSObject {
     var stopWatchlabel: String = ""
     var startStopButton: String = ""
     
+    var isNegPrep: Bool
+    var isAffPrep: Bool
+    
+    init(isNegPrep: Bool, isAffPrep: Bool) {
+        self.isNegPrep = isNegPrep
+        self.isAffPrep = isAffPrep
+    }
+    
     
     func startStop() {
         
@@ -75,9 +83,18 @@ class StopWatch2 : NSObject {
             minutesString = "\(minutes + 1)"
         }
         
+        if isNegPrep {
+            NSUserDefaults.standardUserDefaults().setObject(minutesString, forKey: "negPrepMin")
+            NSUserDefaults.standardUserDefaults().setObject(secondsString, forKey: "negPrepSec")
+        }
+        
+        if isAffPrep {
+            NSUserDefaults.standardUserDefaults().setObject(minutesString, forKey: "affPrepMin")
+            NSUserDefaults.standardUserDefaults().setObject(secondsString, forKey: "affPrepSec")
+        }
         stopWatchString = "\(minutesString):\(secondsString)"
         labelText = stopWatchString
-        print("\(stopWatchString) test")
+        print("\(stopWatchString)")
         return self.stopWatchString
 // I think this is it - I have to return a value
     }
