@@ -915,7 +915,11 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="UXE-Pk-mQv"/>
                                     <barButtonItem title="Home" id="lfh-Lt-wVh"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="WHi-cz-NFN"/>
-                                    <barButtonItem title="Neg Prep" id="2S6-DA-lyj"/>
+                                    <barButtonItem title="Neg Prep" id="2S6-DA-lyj">
+                                        <connections>
+                                            <segue destination="iX6-qW-6bg" kind="show" id="UR2-en-cqP"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fop-ux-qIl">
@@ -955,6 +959,84 @@
             </objects>
             <point key="canvasLocation" x="4910.5" y="311.5"/>
         </scene>
+        <!--View Controller Neg Prep3-->
+        <scene sceneID="1B0-dt-TfH">
+            <objects>
+                <viewController id="iX6-qW-6bg" customClass="ViewControllerNegPrep3" customModule="Debate_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1kQ-Id-A1m"/>
+                        <viewControllerLayoutGuide type="bottom" id="Eth-Qd-jBa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Ce-Pq-VjO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MgY-Ik-e5u">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Negative Prep" id="s6J-8X-8z9"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erg-vk-yO7">
+                                <rect key="frame" x="20" y="49" width="335" height="117"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="80"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u8c-GX-BZ2">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Back" id="O2E-zi-pkT">
+                                        <connections>
+                                            <segue destination="vBK-Ty-wbR" kind="show" id="SyV-ij-dqY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Utf-vP-jdk"/>
+                                    <barButtonItem title="Home" id="e0m-eK-Cdr"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="81K-wQ-AUw"/>
+                                    <barButtonItem title="1 NR" id="jTx-gr-2qL"/>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHp-OQ-UyD">
+                                <rect key="frame" x="56" y="217" width="74" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetTimer:" destination="iX6-qW-6bg" eventType="touchUpInside" id="QpT-u4-1Jh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="If9-sV-nVq">
+                                <rect key="frame" x="254" y="217" width="67" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startStopTimer:" destination="iX6-qW-6bg" eventType="touchUpInside" id="ING-AC-jLu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="erg-vk-yO7" firstAttribute="leading" secondItem="9Ce-Pq-VjO" secondAttribute="leadingMargin" id="6YX-yp-aPG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MgY-Ik-e5u" secondAttribute="trailing" constant="-20" id="7PK-by-nIy"/>
+                            <constraint firstItem="erg-vk-yO7" firstAttribute="trailing" secondItem="9Ce-Pq-VjO" secondAttribute="trailingMargin" id="EtW-Xf-tdz"/>
+                            <constraint firstItem="MgY-Ik-e5u" firstAttribute="top" secondItem="9Ce-Pq-VjO" secondAttribute="topMargin" id="KzQ-SN-8FQ"/>
+                            <constraint firstItem="MgY-Ik-e5u" firstAttribute="leading" secondItem="9Ce-Pq-VjO" secondAttribute="leadingMargin" constant="-20" id="Yhk-1p-TJO"/>
+                            <constraint firstItem="u8c-GX-BZ2" firstAttribute="leading" secondItem="9Ce-Pq-VjO" secondAttribute="leadingMargin" constant="-20" id="djd-tv-SgF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="u8c-GX-BZ2" secondAttribute="trailing" constant="-20" id="mBJ-FS-oUz"/>
+                            <constraint firstItem="Eth-Qd-jBa" firstAttribute="top" secondItem="u8c-GX-BZ2" secondAttribute="bottom" id="mL3-Jx-fIf"/>
+                            <constraint firstItem="erg-vk-yO7" firstAttribute="top" secondItem="MgY-Ik-e5u" secondAttribute="bottom" constant="5" id="wvI-B0-46E"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="startStopButton" destination="If9-sV-nVq" id="xwu-Y3-fAl"/>
+                        <outlet property="timerText" destination="erg-vk-yO7" id="fey-uT-5VA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X8f-eA-y7m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5334.5" y="311.5"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="rwI-1K-ZEl"/>
@@ -962,8 +1044,9 @@
         <segue reference="gyr-Iy-bOQ"/>
         <segue reference="JTM-d5-Nxw"/>
         <segue reference="SPl-lU-Sp5"/>
-        <segue reference="IjN-yw-Ky9"/>
-        <segue reference="NzO-uh-L5O"/>
         <segue reference="bBc-hd-C9c"/>
+        <segue reference="NzO-uh-L5O"/>
+        <segue reference="IjN-yw-Ky9"/>
+        <segue reference="SyV-ij-dqY"/>
     </inferredMetricsTieBreakers>
 </document>
