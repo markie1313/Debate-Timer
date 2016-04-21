@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="re2-lv-y5m">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -102,7 +102,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="mE7-Ah-3px"/>
                                     <barButtonItem title="First CX" id="jpG-lF-ioG">
                                         <connections>
-                                            <segue destination="re2-lv-y5m" kind="show" id="2Yx-Oc-HgT"/>
+                                            <segue destination="re2-lv-y5m" kind="show" identifier="segue1CX" id="2Yx-Oc-HgT"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -182,13 +182,13 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="9Iq-Am-wLc"/>
                                     <barButtonItem title="Home" id="VuL-Ff-U4N">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="d2S-17-cZQ"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="d2S-17-cZQ"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Ei8-oo-ANg"/>
                                     <barButtonItem title="Prep" id="Vl4-e8-Fzg">
                                         <connections>
-                                            <segue destination="Ay1-X3-d53" kind="show" id="otO-Q0-iDR"/>
+                                            <segue destination="Ay1-X3-d53" kind="show" identifier="segueFirstNegPrep" id="otO-Q0-iDR"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -566,7 +566,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="GOe-Re-x4O"/>
                                     <barButtonItem title="2AC" id="Smw-Mv-XlG">
                                         <connections>
-                                            <segue destination="xlT-9q-47B" kind="show" id="meZ-Zc-H8c"/>
+                                            <segue destination="xlT-9q-47B" kind="show" identifier="segue2AC" id="meZ-Zc-H8c"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -659,7 +659,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="7td-f5-Osx"/>
                                     <barButtonItem title="CX" id="uxq-VL-Dgy">
                                         <connections>
-                                            <segue destination="LC8-aH-UlU" kind="show" id="CbT-u1-Ycg"/>
+                                            <segue destination="LC8-aH-UlU" kind="show" identifier="segue3CX" id="CbT-u1-Ycg"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -752,7 +752,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="5xM-1o-DFp"/>
                                     <barButtonItem title="Neg Prep" id="y36-YF-v2c">
                                         <connections>
-                                            <segue destination="63k-Kx-57w" kind="show" id="H6z-zE-U3r"/>
+                                            <segue destination="63k-Kx-57w" kind="show" identifier="segue2NegPrep" id="H6z-zE-U3r"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -775,6 +775,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startStopTimer:" destination="LC8-aH-UlU" eventType="touchUpInside" id="wmX-yz-z7k"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -842,7 +845,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Qdw-HT-hYc"/>
                                     <barButtonItem title="2NC" id="LGj-c2-QfK">
                                         <connections>
-                                            <segue destination="Cxv-Fz-3mi" kind="show" id="ZZz-fK-An9"/>
+                                            <segue destination="Cxv-Fz-3mi" kind="show" identifier="segue2NC" id="ZZz-fK-An9"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -896,7 +899,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5qV-Jp-UUO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4085.5" y="311.5"/>
+            <point key="canvasLocation" x="4095.5" y="317.5"/>
         </scene>
         <!--View Controller2NC-->
         <scene sceneID="7LL-5X-75a">
@@ -925,13 +928,17 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xAL-KS-lD4">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
-                                    <barButtonItem title="Back" id="T6k-mY-XyT"/>
+                                    <barButtonItem title="Back" id="T6k-mY-XyT">
+                                        <connections>
+                                            <segue destination="63k-Kx-57w" kind="show" id="cO3-tf-XLy"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="SM0-JX-UDC"/>
                                     <barButtonItem title="Home" id="Hdi-7Z-uek"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="TVi-a1-aRL"/>
                                     <barButtonItem title="CX" id="ekY-1d-HBm">
                                         <connections>
-                                            <segue destination="vBK-Ty-wbR" kind="show" id="ZuS-Cg-hWy"/>
+                                            <segue destination="vBK-Ty-wbR" kind="show" identifier="segue4CX" id="ZuS-Cg-hWy"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -1024,7 +1031,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="WHi-cz-NFN"/>
                                     <barButtonItem title="Neg Prep" id="2S6-DA-lyj">
                                         <connections>
-                                            <segue destination="iX6-qW-6bg" kind="show" id="UR2-en-cqP"/>
+                                            <segue destination="iX6-qW-6bg" kind="show" identifier="segue3NegPrep" id="UR2-en-cqP"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -1114,7 +1121,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="81K-wQ-AUw"/>
                                     <barButtonItem title="1 NR" id="jTx-gr-2qL">
                                         <connections>
-                                            <segue destination="DIq-4M-BFv" kind="show" id="ery-kf-c3H"/>
+                                            <segue destination="DIq-4M-BFv" kind="show" identifier="segue1NR" id="ery-kf-c3H"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -1207,7 +1214,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="fEj-42-XAL"/>
                                     <barButtonItem title="Aff Prep" id="GSk-gu-YuY">
                                         <connections>
-                                            <segue destination="gwD-27-ntt" kind="show" id="oeA-17-VbV"/>
+                                            <segue destination="gwD-27-ntt" kind="show" identifier="segue2AffPrep" id="oeA-17-VbV"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -1300,7 +1307,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="WwJ-XD-Dbj"/>
                                     <barButtonItem title="1 AR" id="znc-32-u0I">
                                         <connections>
-                                            <segue destination="zMk-5g-oSA" kind="show" id="FIb-Gu-LVA"/>
+                                            <segue destination="zMk-5g-oSA" kind="show" identifier="segue1AR" id="FIb-Gu-LVA"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -1393,7 +1400,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="3x2-le-Mja"/>
                                     <barButtonItem title="Neg Prep" id="dkK-7h-dT8">
                                         <connections>
-                                            <segue destination="Tcz-dQ-tHq" kind="show" id="ujg-g8-PZQ"/>
+                                            <segue destination="Tcz-dQ-tHq" kind="show" identifier="segue4NegPrep" id="ujg-g8-PZQ"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -1478,9 +1485,9 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="jKj-fm-bMm"/>
                                     <barButtonItem title="Home" id="6Ux-mG-NEm"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Ibx-QJ-NAo"/>
-                                    <barButtonItem title="2 NC" id="3Fy-xG-lR1">
+                                    <barButtonItem title="2 NR" id="3Fy-xG-lR1">
                                         <connections>
-                                            <segue destination="XzL-i2-v87" kind="show" id="HS2-kD-pxi"/>
+                                            <segue destination="XzL-i2-v87" kind="show" identifier="segue2NR" id="HS2-kD-pxi"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -1554,35 +1561,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ihC-FL-q0c">
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ihC-FL-q0c">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="2nd Negative Rebuttal" id="8H1-WU-ccR"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="5:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoj-9h-awC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoj-9h-awC">
                                 <rect key="frame" x="20" y="49" width="335" height="119"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="80"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7I-S3-mKx">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7I-S3-mKx">
                                 <rect key="frame" x="56" y="217" width="74" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1gp-w3-XXW"/>
+                                    <constraint firstAttribute="width" constant="74" id="CLt-od-W4u"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Reset"/>
                                 <connections>
                                     <action selector="resetTimer:" destination="XzL-i2-v87" eventType="touchUpInside" id="AkW-dU-NEN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3uR-SH-fBU">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3uR-SH-fBU">
                                 <rect key="frame" x="254" y="217" width="67" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="Mkk-2s-4BC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <action selector="startStopTimer:" destination="XzL-i2-v87" eventType="touchUpInside" id="Z09-Gb-ZWi"/>
                                 </connections>
                             </button>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iJm-45-Rnu">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iJm-45-Rnu">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
                                     <barButtonItem title="Back" id="ZeY-nW-Cao">
@@ -1595,7 +1609,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Bfi-1q-uju"/>
                                     <barButtonItem title="2 NR" id="eVa-Sv-12v">
                                         <connections>
-                                            <segue destination="5w1-t2-Tmz" kind="show" id="yqs-Ih-iwu"/>
+                                            <segue destination="5w1-t2-Tmz" kind="show" identifier="segue3AffPrep" id="yqs-Ih-iwu"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -1603,9 +1617,20 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xoj-9h-awC" firstAttribute="trailing" secondItem="Pl3-vE-d5R" secondAttribute="trailingMargin" id="ot6-TP-vR1"/>
-                            <constraint firstItem="xoj-9h-awC" firstAttribute="leading" secondItem="Pl3-vE-d5R" secondAttribute="leadingMargin" id="rAY-RF-F0q"/>
-                            <constraint firstItem="xoj-9h-awC" firstAttribute="top" secondItem="ihC-FL-q0c" secondAttribute="bottom" constant="5" id="tgg-dP-Ixx"/>
+                            <constraint firstItem="3uR-SH-fBU" firstAttribute="top" secondItem="Y7I-S3-mKx" secondAttribute="top" id="EG2-bS-tSa"/>
+                            <constraint firstItem="Y7I-S3-mKx" firstAttribute="top" secondItem="Pl3-vE-d5R" secondAttribute="top" constant="217" id="KBi-9g-UBt"/>
+                            <constraint firstItem="xoj-9h-awC" firstAttribute="trailing" secondItem="Pl3-vE-d5R" secondAttribute="trailingMargin" id="NyJ-hG-bHb"/>
+                            <constraint firstItem="Y7I-S3-mKx" firstAttribute="leading" secondItem="Pl3-vE-d5R" secondAttribute="leadingMargin" constant="40" id="Svm-zJ-fjZ"/>
+                            <constraint firstItem="Y7I-S3-mKx" firstAttribute="top" secondItem="xoj-9h-awC" secondAttribute="bottom" constant="49" id="Ywg-1f-uUj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iJm-45-Rnu" secondAttribute="trailing" constant="-20" id="cig-ws-d4n"/>
+                            <constraint firstItem="wjX-r9-7Om" firstAttribute="top" secondItem="iJm-45-Rnu" secondAttribute="bottom" id="dX8-8m-f7m"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ihC-FL-q0c" secondAttribute="trailing" constant="-20" id="fMR-4f-KD5"/>
+                            <constraint firstItem="xoj-9h-awC" firstAttribute="leading" secondItem="Pl3-vE-d5R" secondAttribute="leadingMargin" id="gqj-CF-bQ9"/>
+                            <constraint firstItem="xoj-9h-awC" firstAttribute="top" secondItem="ihC-FL-q0c" secondAttribute="bottom" constant="5" id="hKl-s7-UDZ"/>
+                            <constraint firstItem="iJm-45-Rnu" firstAttribute="leading" secondItem="Pl3-vE-d5R" secondAttribute="leadingMargin" constant="-20" id="kaB-o6-gf9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3uR-SH-fBU" secondAttribute="trailing" constant="38" id="lOs-XR-kTP"/>
+                            <constraint firstItem="ihC-FL-q0c" firstAttribute="top" secondItem="Pl3-vE-d5R" secondAttribute="topMargin" id="ozg-DU-dFj"/>
+                            <constraint firstItem="ihC-FL-q0c" firstAttribute="leading" secondItem="Pl3-vE-d5R" secondAttribute="leadingMargin" constant="-20" id="tcn-yS-Cfr"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -1642,7 +1667,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RzS-Ll-ea6">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RzS-Ll-ea6">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
                                     <barButtonItem title="Back" id="QN9-Mg-uA2">
@@ -1655,21 +1680,27 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="noy-9e-Krk"/>
                                     <barButtonItem title="2 AR" id="egY-N4-cnr">
                                         <connections>
-                                            <segue destination="5CH-ub-Nmt" kind="show" id="u6i-0I-gxl"/>
+                                            <segue destination="5CH-ub-Nmt" kind="show" identifier="segue2AR" id="u6i-0I-gxl"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czk-5G-wxM">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czk-5G-wxM">
                                 <rect key="frame" x="56" y="217" width="74" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="Edg-Xc-Xsx"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Reset"/>
                                 <connections>
                                     <action selector="resetTimer:" destination="5w1-t2-Tmz" eventType="touchUpInside" id="xfI-f2-o7d"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbJ-77-PSN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbJ-77-PSN">
                                 <rect key="frame" x="254" y="217" width="67" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="euu-WS-btf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
@@ -1679,12 +1710,20 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="UiD-9o-2qa" firstAttribute="top" secondItem="RzS-Ll-ea6" secondAttribute="bottom" id="5mu-s0-84f"/>
                             <constraint firstItem="7BV-r0-iYT" firstAttribute="leading" secondItem="npH-6X-upd" secondAttribute="leadingMargin" id="6SD-CU-pFL"/>
                             <constraint firstItem="7BV-r0-iYT" firstAttribute="top" secondItem="Vco-Rc-c2g" secondAttribute="bottom" constant="5" id="8Wv-7e-nKn"/>
+                            <constraint firstItem="czk-5G-wxM" firstAttribute="top" secondItem="7BV-r0-iYT" secondAttribute="bottom" constant="51" id="9nb-ZB-4uL"/>
                             <constraint firstItem="Vco-Rc-c2g" firstAttribute="leading" secondItem="npH-6X-upd" secondAttribute="leadingMargin" constant="-20" id="DSf-Je-XTT"/>
                             <constraint firstItem="Vco-Rc-c2g" firstAttribute="top" secondItem="npH-6X-upd" secondAttribute="topMargin" id="YF9-JS-ePP"/>
+                            <constraint firstItem="czk-5G-wxM" firstAttribute="leading" secondItem="npH-6X-upd" secondAttribute="leadingMargin" constant="40" id="eeg-nH-oXt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RzS-Ll-ea6" secondAttribute="trailing" constant="-20" id="hES-9I-asn"/>
                             <constraint firstItem="7BV-r0-iYT" firstAttribute="trailing" secondItem="npH-6X-upd" secondAttribute="trailingMargin" id="mmd-mn-mkL"/>
+                            <constraint firstItem="sbJ-77-PSN" firstAttribute="baseline" secondItem="czk-5G-wxM" secondAttribute="baseline" id="nbJ-RT-Efr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Vco-Rc-c2g" secondAttribute="trailing" constant="-20" id="voH-aF-qZk"/>
+                            <constraint firstItem="czk-5G-wxM" firstAttribute="top" secondItem="npH-6X-upd" secondAttribute="top" constant="217" id="wzl-T0-B8j"/>
+                            <constraint firstItem="RzS-Ll-ea6" firstAttribute="leading" secondItem="npH-6X-upd" secondAttribute="leadingMargin" constant="-20" id="ywH-eS-ZGa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sbJ-77-PSN" secondAttribute="trailing" constant="38" id="zeG-vt-DY9"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -1732,21 +1771,27 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="bYP-pO-Emw"/>
                                     <barButtonItem title="Home" id="aCy-WJ-9OR">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="Yib-93-6zj"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="Yib-93-6zj"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbO-Rt-NrJ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbO-Rt-NrJ">
                                 <rect key="frame" x="56" y="217" width="74" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="Mt9-dg-4Pd"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Reset"/>
                                 <connections>
                                     <action selector="resetTimer:" destination="5CH-ub-Nmt" eventType="touchUpInside" id="8O9-3j-0Kl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3p-xz-vxc">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3p-xz-vxc">
                                 <rect key="frame" x="254" y="217" width="67" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="bC5-oS-7jc"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
@@ -1758,11 +1803,16 @@
                         <constraints>
                             <constraint firstItem="3AL-5c-jca" firstAttribute="leading" secondItem="1wC-QW-lZR" secondAttribute="leadingMargin" constant="-20" id="0sF-V3-MVA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3AL-5c-jca" secondAttribute="trailing" constant="-20" id="13o-19-QVf"/>
+                            <constraint firstItem="UbO-Rt-NrJ" firstAttribute="top" secondItem="5tT-fl-H4s" secondAttribute="bottom" constant="51" id="1qN-Z0-dcq"/>
                             <constraint firstItem="5tT-fl-H4s" firstAttribute="top" secondItem="3AL-5c-jca" secondAttribute="bottom" constant="5" id="5pk-Va-fLH"/>
+                            <constraint firstItem="UbO-Rt-NrJ" firstAttribute="baseline" secondItem="x3p-xz-vxc" secondAttribute="baseline" id="QgT-Bj-EZk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="x3p-xz-vxc" secondAttribute="trailing" constant="38" id="W4X-M8-q5e"/>
                             <constraint firstItem="3AL-5c-jca" firstAttribute="top" secondItem="1wC-QW-lZR" secondAttribute="topMargin" id="Xxy-Wc-Mxb"/>
+                            <constraint firstItem="UbO-Rt-NrJ" firstAttribute="leading" secondItem="1wC-QW-lZR" secondAttribute="leadingMargin" constant="40" id="YJ7-ph-2H0"/>
                             <constraint firstItem="5tT-fl-H4s" firstAttribute="leading" secondItem="1wC-QW-lZR" secondAttribute="leadingMargin" id="n2Q-Vn-ARV"/>
                             <constraint firstItem="MnF-Gc-xWa" firstAttribute="top" secondItem="zNf-kY-Ixp" secondAttribute="bottom" id="p2I-cx-8Ey"/>
                             <constraint firstItem="5tT-fl-H4s" firstAttribute="trailing" secondItem="1wC-QW-lZR" secondAttribute="trailingMargin" id="qBF-8C-DTd"/>
+                            <constraint firstItem="UbO-Rt-NrJ" firstAttribute="top" secondItem="1wC-QW-lZR" secondAttribute="top" constant="217" id="u4N-cC-Zaj"/>
                             <constraint firstItem="zNf-kY-Ixp" firstAttribute="leading" secondItem="1wC-QW-lZR" secondAttribute="leadingMargin" constant="-20" id="vJT-AX-49C"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zNf-kY-Ixp" secondAttribute="trailing" constant="-20" id="z4Z-y5-vCg"/>
                         </constraints>
@@ -1783,18 +1833,19 @@
         <segue reference="v8w-Ss-jRj"/>
         <segue reference="KEA-1j-VSb"/>
         <segue reference="IGg-dS-Sax"/>
-        <segue reference="WD6-l3-75v"/>
-        <segue reference="Q12-hZ-zJ8"/>
+        <segue reference="ery-kf-c3H"/>
         <segue reference="wyJ-pZ-gBG"/>
         <segue reference="SyV-ij-dqY"/>
-        <segue reference="KGd-6o-0Wm"/>
+        <segue reference="oeA-17-VbV"/>
         <segue reference="bBc-hd-C9c"/>
+        <segue reference="cO3-tf-XLy"/>
+        <segue reference="ZZz-fK-An9"/>
         <segue reference="NzO-uh-L5O"/>
         <segue reference="IjN-yw-Ky9"/>
         <segue reference="otO-Q0-iDR"/>
-        <segue reference="dD5-fG-y8P"/>
+        <segue reference="2Yx-Oc-HgT"/>
+        <segue reference="rwI-1K-ZEl"/>
         <segue reference="d2S-17-cZQ"/>
-        <segue reference="0DX-vx-3ZX"/>
-        <segue reference="QsN-RF-Obo"/>
+        <segue reference="JTM-d5-Nxw"/>
     </inferredMetricsTieBreakers>
 </document>

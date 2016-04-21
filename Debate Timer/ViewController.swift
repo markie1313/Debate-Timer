@@ -24,7 +24,6 @@ class ViewController: UIViewController {
 
 }
 
-
 class ViewController1AC: UIViewController {
     
     var newTimer = StopWatch2(isNegPrep: false, isAffPrep: false)
@@ -114,12 +113,29 @@ class ViewController1AC: UIViewController {
         timerText.text = "8:00"
     }
   
-    /*
-  I will want to use this to do a transition to the next page - i.e. do you want to go to the next page if the timer is running?  
-    func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
-        <#code#>
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "segue1CX" {
+            if newTimer.startStopwatch == false {
+                var alert:UIAlertController?
+                alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
+                
+                let firstAction = UIAlertAction(title: "OK",
+                    style: UIAlertActionStyle.Cancel,
+                    handler: nil
+                )
+                
+                alert!.addAction(firstAction)
+                self.presentViewController(alert!,
+                    animated: true,
+                    completion: nil)
+                
+            } else {
+                return true
+            }
+        }
+        return true
     }
-*/
+
 }
 
 class ViewController1CX: UIViewController {
@@ -205,6 +221,30 @@ class ViewController1CX: UIViewController {
         newTimer.seconds = 60
         timerText.text = "3:00"
     }
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "goHome" || identifier == "segueFirstNegPrep" {
+            if newTimer.startStopwatch == false {
+                var alert:UIAlertController?
+                alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
+                
+                let firstAction = UIAlertAction(title: "OK",
+                    style: UIAlertActionStyle.Cancel,
+                    handler: nil
+                )
+                
+                alert!.addAction(firstAction)
+                self.presentViewController(alert!,
+                    animated: true,
+                    completion: nil)
+                
+            } else {
+                return true
+            }
+        }
+        return true
+    }
+
     
 }
 
@@ -396,9 +436,6 @@ class ViewController1NC: UIViewController {
 
         print("\(negPrepMin):\(negPrepSec)")
     }
-    
-
-    
     
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
@@ -612,6 +649,30 @@ class ViewController1AffPrep: UIViewController {
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
     }
+
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "segue2AC" {
+            if newTimer.startStopwatch == false {
+                var alert:UIAlertController?
+                alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
+                
+                let firstAction = UIAlertAction(title: "OK",
+                    style: UIAlertActionStyle.Cancel,
+                    handler: nil
+                )
+                
+                alert!.addAction(firstAction)
+                self.presentViewController(alert!,
+                    animated: true,
+                    completion: nil)
+                
+            } else {
+                return true
+            }
+        }
+        return true
+    }
+
 }
 
 class viewController2AC: UIViewController {
@@ -693,7 +754,30 @@ class viewController2AC: UIViewController {
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
     }
-   
+
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "segue3CX" {
+            if newTimer.startStopwatch == false {
+                var alert:UIAlertController?
+                alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
+                
+                let firstAction = UIAlertAction(title: "OK",
+                    style: UIAlertActionStyle.Cancel,
+                    handler: nil
+                )
+                
+                alert!.addAction(firstAction)
+                self.presentViewController(alert!,
+                    animated: true,
+                    completion: nil)
+                
+            } else {
+                return true
+            }
+        }
+        return true
+    }
+
 }
 
 class ViewController3CX: UIViewController {
@@ -777,6 +861,30 @@ class ViewController3CX: UIViewController {
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
     }
+
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "segue2NegPrep" {
+            if newTimer.startStopwatch == false {
+                var alert:UIAlertController?
+                alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
+                
+                let firstAction = UIAlertAction(title: "OK",
+                    style: UIAlertActionStyle.Cancel,
+                    handler: nil
+                )
+                
+                alert!.addAction(firstAction)
+                self.presentViewController(alert!,
+                    animated: true,
+                    completion: nil)
+                
+            } else {
+                return true
+            }
+        }
+        return true
+    }
+
 }
 
 class ViewControllerNegPrep2: UIViewController {
@@ -864,6 +972,30 @@ class ViewControllerNegPrep2: UIViewController {
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
     }
+
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "segue2NC" {
+            if newTimer.startStopwatch == false {
+                var alert:UIAlertController?
+                alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
+                
+                let firstAction = UIAlertAction(title: "OK",
+                    style: UIAlertActionStyle.Cancel,
+                    handler: nil
+                )
+                
+                alert!.addAction(firstAction)
+                self.presentViewController(alert!,
+                    animated: true,
+                    completion: nil)
+                
+            } else {
+                return true
+            }
+        }
+        return true
+    }
+
 }
 
 class ViewController2NC: UIViewController {
@@ -945,6 +1077,29 @@ class ViewController2NC: UIViewController {
         timerText.text = newTimer.updateStopwatch()
     }
     
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "segue4CX" {
+            if newTimer.startStopwatch == false {
+                var alert:UIAlertController?
+                alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
+                
+                let firstAction = UIAlertAction(title: "OK",
+                    style: UIAlertActionStyle.Cancel,
+                    handler: nil
+                )
+                
+                alert!.addAction(firstAction)
+                self.presentViewController(alert!,
+                    animated: true,
+                    completion: nil)
+                
+            } else {
+                return true
+            }
+        }
+        return true
+    }
+
 }
 
 class ViewController4CX: UIViewController {
@@ -1024,6 +1179,29 @@ class ViewController4CX: UIViewController {
     
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
+    }
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "segue3NegPrep" {
+            if newTimer.startStopwatch == false {
+                var alert:UIAlertController?
+                alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
+                
+                let firstAction = UIAlertAction(title: "OK",
+                    style: UIAlertActionStyle.Cancel,
+                    handler: nil
+                )
+                
+                alert!.addAction(firstAction)
+                self.presentViewController(alert!,
+                    animated: true,
+                    completion: nil)
+                
+            } else {
+                return true
+            }
+        }
+        return true
     }
 }
 
@@ -1112,6 +1290,30 @@ class ViewControllerNegPrep3: UIViewController {
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
     }
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "segue1NR" {
+            if newTimer.startStopwatch == false {
+                var alert:UIAlertController?
+                alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
+                
+                let firstAction = UIAlertAction(title: "OK",
+                    style: UIAlertActionStyle.Cancel,
+                    handler: nil
+                )
+                
+                alert!.addAction(firstAction)
+                self.presentViewController(alert!,
+                    animated: true,
+                    completion: nil)
+                
+            } else {
+                return true
+            }
+        }
+        return true
+    }
+
 }
 
 class ViewController1NR: UIViewController {
@@ -1181,7 +1383,7 @@ class ViewController1NR: UIViewController {
         }
     }
     
-   override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         timerText.text = timerLabel
         newTimer.minutes = timerMinutes
@@ -1191,6 +1393,29 @@ class ViewController1NR: UIViewController {
     
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
+    }
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "segue2AffPrep" {
+            if newTimer.startStopwatch == false {
+                var alert:UIAlertController?
+                alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
+                
+                let firstAction = UIAlertAction(title: "OK",
+                    style: UIAlertActionStyle.Cancel,
+                    handler: nil
+                )
+                
+                alert!.addAction(firstAction)
+                self.presentViewController(alert!,
+                    animated: true,
+                    completion: nil)
+                
+            } else {
+                return true
+            }
+        }
+        return true
     }
 }
 
@@ -1275,6 +1500,30 @@ class ViewControllerAffPrep2: UIViewController {
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
     }
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "segue1AR" {
+            if newTimer.startStopwatch == false {
+                var alert:UIAlertController?
+                alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
+                
+                let firstAction = UIAlertAction(title: "OK",
+                    style: UIAlertActionStyle.Cancel,
+                    handler: nil
+                )
+                
+                alert!.addAction(firstAction)
+                self.presentViewController(alert!,
+                    animated: true,
+                    completion: nil)
+                
+            } else {
+                return true
+            }
+        }
+        return true
+    }
+
 }
 
 class ViewController1AR: UIViewController {
@@ -1353,6 +1602,29 @@ class ViewController1AR: UIViewController {
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
     }
+
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "segue4NegPrep" {
+            if newTimer.startStopwatch == false {
+                var alert:UIAlertController?
+                alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
+                
+                let firstAction = UIAlertAction(title: "OK",
+                    style: UIAlertActionStyle.Cancel,
+                    handler: nil
+                )
+                
+                alert!.addAction(firstAction)
+                self.presentViewController(alert!,
+                    animated: true,
+                    completion: nil)
+                
+            } else {
+                return true
+            }
+        }
+        return true
+    }
 }
 
 class ViewControllerNegPrep4: UIViewController {
@@ -1421,6 +1693,7 @@ class ViewControllerNegPrep4: UIViewController {
                 completion: nil)
         }
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         originalPrepMin = Int(negPrepMin as! String)!
@@ -1433,6 +1706,29 @@ class ViewControllerNegPrep4: UIViewController {
     
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
+    }
+
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "segue2NR" {
+            if newTimer.startStopwatch == false {
+                var alert:UIAlertController?
+                alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
+                
+                let firstAction = UIAlertAction(title: "OK",
+                    style: UIAlertActionStyle.Cancel,
+                    handler: nil
+                )
+                
+                alert!.addAction(firstAction)
+                self.presentViewController(alert!,
+                    animated: true,
+                    completion: nil)
+                
+            } else {
+                return true
+            }
+        }
+        return true
     }
 }
 
@@ -1504,6 +1800,29 @@ class ViewController2NR: UIViewController {
     
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
+    }
+
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "segue3AffPrep" {
+            if newTimer.startStopwatch == false {
+                var alert:UIAlertController?
+                alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
+                
+                let firstAction = UIAlertAction(title: "OK",
+                    style: UIAlertActionStyle.Cancel,
+                    handler: nil
+                )
+                
+                alert!.addAction(firstAction)
+                self.presentViewController(alert!,
+                    animated: true,
+                    completion: nil)
+                
+            } else {
+                return true
+            }
+        }
+        return true
     }
 }
 
@@ -1592,6 +1911,29 @@ class ViewControllerAffPrep3: UIViewController {
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
     }
+
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "segue2AR" {
+            if newTimer.startStopwatch == false {
+                var alert:UIAlertController?
+                alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
+                
+                let firstAction = UIAlertAction(title: "OK",
+                    style: UIAlertActionStyle.Cancel,
+                    handler: nil
+                )
+                
+                alert!.addAction(firstAction)
+                self.presentViewController(alert!,
+                    animated: true,
+                    completion: nil)
+                
+            } else {
+                return true
+            }
+        }
+        return true
+    }
 }
 
 class ViewController2AR: UIViewController {
@@ -1663,4 +2005,28 @@ class ViewController2AR: UIViewController {
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
     }
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "goHome" {
+            if newTimer.startStopwatch == false {
+                var alert:UIAlertController?
+                alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
+                
+                let firstAction = UIAlertAction(title: "OK",
+                    style: UIAlertActionStyle.Cancel,
+                    handler: nil
+                )
+                
+                alert!.addAction(firstAction)
+                self.presentViewController(alert!,
+                    animated: true,
+                    completion: nil)
+                
+            } else {
+                return true
+            }
+        }
+        return true
+    }
+
 }
