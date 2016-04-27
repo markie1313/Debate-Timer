@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="re2-lv-y5m">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="63k-Kx-57w">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -29,7 +29,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                 <state key="normal" title="Team Policy"/>
                                 <connections>
-                                    <segue destination="UeC-gF-JX5" kind="show" id="0DX-vx-3ZX"/>
+                                    <segue destination="UeC-gF-JX5" kind="presentation" modalTransitionStyle="crossDissolve" id="0DX-vx-3ZX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIh-HU-ozV">
@@ -176,13 +176,13 @@
                                 <items>
                                     <barButtonItem title="Back" id="Hbn-Cs-vc9">
                                         <connections>
-                                            <segue destination="UeC-gF-JX5" kind="show" id="rwI-1K-ZEl"/>
+                                            <segue destination="UeC-gF-JX5" kind="show" identifier="goHome" id="rwI-1K-ZEl"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="9Iq-Am-wLc"/>
                                     <barButtonItem title="Home" id="VuL-Ff-U4N">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="d2S-17-cZQ"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="Nru-qd-tTO"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Ei8-oo-ANg"/>
@@ -304,7 +304,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="4dB-Lp-dVG"/>
                                     <barButtonItem title="Home" id="LGb-Pq-KE3">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="SPl-lU-Sp5"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="SPl-lU-Sp5"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="3VF-SK-tcf"/>
@@ -381,7 +381,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="yqv-qA-f5s"/>
                                     <barButtonItem title="Home" id="eqx-3p-ep3">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="ap4-V8-hjl"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="2et-bL-vqq"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="SaM-WY-kOz"/>
@@ -493,7 +493,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="EdL-4f-QW9"/>
                                     <barButtonItem title="Home" id="Bx6-nl-Qlx">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="PBN-Xo-fpB"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="PBN-Xo-fpB"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="9Y3-5M-kpT"/>
@@ -562,7 +562,11 @@
                                 <items>
                                     <barButtonItem title="Back" id="3DF-ZF-2cQ"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="fQb-35-z1T"/>
-                                    <barButtonItem title="Home" id="kdz-0g-iKw"/>
+                                    <barButtonItem title="Home" id="kdz-0g-iKw">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="SqT-Vg-i2v"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="GOe-Re-x4O"/>
                                     <barButtonItem title="2AC" id="Smw-Mv-XlG">
                                         <connections>
@@ -655,7 +659,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="tM5-KV-YEy"/>
-                                    <barButtonItem title="Home" id="AaJ-iL-JjK"/>
+                                    <barButtonItem title="Home" id="AaJ-iL-JjK">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="UZ4-7a-jma"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="7td-f5-Osx"/>
                                     <barButtonItem title="CX" id="uxq-VL-Dgy">
                                         <connections>
@@ -748,7 +756,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="vhf-sa-UAC"/>
-                                    <barButtonItem title="Home" id="vXF-cg-RU0"/>
+                                    <barButtonItem title="Home" id="vXF-cg-RU0">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="pZP-BV-WzC"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="5xM-1o-DFp"/>
                                     <barButtonItem title="Neg Prep" id="y36-YF-v2c">
                                         <connections>
@@ -841,7 +853,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="9El-ll-IIe"/>
-                                    <barButtonItem title="Home" id="z2V-ze-VKk"/>
+                                    <barButtonItem title="Home" id="z2V-ze-VKk">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="6Wc-NX-2LL"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Qdw-HT-hYc"/>
                                     <barButtonItem title="2NC" id="LGj-c2-QfK">
                                         <connections>
@@ -934,7 +950,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="SM0-JX-UDC"/>
-                                    <barButtonItem title="Home" id="Hdi-7Z-uek"/>
+                                    <barButtonItem title="Home" id="Hdi-7Z-uek">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="B53-EI-0AJ"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="TVi-a1-aRL"/>
                                     <barButtonItem title="CX" id="ekY-1d-HBm">
                                         <connections>
@@ -1012,8 +1032,11 @@
                                     <navigationItem title="CX" id="dUD-Xd-gSX"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="3:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Fh-Do-LXn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Fh-Do-LXn">
                                 <rect key="frame" x="20" y="49" width="335" height="117"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="117" id="X0x-gM-eLB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="80"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1027,7 +1050,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="UXE-Pk-mQv"/>
-                                    <barButtonItem title="Home" id="lfh-Lt-wVh"/>
+                                    <barButtonItem title="Home" id="lfh-Lt-wVh">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="7QQ-Ix-Tt5"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="WHi-cz-NFN"/>
                                     <barButtonItem title="Neg Prep" id="2S6-DA-lyj">
                                         <connections>
@@ -1066,9 +1093,11 @@
                             <constraint firstItem="pQ2-ln-2FD" firstAttribute="leading" secondItem="wQ4-IY-ylz" secondAttribute="leadingMargin" constant="-20" id="MuZ-dU-K5l"/>
                             <constraint firstItem="6t2-77-UlB" firstAttribute="top" secondItem="pQ2-ln-2FD" secondAttribute="bottom" id="P0S-Qr-uOD"/>
                             <constraint firstItem="Fop-ux-qIl" firstAttribute="top" secondItem="wQ4-IY-ylz" secondAttribute="top" constant="217" id="UNq-YP-zoz"/>
+                            <constraint firstItem="4Fh-Do-LXn" firstAttribute="centerX" secondItem="2gC-B4-OIU" secondAttribute="centerX" id="Uay-a3-0eT"/>
                             <constraint firstItem="Fop-ux-qIl" firstAttribute="leading" secondItem="wQ4-IY-ylz" secondAttribute="leadingMargin" constant="40" id="XUw-9S-Cyb"/>
                             <constraint firstItem="Fop-ux-qIl" firstAttribute="top" secondItem="4Fh-Do-LXn" secondAttribute="bottom" constant="51" id="eFZ-Sl-BTJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pQ2-ln-2FD" secondAttribute="trailing" constant="-20" id="fNL-P5-FH3"/>
+                            <constraint firstItem="4Fh-Do-LXn" firstAttribute="leading" secondItem="wQ4-IY-ylz" secondAttribute="leadingMargin" constant="4" id="gJn-vL-ysf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GRw-4b-w5j" secondAttribute="trailing" constant="38" id="iUf-CU-maU"/>
                             <constraint firstItem="2gC-B4-OIU" firstAttribute="leading" secondItem="wQ4-IY-ylz" secondAttribute="leadingMargin" constant="-20" id="xqa-6P-BvJ"/>
                             <constraint firstItem="2gC-B4-OIU" firstAttribute="top" secondItem="wQ4-IY-ylz" secondAttribute="topMargin" id="zpB-IE-dkw"/>
@@ -1117,7 +1146,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Utf-vP-jdk"/>
-                                    <barButtonItem title="Home" id="e0m-eK-Cdr"/>
+                                    <barButtonItem title="Home" id="e0m-eK-Cdr">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="43T-l8-XgG"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="81K-wQ-AUw"/>
                                     <barButtonItem title="1 NR" id="jTx-gr-2qL">
                                         <connections>
@@ -1198,7 +1231,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfN-BQ-8Ed">
                                 <rect key="frame" x="20" y="49" width="335" height="117"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="80"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ui-0w-hk3">
@@ -1210,7 +1243,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="SkB-f0-xDO"/>
-                                    <barButtonItem title="Home" id="gMf-aI-vvy"/>
+                                    <barButtonItem title="Home" id="gMf-aI-vvy">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="pTk-aH-qtY"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="fEj-42-XAL"/>
                                     <barButtonItem title="Aff Prep" id="GSk-gu-YuY">
                                         <connections>
@@ -1291,7 +1328,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fW-Hr-2LT">
                                 <rect key="frame" x="20" y="49" width="335" height="117"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="80"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zZU-nX-ydO">
@@ -1303,7 +1340,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Vcq-g6-66a"/>
-                                    <barButtonItem title="Home" id="czN-oS-oLW"/>
+                                    <barButtonItem title="Home" id="czN-oS-oLW">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="Yl9-Uj-zku"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="WwJ-XD-Dbj"/>
                                     <barButtonItem title="1 AR" id="znc-32-u0I">
                                         <connections>
@@ -1384,7 +1425,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhp-nx-Dn1">
                                 <rect key="frame" x="20" y="49" width="335" height="117"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="80"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ekp-dm-wmy">
@@ -1396,7 +1437,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="QuA-zV-r5u"/>
-                                    <barButtonItem title="Home" id="vpl-TT-y1C"/>
+                                    <barButtonItem title="Home" id="vpl-TT-y1C">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="5Ba-NW-LW8"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="3x2-le-Mja"/>
                                     <barButtonItem title="Neg Prep" id="dkK-7h-dT8">
                                         <connections>
@@ -1483,7 +1528,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="jKj-fm-bMm"/>
-                                    <barButtonItem title="Home" id="6Ux-mG-NEm"/>
+                                    <barButtonItem title="Home" id="6Ux-mG-NEm">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="PDe-5Y-hKN"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Ibx-QJ-NAo"/>
                                     <barButtonItem title="2 NR" id="3Fy-xG-lR1">
                                         <connections>
@@ -1506,7 +1555,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DK3-x3-hW1">
                                 <rect key="frame" x="20" y="49" width="335" height="119"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="80"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIn-9y-m54">
@@ -1570,7 +1619,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoj-9h-awC">
                                 <rect key="frame" x="20" y="49" width="335" height="119"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="80"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7I-S3-mKx">
@@ -1605,7 +1654,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="GX0-ng-C8U"/>
-                                    <barButtonItem title="Home" id="k3r-O5-e58"/>
+                                    <barButtonItem title="Home" id="k3r-O5-e58">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="AtI-aw-9Hb"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Bfi-1q-uju"/>
                                     <barButtonItem title="2 NR" id="eVa-Sv-12v">
                                         <connections>
@@ -1664,7 +1717,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7BV-r0-iYT">
                                 <rect key="frame" x="20" y="49" width="335" height="117"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="80"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RzS-Ll-ea6">
@@ -1676,7 +1729,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Ih8-df-gKb"/>
-                                    <barButtonItem title="Home" id="Cev-8N-n5E"/>
+                                    <barButtonItem title="Home" id="Cev-8N-n5E">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="aOO-W3-wba"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="noy-9e-Krk"/>
                                     <barButtonItem title="2 AR" id="egY-N4-cnr">
                                         <connections>
@@ -1757,7 +1814,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tT-fl-H4s">
                                 <rect key="frame" x="20" y="49" width="335" height="117"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="80"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zNf-kY-Ixp">
@@ -1829,23 +1886,23 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="KGd-6o-0Wm"/>
+        <segue reference="SyV-ij-dqY"/>
+        <segue reference="wyJ-pZ-gBG"/>
+        <segue reference="Q12-hZ-zJ8"/>
+        <segue reference="WD6-l3-75v"/>
+        <segue reference="IGg-dS-Sax"/>
         <segue reference="0lp-w5-jJr"/>
         <segue reference="v8w-Ss-jRj"/>
-        <segue reference="KEA-1j-VSb"/>
-        <segue reference="IGg-dS-Sax"/>
-        <segue reference="ery-kf-c3H"/>
-        <segue reference="wyJ-pZ-gBG"/>
-        <segue reference="SyV-ij-dqY"/>
-        <segue reference="oeA-17-VbV"/>
-        <segue reference="bBc-hd-C9c"/>
+        <segue reference="yqs-Ih-iwu"/>
+        <segue reference="Yib-93-6zj"/>
+        <segue reference="0DX-vx-3ZX"/>
+        <segue reference="2Yx-Oc-HgT"/>
         <segue reference="cO3-tf-XLy"/>
-        <segue reference="ZZz-fK-An9"/>
+        <segue reference="bBc-hd-C9c"/>
         <segue reference="NzO-uh-L5O"/>
         <segue reference="IjN-yw-Ky9"/>
-        <segue reference="otO-Q0-iDR"/>
-        <segue reference="2Yx-Oc-HgT"/>
-        <segue reference="rwI-1K-ZEl"/>
-        <segue reference="d2S-17-cZQ"/>
+        <segue reference="gyr-Iy-bOQ"/>
         <segue reference="JTM-d5-Nxw"/>
     </inferredMetricsTieBreakers>
 </document>
