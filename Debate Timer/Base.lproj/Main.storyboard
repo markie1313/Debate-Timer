@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="re2-lv-y5m">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -96,13 +96,13 @@
                                 <items>
                                     <barButtonItem title="Back" id="J43-VF-Hj1">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="Yfz-fC-BnM"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goBack" id="Yfz-fC-BnM"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="mE7-Ah-3px"/>
                                     <barButtonItem title="First CX" id="jpG-lF-ioG">
                                         <connections>
-                                            <segue destination="re2-lv-y5m" kind="show" identifier="segue1CX" id="2Yx-Oc-HgT"/>
+                                            <segue destination="re2-lv-y5m" kind="presentation" identifier="segue1CX" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="2Yx-Oc-HgT"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -176,7 +176,7 @@
                                 <items>
                                     <barButtonItem title="Back" id="Hbn-Cs-vc9">
                                         <connections>
-                                            <segue destination="UeC-gF-JX5" kind="show" identifier="goHome" id="rwI-1K-ZEl"/>
+                                            <segue destination="UeC-gF-JX5" kind="show" identifier="goBack" id="rwI-1K-ZEl"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="9Iq-Am-wLc"/>
@@ -298,7 +298,7 @@
                                 <items>
                                     <barButtonItem title="Back" id="ozZ-Kd-IRr">
                                         <connections>
-                                            <segue destination="re2-lv-y5m" kind="show" id="dD5-fG-y8P"/>
+                                            <segue destination="re2-lv-y5m" kind="show" identifier="goBack" id="dD5-fG-y8P"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="4dB-Lp-dVG"/>
@@ -375,13 +375,13 @@
                                 <items>
                                     <barButtonItem title="Back" id="uyO-lL-5sE">
                                         <connections>
-                                            <segue destination="Ay1-X3-d53" kind="show" id="gyr-Iy-bOQ"/>
+                                            <segue destination="Ay1-X3-d53" kind="show" identifier="goBack" id="gyr-Iy-bOQ"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="yqv-qA-f5s"/>
                                     <barButtonItem title="Home" id="eqx-3p-ep3">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="2et-bL-vqq"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="2et-bL-vqq"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="SaM-WY-kOz"/>
@@ -487,7 +487,7 @@
                                 <items>
                                     <barButtonItem title="Back" id="xmI-jl-DCU">
                                         <connections>
-                                            <segue destination="P5X-Rw-BwG" kind="show" id="QsN-RF-Obo"/>
+                                            <segue destination="P5X-Rw-BwG" kind="show" identifier="goBack" id="QsN-RF-Obo"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="EdL-4f-QW9"/>
@@ -557,24 +557,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nV8-SV-DeR">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <items>
-                                    <barButtonItem title="Back" id="3DF-ZF-2cQ"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="fQb-35-z1T"/>
-                                    <barButtonItem title="Home" id="kdz-0g-iKw">
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="SqT-Vg-i2v"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="GOe-Re-x4O"/>
-                                    <barButtonItem title="2AC" id="Smw-Mv-XlG">
-                                        <connections>
-                                            <segue destination="xlT-9q-47B" kind="show" identifier="segue2AC" id="meZ-Zc-H8c"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Vw-vi-iCb">
                                 <rect key="frame" x="56" y="217" width="74" height="36"/>
                                 <constraints>
@@ -597,6 +579,28 @@
                                     <action selector="startStopTimer:" destination="g0X-t9-hPG" eventType="touchUpInside" id="K0i-U9-gpm"/>
                                 </connections>
                             </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nV8-SV-DeR">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Back" id="3DF-ZF-2cQ">
+                                        <connections>
+                                            <segue destination="HaO-By-XlD" kind="show" identifier="goBack" id="U2w-Y9-L1U"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="fQb-35-z1T"/>
+                                    <barButtonItem title="Home" id="kdz-0g-iKw">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="SqT-Vg-i2v"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="GOe-Re-x4O"/>
+                                    <barButtonItem title="2AC" id="Smw-Mv-XlG">
+                                        <connections>
+                                            <segue destination="xlT-9q-47B" kind="show" identifier="segue2AC" id="meZ-Zc-H8c"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -655,7 +659,7 @@
                                 <items>
                                     <barButtonItem title="Back" id="Kb7-mM-0q0">
                                         <connections>
-                                            <segue destination="g0X-t9-hPG" kind="show" id="IjN-yw-Ky9"/>
+                                            <segue destination="g0X-t9-hPG" kind="show" identifier="goBack" id="IjN-yw-Ky9"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="tM5-KV-YEy"/>
@@ -752,7 +756,7 @@
                                 <items>
                                     <barButtonItem title="Back" id="j7D-zQ-Ooh">
                                         <connections>
-                                            <segue destination="xlT-9q-47B" kind="show" id="NzO-uh-L5O"/>
+                                            <segue destination="xlT-9q-47B" kind="show" identifier="goBack" id="NzO-uh-L5O"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="vhf-sa-UAC"/>
@@ -849,7 +853,7 @@
                                 <items>
                                     <barButtonItem title="Back" id="cWh-b5-MIs">
                                         <connections>
-                                            <segue destination="LC8-aH-UlU" kind="show" id="bBc-hd-C9c"/>
+                                            <segue destination="LC8-aH-UlU" kind="show" identifier="goBack" id="bBc-hd-C9c"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="9El-ll-IIe"/>
@@ -946,7 +950,7 @@
                                 <items>
                                     <barButtonItem title="Back" id="T6k-mY-XyT">
                                         <connections>
-                                            <segue destination="63k-Kx-57w" kind="show" id="cO3-tf-XLy"/>
+                                            <segue destination="63k-Kx-57w" kind="show" identifier="goBack" id="cO3-tf-XLy"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="SM0-JX-UDC"/>
@@ -1046,7 +1050,7 @@
                                 <items>
                                     <barButtonItem title="Back" id="kmP-3U-ERA">
                                         <connections>
-                                            <segue destination="Cxv-Fz-3mi" kind="show" id="KGd-6o-0Wm"/>
+                                            <segue destination="Cxv-Fz-3mi" kind="show" identifier="goBack" id="KGd-6o-0Wm"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="UXE-Pk-mQv"/>
@@ -1142,7 +1146,7 @@
                                 <items>
                                     <barButtonItem title="Back" id="O2E-zi-pkT">
                                         <connections>
-                                            <segue destination="vBK-Ty-wbR" kind="show" id="SyV-ij-dqY"/>
+                                            <segue destination="vBK-Ty-wbR" kind="show" identifier="goBack" id="SyV-ij-dqY"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Utf-vP-jdk"/>
@@ -1239,7 +1243,7 @@
                                 <items>
                                     <barButtonItem title="Back" id="WO6-ba-rcE">
                                         <connections>
-                                            <segue destination="iX6-qW-6bg" kind="show" id="wyJ-pZ-gBG"/>
+                                            <segue destination="iX6-qW-6bg" kind="show" identifier="goBack" id="wyJ-pZ-gBG"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="SkB-f0-xDO"/>
@@ -1336,7 +1340,7 @@
                                 <items>
                                     <barButtonItem title="Back" id="t4z-Yq-jmf">
                                         <connections>
-                                            <segue destination="DIq-4M-BFv" kind="show" id="Q12-hZ-zJ8"/>
+                                            <segue destination="DIq-4M-BFv" kind="show" identifier="goBack" id="Q12-hZ-zJ8"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Vcq-g6-66a"/>
@@ -1433,7 +1437,7 @@
                                 <items>
                                     <barButtonItem title="Back" id="wdK-bg-frh">
                                         <connections>
-                                            <segue destination="gwD-27-ntt" kind="show" id="WD6-l3-75v"/>
+                                            <segue destination="gwD-27-ntt" kind="show" identifier="goBack" id="WD6-l3-75v"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="QuA-zV-r5u"/>
@@ -1524,7 +1528,7 @@
                                 <items>
                                     <barButtonItem title="Back" id="XS7-zQ-wDc">
                                         <connections>
-                                            <segue destination="zMk-5g-oSA" kind="show" id="IGg-dS-Sax"/>
+                                            <segue destination="zMk-5g-oSA" kind="show" identifier="goBack" id="IGg-dS-Sax"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="jKj-fm-bMm"/>
@@ -1650,7 +1654,7 @@
                                 <items>
                                     <barButtonItem title="Back" id="ZeY-nW-Cao">
                                         <connections>
-                                            <segue destination="Tcz-dQ-tHq" kind="show" id="0lp-w5-jJr"/>
+                                            <segue destination="Tcz-dQ-tHq" kind="show" identifier="goBack" id="0lp-w5-jJr"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="GX0-ng-C8U"/>
@@ -1725,13 +1729,13 @@
                                 <items>
                                     <barButtonItem title="Back" id="QN9-Mg-uA2">
                                         <connections>
-                                            <segue destination="XzL-i2-v87" kind="show" id="v8w-Ss-jRj"/>
+                                            <segue destination="XzL-i2-v87" kind="show" identifier="goBack" id="v8w-Ss-jRj"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Ih8-df-gKb"/>
                                     <barButtonItem title="Home" id="Cev-8N-n5E">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="aOO-W3-wba"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="aOO-W3-wba"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="noy-9e-Krk"/>
@@ -1822,7 +1826,7 @@
                                 <items>
                                     <barButtonItem title="Back" id="MuZ-6t-tO2">
                                         <connections>
-                                            <segue destination="5w1-t2-Tmz" kind="show" id="KEA-1j-VSb"/>
+                                            <segue destination="5w1-t2-Tmz" kind="show" identifier="goBack" id="KEA-1j-VSb"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="bYP-pO-Emw"/>
@@ -1886,6 +1890,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="IjN-yw-Ky9"/>
+        <segue reference="NzO-uh-L5O"/>
+        <segue reference="bBc-hd-C9c"/>
+        <segue reference="cO3-tf-XLy"/>
         <segue reference="KGd-6o-0Wm"/>
         <segue reference="SyV-ij-dqY"/>
         <segue reference="wyJ-pZ-gBG"/>
@@ -1894,15 +1902,12 @@
         <segue reference="IGg-dS-Sax"/>
         <segue reference="0lp-w5-jJr"/>
         <segue reference="v8w-Ss-jRj"/>
-        <segue reference="yqs-Ih-iwu"/>
-        <segue reference="Yib-93-6zj"/>
-        <segue reference="cO3-tf-XLy"/>
-        <segue reference="bBc-hd-C9c"/>
-        <segue reference="NzO-uh-L5O"/>
-        <segue reference="IjN-yw-Ky9"/>
+        <segue reference="KEA-1j-VSb"/>
+        <segue reference="U2w-Y9-L1U"/>
+        <segue reference="QsN-RF-Obo"/>
         <segue reference="rwI-1K-ZEl"/>
         <segue reference="2Yx-Oc-HgT"/>
+        <segue reference="Nru-qd-tTO"/>
         <segue reference="otO-Q0-iDR"/>
-        <segue reference="JTM-d5-Nxw"/>
     </inferredMetricsTieBreakers>
 </document>
