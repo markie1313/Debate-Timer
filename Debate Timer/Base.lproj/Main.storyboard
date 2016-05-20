@@ -1,11 +1,100 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="fc5-kM-ois">
+            <objects>
+                <viewController id="cxg-Oe-u2a" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TF0-Ul-Rue"/>
+                        <viewControllerLayoutGuide type="bottom" id="3kw-ss-dPJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OP9-SE-YmW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mHE-Cw-AFP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Affirmative Constructive" id="GyQ-Zc-Kua"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aVs-Mk-duE">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Back" id="emE-8n-k0n">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="JJL-vQ-8bc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="LNi-WQ-5SN"/>
+                                    <barButtonItem title="Home" id="Z0T-tq-iuM">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="fwQ-od-Y7n"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="r0k-1Z-sTh"/>
+                                    <barButtonItem title="CX" id="fIs-nP-gYm">
+                                        <connections>
+                                            <segue destination="nPG-aG-nTi" kind="presentation" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="MdN-38-MOa"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0B-Bl-bW4">
+                                <rect key="frame" x="56" y="217" width="74" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="A1P-8i-lo7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Reset"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="seF-kg-DzA">
+                                <rect key="frame" x="254" y="217" width="67" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="a5z-ES-qhi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="6:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWt-DW-ctw">
+                                <rect key="frame" x="20" y="49" width="335" height="117"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="80"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="X0B-Bl-bW4" firstAttribute="top" secondItem="yWt-DW-ctw" secondAttribute="bottom" constant="51" id="6JR-Od-OJl"/>
+                            <constraint firstItem="mHE-Cw-AFP" firstAttribute="leading" secondItem="OP9-SE-YmW" secondAttribute="leadingMargin" constant="-20" id="6vJ-6d-6Gf"/>
+                            <constraint firstItem="X0B-Bl-bW4" firstAttribute="baseline" secondItem="seF-kg-DzA" secondAttribute="baseline" id="752-ig-oi3"/>
+                            <constraint firstItem="yWt-DW-ctw" firstAttribute="leading" secondItem="OP9-SE-YmW" secondAttribute="leadingMargin" id="BOM-0A-Xp7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aVs-Mk-duE" secondAttribute="trailing" constant="-20" id="Bfr-HD-V04"/>
+                            <constraint firstItem="yWt-DW-ctw" firstAttribute="top" secondItem="mHE-Cw-AFP" secondAttribute="bottom" constant="5" id="PWp-ah-epp"/>
+                            <constraint firstItem="aVs-Mk-duE" firstAttribute="leading" secondItem="OP9-SE-YmW" secondAttribute="leadingMargin" constant="-20" id="STC-7L-lEI"/>
+                            <constraint firstItem="X0B-Bl-bW4" firstAttribute="leading" secondItem="OP9-SE-YmW" secondAttribute="leadingMargin" constant="40" id="TT4-5l-Rpw"/>
+                            <constraint firstItem="yWt-DW-ctw" firstAttribute="trailing" secondItem="OP9-SE-YmW" secondAttribute="trailingMargin" id="Z6G-Hh-nKg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="seF-kg-DzA" secondAttribute="trailing" constant="38" id="dAS-Cp-g5P"/>
+                            <constraint firstItem="mHE-Cw-AFP" firstAttribute="top" secondItem="OP9-SE-YmW" secondAttribute="topMargin" id="iTS-RE-13x"/>
+                            <constraint firstItem="X0B-Bl-bW4" firstAttribute="top" secondItem="OP9-SE-YmW" secondAttribute="top" constant="217" id="jX9-Cy-qHa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mHE-Cw-AFP" secondAttribute="trailing" constant="-20" id="nOt-Ej-abK"/>
+                            <constraint firstItem="3kw-ss-dPJ" firstAttribute="top" secondItem="aVs-Mk-duE" secondAttribute="bottom" id="qpf-6c-GwI"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4MO-XT-Hph" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-165.5" y="317.5"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -24,18 +113,24 @@
                                     <navigationItem title="Debate Timer" id="ZxR-GJ-nqS"/>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5G-Is-AiK">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5G-Is-AiK">
                                 <rect key="frame" x="20" y="118" width="335" height="44"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                 <state key="normal" title="Team Policy"/>
                                 <connections>
-                                    <segue destination="UeC-gF-JX5" kind="presentation" modalTransitionStyle="crossDissolve" id="0DX-vx-3ZX"/>
+                                    <segue destination="UeC-gF-JX5" kind="presentation" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="0DX-vx-3ZX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIh-HU-ozV">
-                                <rect key="frame" x="20" y="276" width="335" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIh-HU-ozV">
+                                <rect key="frame" x="20" y="199" width="335" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="MjA-dc-wpN"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                 <state key="normal" title="Lincoln Douglas"/>
+                                <connections>
+                                    <segue destination="cxg-Oe-u2a" kind="show" id="OmW-zk-9jV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -43,8 +138,10 @@
                             <constraint firstItem="G6B-61-aw1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="8ZP-Q9-IdM"/>
                             <constraint firstItem="N5G-Is-AiK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="HEA-LA-QwS"/>
                             <constraint firstItem="N5G-Is-AiK" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="JdQ-zh-1pv"/>
-                            <constraint firstItem="wIh-HU-ozV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jIV-i0-bhd"/>
-                            <constraint firstItem="wIh-HU-ozV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="jWX-Wc-fMz"/>
+                            <constraint firstItem="wIh-HU-ozV" firstAttribute="leading" secondItem="N5G-Is-AiK" secondAttribute="leading" id="Jdy-hc-bRQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wIh-HU-ozV" secondAttribute="bottom" constant="438" id="PKE-gH-xbn"/>
+                            <constraint firstItem="wIh-HU-ozV" firstAttribute="trailing" secondItem="N5G-Is-AiK" secondAttribute="trailing" id="PVb-cS-Lod"/>
+                            <constraint firstItem="wIh-HU-ozV" firstAttribute="top" secondItem="N5G-Is-AiK" secondAttribute="bottom" constant="37" id="VfO-mO-yp4"/>
                             <constraint firstItem="G6B-61-aw1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="rY9-PQ-vTU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="G6B-61-aw1" secondAttribute="trailing" constant="-20" id="wch-1X-h3B"/>
                         </constraints>
@@ -70,7 +167,7 @@
                             <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AM5-eV-4KV">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="1 AC" id="ZrH-W2-nob"/>
+                                    <navigationItem title="1st Affirmative Constructive" id="ZrH-W2-nob"/>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="8:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQ4-Ep-0ib">
@@ -79,7 +176,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5k-5K-eTN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5k-5K-eTN">
                                 <rect key="frame" x="56" y="220" width="74" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="74" id="2S9-25-alW"/>
@@ -96,7 +193,7 @@
                                 <items>
                                     <barButtonItem title="Back" id="J43-VF-Hj1">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goBack" id="Yfz-fC-BnM"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goBack" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="Yfz-fC-BnM"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="mE7-Ah-3px"/>
@@ -107,10 +204,10 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpp-cr-erO">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpp-cr-erO">
                                 <rect key="frame" x="254" y="217" width="67" height="36"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="67" id="ieE-lw-U5q"/>
+                                    <constraint firstAttribute="width" constant="67" id="zyw-M4-mN6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Start"/>
@@ -121,19 +218,20 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="jpp-cr-erO" firstAttribute="top" secondItem="XQ4-Ep-0ib" secondAttribute="bottom" constant="51" id="1Ig-zd-Tdg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jpp-cr-erO" secondAttribute="trailing" constant="38" id="8jl-UO-ItY"/>
+                            <constraint firstItem="jpp-cr-erO" firstAttribute="baseline" secondItem="q5k-5K-eTN" secondAttribute="baseline" id="COm-fx-mMU"/>
                             <constraint firstItem="XQ4-Ep-0ib" firstAttribute="leading" secondItem="bIf-Zg-YED" secondAttribute="leadingMargin" id="FAf-CI-mWA"/>
                             <constraint firstItem="q5k-5K-eTN" firstAttribute="leading" secondItem="bIf-Zg-YED" secondAttribute="leadingMargin" constant="40" id="Mhh-q4-H06"/>
                             <constraint firstItem="XQ4-Ep-0ib" firstAttribute="trailing" secondItem="bIf-Zg-YED" secondAttribute="trailingMargin" id="OAh-Ml-NRu"/>
+                            <constraint firstItem="jpp-cr-erO" firstAttribute="top" secondItem="bIf-Zg-YED" secondAttribute="top" constant="217" id="TMC-vb-gBq"/>
                             <constraint firstItem="AM5-eV-4KV" firstAttribute="leading" secondItem="bIf-Zg-YED" secondAttribute="leadingMargin" constant="-20" id="YDc-zF-0x0"/>
-                            <constraint firstItem="jpp-cr-erO" firstAttribute="top" secondItem="XQ4-Ep-0ib" secondAttribute="bottom" constant="51" id="Yjb-UA-6G2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="N9l-iG-mRk" secondAttribute="trailing" constant="-20" id="ZCb-pc-cfH"/>
                             <constraint firstItem="LdM-MM-Xgh" firstAttribute="top" secondItem="N9l-iG-mRk" secondAttribute="bottom" id="aGO-U9-ZWE"/>
                             <constraint firstItem="AM5-eV-4KV" firstAttribute="top" secondItem="bIf-Zg-YED" secondAttribute="topMargin" id="aJx-23-eDH"/>
                             <constraint firstItem="XQ4-Ep-0ib" firstAttribute="top" secondItem="AM5-eV-4KV" secondAttribute="bottom" constant="5" id="gwM-uh-YfF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AM5-eV-4KV" secondAttribute="trailing" constant="-20" id="kxz-uF-ESd"/>
-                            <constraint firstItem="q5k-5K-eTN" firstAttribute="baseline" secondItem="jpp-cr-erO" secondAttribute="baseline" id="sbh-tO-teN"/>
                             <constraint firstItem="N9l-iG-mRk" firstAttribute="leading" secondItem="bIf-Zg-YED" secondAttribute="leadingMargin" constant="-20" id="tux-ZI-ngV"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="jpp-cr-erO" secondAttribute="trailing" constant="38" id="ymP-E3-4Et"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -162,7 +260,7 @@
                             <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sJy-NE-vnj">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="First CX" id="Meo-uB-m6q"/>
+                                    <navigationItem title="1st Cross Examination" id="Meo-uB-m6q"/>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEL-tK-Hpy">
@@ -176,19 +274,19 @@
                                 <items>
                                     <barButtonItem title="Back" id="Hbn-Cs-vc9">
                                         <connections>
-                                            <segue destination="UeC-gF-JX5" kind="show" identifier="goBack" id="rwI-1K-ZEl"/>
+                                            <segue destination="UeC-gF-JX5" kind="presentation" identifier="goBack" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="rwI-1K-ZEl"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="9Iq-Am-wLc"/>
                                     <barButtonItem title="Home" id="VuL-Ff-U4N">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="Nru-qd-tTO"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="Nru-qd-tTO"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Ei8-oo-ANg"/>
                                     <barButtonItem title="Prep" id="Vl4-e8-Fzg">
                                         <connections>
-                                            <segue destination="Ay1-X3-d53" kind="show" identifier="segueFirstNegPrep" id="otO-Q0-iDR"/>
+                                            <segue destination="Ay1-X3-d53" kind="presentation" identifier="segueFirstNegPrep" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="otO-Q0-iDR"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -261,7 +359,7 @@
                             <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p8X-gj-5ac">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Negative Prep Time" id="8GX-go-xrJ"/>
+                                    <navigationItem title="1st Negative Prep" id="8GX-go-xrJ"/>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IbE-oF-o78">
@@ -298,19 +396,19 @@
                                 <items>
                                     <barButtonItem title="Back" id="ozZ-Kd-IRr">
                                         <connections>
-                                            <segue destination="re2-lv-y5m" kind="show" identifier="goBack" id="dD5-fG-y8P"/>
+                                            <segue destination="re2-lv-y5m" kind="presentation" identifier="goBack" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="dD5-fG-y8P"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="4dB-Lp-dVG"/>
                                     <barButtonItem title="Home" id="LGb-Pq-KE3">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="SPl-lU-Sp5"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="SPl-lU-Sp5"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="3VF-SK-tcf"/>
                                     <barButtonItem title="1NC" id="5uZ-kz-L5c">
                                         <connections>
-                                            <segue destination="P5X-Rw-BwG" kind="show" identifier="segue1NC" id="JTM-d5-Nxw"/>
+                                            <segue destination="P5X-Rw-BwG" kind="presentation" identifier="segue1NC" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="JTM-d5-Nxw"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -362,7 +460,7 @@
                             <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xUs-E2-cIP">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="1 NC" id="VC0-3y-rpA"/>
+                                    <navigationItem title="1st Negative Constructive" id="VC0-3y-rpA"/>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="8:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gF9-ip-tje">
@@ -375,19 +473,19 @@
                                 <items>
                                     <barButtonItem title="Back" id="uyO-lL-5sE">
                                         <connections>
-                                            <segue destination="Ay1-X3-d53" kind="show" identifier="goBack" id="gyr-Iy-bOQ"/>
+                                            <segue destination="Ay1-X3-d53" kind="presentation" identifier="goBack" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="gyr-Iy-bOQ"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="yqv-qA-f5s"/>
                                     <barButtonItem title="Home" id="eqx-3p-ep3">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="2et-bL-vqq"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="2et-bL-vqq"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="SaM-WY-kOz"/>
                                     <barButtonItem title="CX" id="Xa2-XB-Fey">
                                         <connections>
-                                            <segue destination="HaO-By-XlD" kind="show" identifier="segue2CX" id="bDe-iV-QHk"/>
+                                            <segue destination="HaO-By-XlD" kind="presentation" identifier="segue2CX" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="bDe-iV-QHk"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -400,8 +498,11 @@
                                     <action selector="resetTimer:" destination="P5X-Rw-BwG" eventType="touchUpInside" id="B93-1a-slx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5s2-lD-RfZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5s2-lD-RfZ">
                                 <rect key="frame" x="254" y="217" width="67" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="I6B-Su-FoQ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
@@ -412,16 +513,17 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Au1-aG-JRN" firstAttribute="top" secondItem="XAc-7r-08b" secondAttribute="bottom" id="1mB-II-eBM"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="5s2-lD-RfZ" secondAttribute="trailing" constant="34" id="37r-kf-JPi"/>
                             <constraint firstItem="gF9-ip-tje" firstAttribute="trailing" secondItem="efj-sR-xYG" secondAttribute="trailingMargin" id="7qh-Rh-jTE"/>
                             <constraint firstItem="gF9-ip-tje" firstAttribute="top" secondItem="xUs-E2-cIP" secondAttribute="bottom" constant="5" id="8Hi-Su-zqj"/>
                             <constraint firstItem="XAc-7r-08b" firstAttribute="leading" secondItem="efj-sR-xYG" secondAttribute="leadingMargin" constant="-20" id="DmJ-up-N6q"/>
                             <constraint firstItem="D59-mq-IWU" firstAttribute="leading" secondItem="efj-sR-xYG" secondAttribute="leadingMargin" constant="36" id="HBP-KC-XHR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XAc-7r-08b" secondAttribute="trailing" constant="-20" id="P3y-wh-QpL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5s2-lD-RfZ" secondAttribute="trailing" constant="38" id="PJM-hm-rym"/>
                             <constraint firstItem="gF9-ip-tje" firstAttribute="leading" secondItem="efj-sR-xYG" secondAttribute="leadingMargin" id="UvN-6L-2fm"/>
                             <constraint firstItem="D59-mq-IWU" firstAttribute="top" secondItem="gF9-ip-tje" secondAttribute="bottom" constant="51" id="Vol-4p-hJf"/>
-                            <constraint firstItem="5s2-lD-RfZ" firstAttribute="top" secondItem="gF9-ip-tje" secondAttribute="bottom" constant="51" id="aKX-Ab-uXJ"/>
                             <constraint firstItem="xUs-E2-cIP" firstAttribute="top" secondItem="efj-sR-xYG" secondAttribute="topMargin" id="kO8-lL-n7Q"/>
+                            <constraint firstItem="5s2-lD-RfZ" firstAttribute="firstBaseline" secondItem="D59-mq-IWU" secondAttribute="baseline" id="oEG-Wq-QTB"/>
+                            <constraint firstItem="5s2-lD-RfZ" firstAttribute="top" secondItem="efj-sR-xYG" secondAttribute="top" constant="217" id="qQP-qB-4o1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xUs-E2-cIP" secondAttribute="trailing" constant="-20" id="vCq-GP-5xs"/>
                             <constraint firstItem="xUs-E2-cIP" firstAttribute="leading" secondItem="efj-sR-xYG" secondAttribute="leadingMargin" constant="-20" id="yBl-hO-jPm"/>
                         </constraints>
@@ -451,7 +553,7 @@
                             <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LCT-jo-w9O">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="2nd CX" id="cJS-V7-Bbl"/>
+                                    <navigationItem title="2nd Cross Examination" id="cJS-V7-Bbl"/>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WA1-v0-dIe">
@@ -487,19 +589,19 @@
                                 <items>
                                     <barButtonItem title="Back" id="xmI-jl-DCU">
                                         <connections>
-                                            <segue destination="P5X-Rw-BwG" kind="show" identifier="goBack" id="QsN-RF-Obo"/>
+                                            <segue destination="P5X-Rw-BwG" kind="presentation" identifier="goBack" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="QsN-RF-Obo"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="EdL-4f-QW9"/>
                                     <barButtonItem title="Home" id="Bx6-nl-Qlx">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="PBN-Xo-fpB"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="PBN-Xo-fpB"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="9Y3-5M-kpT"/>
                                     <barButtonItem title="Aff Prep" id="nnI-b4-yAI">
                                         <connections>
-                                            <segue destination="g0X-t9-hPG" kind="show" identifier="segue1AffPrep" id="nKy-ns-JlV"/>
+                                            <segue destination="g0X-t9-hPG" kind="presentation" identifier="segue1AffPrep" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="nKy-ns-JlV"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -548,7 +650,7 @@
                             <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SWI-bG-LwD">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="1st Aff Prep" id="axO-wr-4qC"/>
+                                    <navigationItem title="1st Affirmative Prep" id="axO-wr-4qC"/>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7V7-vg-Wmi">
@@ -584,19 +686,19 @@
                                 <items>
                                     <barButtonItem title="Back" id="3DF-ZF-2cQ">
                                         <connections>
-                                            <segue destination="HaO-By-XlD" kind="show" identifier="goBack" id="U2w-Y9-L1U"/>
+                                            <segue destination="HaO-By-XlD" kind="presentation" identifier="goBack" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="U2w-Y9-L1U"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="fQb-35-z1T"/>
                                     <barButtonItem title="Home" id="kdz-0g-iKw">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="SqT-Vg-i2v"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="SqT-Vg-i2v"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="GOe-Re-x4O"/>
                                     <barButtonItem title="2AC" id="Smw-Mv-XlG">
                                         <connections>
-                                            <segue destination="xlT-9q-47B" kind="show" identifier="segue2AC" id="meZ-Zc-H8c"/>
+                                            <segue destination="xlT-9q-47B" kind="presentation" identifier="segue2AC" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="meZ-Zc-H8c"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -645,7 +747,7 @@
                             <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7i5-lM-Ci0">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="2AC" id="3Ff-BE-kxK"/>
+                                    <navigationItem title="2nd Affirmative Constructive" id="3Ff-BE-kxK"/>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="8:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtp-nG-hpW">
@@ -659,19 +761,19 @@
                                 <items>
                                     <barButtonItem title="Back" id="Kb7-mM-0q0">
                                         <connections>
-                                            <segue destination="g0X-t9-hPG" kind="show" identifier="goBack" id="IjN-yw-Ky9"/>
+                                            <segue destination="g0X-t9-hPG" kind="presentation" identifier="goBack" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="IjN-yw-Ky9"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="tM5-KV-YEy"/>
                                     <barButtonItem title="Home" id="AaJ-iL-JjK">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="UZ4-7a-jma"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="UZ4-7a-jma"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="7td-f5-Osx"/>
                                     <barButtonItem title="CX" id="uxq-VL-Dgy">
                                         <connections>
-                                            <segue destination="LC8-aH-UlU" kind="show" identifier="segue3CX" id="CbT-u1-Ycg"/>
+                                            <segue destination="LC8-aH-UlU" kind="presentation" identifier="segue3CX" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="CbT-u1-Ycg"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -742,7 +844,7 @@
                             <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ZT-Sb-wjd">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="CX" id="gyq-42-eO2"/>
+                                    <navigationItem title="3rd Cross Examination" id="gyq-42-eO2"/>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6SZ-YL-fZw">
@@ -756,19 +858,19 @@
                                 <items>
                                     <barButtonItem title="Back" id="j7D-zQ-Ooh">
                                         <connections>
-                                            <segue destination="xlT-9q-47B" kind="show" identifier="goBack" id="NzO-uh-L5O"/>
+                                            <segue destination="xlT-9q-47B" kind="presentation" identifier="goBack" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="NzO-uh-L5O"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="vhf-sa-UAC"/>
                                     <barButtonItem title="Home" id="vXF-cg-RU0">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="pZP-BV-WzC"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="pZP-BV-WzC"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="5xM-1o-DFp"/>
                                     <barButtonItem title="Neg Prep" id="y36-YF-v2c">
                                         <connections>
-                                            <segue destination="63k-Kx-57w" kind="show" identifier="segue2NegPrep" id="H6z-zE-U3r"/>
+                                            <segue destination="63k-Kx-57w" kind="presentation" identifier="segue2NegPrep" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="H6z-zE-U3r"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -839,7 +941,7 @@
                             <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yqO-RV-Yrx">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="2nd Neg Prep" id="UpL-Eq-G5t"/>
+                                    <navigationItem title="2nd Negative Prep" id="UpL-Eq-G5t"/>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8U5-D6-8KJ">
@@ -853,19 +955,19 @@
                                 <items>
                                     <barButtonItem title="Back" id="cWh-b5-MIs">
                                         <connections>
-                                            <segue destination="LC8-aH-UlU" kind="show" identifier="goBack" id="bBc-hd-C9c"/>
+                                            <segue destination="LC8-aH-UlU" kind="presentation" identifier="goBack" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="bBc-hd-C9c"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="9El-ll-IIe"/>
                                     <barButtonItem title="Home" id="z2V-ze-VKk">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="6Wc-NX-2LL"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="6Wc-NX-2LL"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Qdw-HT-hYc"/>
                                     <barButtonItem title="2NC" id="LGj-c2-QfK">
                                         <connections>
-                                            <segue destination="Cxv-Fz-3mi" kind="show" identifier="segue2NC" id="ZZz-fK-An9"/>
+                                            <segue destination="Cxv-Fz-3mi" kind="presentation" identifier="segue2NC" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="ZZz-fK-An9"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -936,7 +1038,7 @@
                             <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HAm-5G-QzT">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="2NC" id="rSi-is-Q97"/>
+                                    <navigationItem title="2nd Negative Constructive" id="rSi-is-Q97"/>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="8:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taQ-NV-s3v">
@@ -950,19 +1052,19 @@
                                 <items>
                                     <barButtonItem title="Back" id="T6k-mY-XyT">
                                         <connections>
-                                            <segue destination="63k-Kx-57w" kind="show" identifier="goBack" id="cO3-tf-XLy"/>
+                                            <segue destination="63k-Kx-57w" kind="presentation" identifier="goBack" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="cO3-tf-XLy"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="SM0-JX-UDC"/>
                                     <barButtonItem title="Home" id="Hdi-7Z-uek">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="B53-EI-0AJ"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="B53-EI-0AJ"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="TVi-a1-aRL"/>
                                     <barButtonItem title="CX" id="ekY-1d-HBm">
                                         <connections>
-                                            <segue destination="vBK-Ty-wbR" kind="show" identifier="segue4CX" id="ZuS-Cg-hWy"/>
+                                            <segue destination="vBK-Ty-wbR" kind="presentation" identifier="segue4CX" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="ZuS-Cg-hWy"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -1033,14 +1135,11 @@
                             <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2gC-B4-OIU">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="CX" id="dUD-Xd-gSX"/>
+                                    <navigationItem title="4th Cross Examination" id="dUD-Xd-gSX"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Fh-Do-LXn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Fh-Do-LXn">
                                 <rect key="frame" x="20" y="49" width="335" height="117"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="117" id="X0x-gM-eLB"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="80"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1050,19 +1149,19 @@
                                 <items>
                                     <barButtonItem title="Back" id="kmP-3U-ERA">
                                         <connections>
-                                            <segue destination="Cxv-Fz-3mi" kind="show" identifier="goBack" id="KGd-6o-0Wm"/>
+                                            <segue destination="Cxv-Fz-3mi" kind="presentation" identifier="goBack" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="KGd-6o-0Wm"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="UXE-Pk-mQv"/>
                                     <barButtonItem title="Home" id="lfh-Lt-wVh">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="7QQ-Ix-Tt5"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="7QQ-Ix-Tt5"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="WHi-cz-NFN"/>
                                     <barButtonItem title="Neg Prep" id="2S6-DA-lyj">
                                         <connections>
-                                            <segue destination="iX6-qW-6bg" kind="show" identifier="segue3NegPrep" id="UR2-en-cqP"/>
+                                            <segue destination="iX6-qW-6bg" kind="presentation" identifier="segue3NegPrep" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="UR2-en-cqP"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -1070,7 +1169,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fop-ux-qIl">
                                 <rect key="frame" x="56" y="217" width="74" height="36"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="74" id="Od6-Lx-YXA"/>
+                                    <constraint firstAttribute="width" constant="74" id="DFr-Ys-52K"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Reset"/>
@@ -1081,7 +1180,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRw-4b-w5j">
                                 <rect key="frame" x="254" y="217" width="67" height="36"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="67" id="rg1-HU-SBY"/>
+                                    <constraint firstAttribute="width" constant="67" id="hWM-WW-6Xs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Start"/>
@@ -1092,19 +1191,20 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="GRw-4b-w5j" firstAttribute="baseline" secondItem="Fop-ux-qIl" secondAttribute="baseline" id="HE6-qe-75z"/>
+                            <constraint firstItem="4Fh-Do-LXn" firstAttribute="trailing" secondItem="wQ4-IY-ylz" secondAttribute="trailingMargin" id="1Ta-l1-J3r"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GRw-4b-w5j" secondAttribute="trailing" constant="38" id="G7k-G0-JAE"/>
+                            <constraint firstItem="Fop-ux-qIl" firstAttribute="leading" secondItem="wQ4-IY-ylz" secondAttribute="leadingMargin" constant="40" id="IwA-hf-e57"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2gC-B4-OIU" secondAttribute="trailing" constant="-20" id="L4f-Fy-Wx0"/>
                             <constraint firstItem="pQ2-ln-2FD" firstAttribute="leading" secondItem="wQ4-IY-ylz" secondAttribute="leadingMargin" constant="-20" id="MuZ-dU-K5l"/>
                             <constraint firstItem="6t2-77-UlB" firstAttribute="top" secondItem="pQ2-ln-2FD" secondAttribute="bottom" id="P0S-Qr-uOD"/>
-                            <constraint firstItem="Fop-ux-qIl" firstAttribute="top" secondItem="wQ4-IY-ylz" secondAttribute="top" constant="217" id="UNq-YP-zoz"/>
-                            <constraint firstItem="4Fh-Do-LXn" firstAttribute="centerX" secondItem="2gC-B4-OIU" secondAttribute="centerX" id="Uay-a3-0eT"/>
-                            <constraint firstItem="Fop-ux-qIl" firstAttribute="leading" secondItem="wQ4-IY-ylz" secondAttribute="leadingMargin" constant="40" id="XUw-9S-Cyb"/>
-                            <constraint firstItem="Fop-ux-qIl" firstAttribute="top" secondItem="4Fh-Do-LXn" secondAttribute="bottom" constant="51" id="eFZ-Sl-BTJ"/>
+                            <constraint firstItem="4Fh-Do-LXn" firstAttribute="leading" secondItem="wQ4-IY-ylz" secondAttribute="leadingMargin" id="Qh7-LX-JNp"/>
+                            <constraint firstItem="Fop-ux-qIl" firstAttribute="baseline" secondItem="GRw-4b-w5j" secondAttribute="baseline" id="WNj-6A-fOV"/>
+                            <constraint firstItem="Fop-ux-qIl" firstAttribute="top" secondItem="wQ4-IY-ylz" secondAttribute="top" constant="217" id="XvI-YL-KdF"/>
+                            <constraint firstItem="Fop-ux-qIl" firstAttribute="top" secondItem="4Fh-Do-LXn" secondAttribute="bottom" constant="51" id="eVV-ok-H7P"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pQ2-ln-2FD" secondAttribute="trailing" constant="-20" id="fNL-P5-FH3"/>
-                            <constraint firstItem="4Fh-Do-LXn" firstAttribute="leading" secondItem="wQ4-IY-ylz" secondAttribute="leadingMargin" constant="4" id="gJn-vL-ysf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="GRw-4b-w5j" secondAttribute="trailing" constant="38" id="iUf-CU-maU"/>
                             <constraint firstItem="2gC-B4-OIU" firstAttribute="leading" secondItem="wQ4-IY-ylz" secondAttribute="leadingMargin" constant="-20" id="xqa-6P-BvJ"/>
                             <constraint firstItem="2gC-B4-OIU" firstAttribute="top" secondItem="wQ4-IY-ylz" secondAttribute="topMargin" id="zpB-IE-dkw"/>
+                            <constraint firstItem="4Fh-Do-LXn" firstAttribute="top" secondItem="2gC-B4-OIU" secondAttribute="bottom" constant="5" id="zy7-kc-5OP"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -1132,7 +1232,7 @@
                             <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MgY-Ik-e5u">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Negative Prep" id="s6J-8X-8z9"/>
+                                    <navigationItem title="3rd Negative Prep" id="s6J-8X-8z9"/>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erg-vk-yO7">
@@ -1146,19 +1246,19 @@
                                 <items>
                                     <barButtonItem title="Back" id="O2E-zi-pkT">
                                         <connections>
-                                            <segue destination="vBK-Ty-wbR" kind="show" identifier="goBack" id="SyV-ij-dqY"/>
+                                            <segue destination="vBK-Ty-wbR" kind="presentation" identifier="goBack" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="SyV-ij-dqY"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Utf-vP-jdk"/>
                                     <barButtonItem title="Home" id="e0m-eK-Cdr">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="43T-l8-XgG"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="43T-l8-XgG"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="81K-wQ-AUw"/>
                                     <barButtonItem title="1 NR" id="jTx-gr-2qL">
                                         <connections>
-                                            <segue destination="DIq-4M-BFv" kind="show" identifier="segue1NR" id="ery-kf-c3H"/>
+                                            <segue destination="DIq-4M-BFv" kind="presentation" identifier="segue1NR" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="ery-kf-c3H"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -1243,19 +1343,19 @@
                                 <items>
                                     <barButtonItem title="Back" id="WO6-ba-rcE">
                                         <connections>
-                                            <segue destination="iX6-qW-6bg" kind="show" identifier="goBack" id="wyJ-pZ-gBG"/>
+                                            <segue destination="iX6-qW-6bg" kind="presentation" identifier="goBack" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="wyJ-pZ-gBG"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="SkB-f0-xDO"/>
                                     <barButtonItem title="Home" id="gMf-aI-vvy">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="pTk-aH-qtY"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="pTk-aH-qtY"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="fEj-42-XAL"/>
                                     <barButtonItem title="Aff Prep" id="GSk-gu-YuY">
                                         <connections>
-                                            <segue destination="gwD-27-ntt" kind="show" identifier="segue2AffPrep" id="oeA-17-VbV"/>
+                                            <segue destination="gwD-27-ntt" kind="presentation" identifier="segue2AffPrep" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="oeA-17-VbV"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -1326,7 +1426,7 @@
                             <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0XH-Ru-QYq">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Affirmative Prep" id="Amv-Cn-b3V"/>
+                                    <navigationItem title="2nd Affirmative Prep" id="Amv-Cn-b3V"/>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fW-Hr-2LT">
@@ -1340,19 +1440,19 @@
                                 <items>
                                     <barButtonItem title="Back" id="t4z-Yq-jmf">
                                         <connections>
-                                            <segue destination="DIq-4M-BFv" kind="show" identifier="goBack" id="Q12-hZ-zJ8"/>
+                                            <segue destination="DIq-4M-BFv" kind="presentation" identifier="goBack" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="Q12-hZ-zJ8"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Vcq-g6-66a"/>
                                     <barButtonItem title="Home" id="czN-oS-oLW">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="Yl9-Uj-zku"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="Yl9-Uj-zku"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="WwJ-XD-Dbj"/>
                                     <barButtonItem title="1 AR" id="znc-32-u0I">
                                         <connections>
-                                            <segue destination="zMk-5g-oSA" kind="show" identifier="segue1AR" id="FIb-Gu-LVA"/>
+                                            <segue destination="zMk-5g-oSA" kind="presentation" identifier="segue1AR" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="FIb-Gu-LVA"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -1437,19 +1537,19 @@
                                 <items>
                                     <barButtonItem title="Back" id="wdK-bg-frh">
                                         <connections>
-                                            <segue destination="gwD-27-ntt" kind="show" identifier="goBack" id="WD6-l3-75v"/>
+                                            <segue destination="gwD-27-ntt" kind="presentation" identifier="goBack" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="WD6-l3-75v"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="QuA-zV-r5u"/>
                                     <barButtonItem title="Home" id="vpl-TT-y1C">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="5Ba-NW-LW8"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="5Ba-NW-LW8"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="3x2-le-Mja"/>
                                     <barButtonItem title="Neg Prep" id="dkK-7h-dT8">
                                         <connections>
-                                            <segue destination="Tcz-dQ-tHq" kind="show" identifier="segue4NegPrep" id="ujg-g8-PZQ"/>
+                                            <segue destination="Tcz-dQ-tHq" kind="presentation" identifier="segue4NegPrep" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="ujg-g8-PZQ"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -1520,7 +1620,7 @@
                             <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vhq-bG-Q0a">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Negative Prep Time" id="Zny-Rw-LxJ"/>
+                                    <navigationItem title="4th Negative Prep" id="Zny-Rw-LxJ"/>
                                 </items>
                             </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fl4-fq-SbB">
@@ -1528,19 +1628,19 @@
                                 <items>
                                     <barButtonItem title="Back" id="XS7-zQ-wDc">
                                         <connections>
-                                            <segue destination="zMk-5g-oSA" kind="show" identifier="goBack" id="IGg-dS-Sax"/>
+                                            <segue destination="zMk-5g-oSA" kind="presentation" identifier="goBack" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="IGg-dS-Sax"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="jKj-fm-bMm"/>
                                     <barButtonItem title="Home" id="6Ux-mG-NEm">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="PDe-5Y-hKN"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="PDe-5Y-hKN"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Ibx-QJ-NAo"/>
                                     <barButtonItem title="2 NR" id="3Fy-xG-lR1">
                                         <connections>
-                                            <segue destination="XzL-i2-v87" kind="show" identifier="segue2NR" id="HS2-kD-pxi"/>
+                                            <segue destination="XzL-i2-v87" kind="presentation" identifier="segue2NR" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="HS2-kD-pxi"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -1654,19 +1754,19 @@
                                 <items>
                                     <barButtonItem title="Back" id="ZeY-nW-Cao">
                                         <connections>
-                                            <segue destination="Tcz-dQ-tHq" kind="show" identifier="goBack" id="0lp-w5-jJr"/>
+                                            <segue destination="Tcz-dQ-tHq" kind="presentation" identifier="goBack" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="0lp-w5-jJr"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="GX0-ng-C8U"/>
                                     <barButtonItem title="Home" id="k3r-O5-e58">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="AtI-aw-9Hb"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="AtI-aw-9Hb"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Bfi-1q-uju"/>
-                                    <barButtonItem title="2 NR" id="eVa-Sv-12v">
+                                    <barButtonItem title="Aff Prep" id="eVa-Sv-12v">
                                         <connections>
-                                            <segue destination="5w1-t2-Tmz" kind="show" identifier="segue3AffPrep" id="yqs-Ih-iwu"/>
+                                            <segue destination="5w1-t2-Tmz" kind="presentation" identifier="segue3AffPrep" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="yqs-Ih-iwu"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -1715,7 +1815,7 @@
                             <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vco-Rc-c2g">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Affirmative Prep" id="cb8-H9-3zd"/>
+                                    <navigationItem title="3rd Affirmative Prep" id="cb8-H9-3zd"/>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7BV-r0-iYT">
@@ -1729,19 +1829,19 @@
                                 <items>
                                     <barButtonItem title="Back" id="QN9-Mg-uA2">
                                         <connections>
-                                            <segue destination="XzL-i2-v87" kind="show" identifier="goBack" id="v8w-Ss-jRj"/>
+                                            <segue destination="XzL-i2-v87" kind="presentation" identifier="goBack" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="v8w-Ss-jRj"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Ih8-df-gKb"/>
                                     <barButtonItem title="Home" id="Cev-8N-n5E">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="aOO-W3-wba"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="aOO-W3-wba"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="noy-9e-Krk"/>
                                     <barButtonItem title="2 AR" id="egY-N4-cnr">
                                         <connections>
-                                            <segue destination="5CH-ub-Nmt" kind="show" identifier="segue2AR" id="u6i-0I-gxl"/>
+                                            <segue destination="5CH-ub-Nmt" kind="presentation" identifier="segue2AR" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="u6i-0I-gxl"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -1826,13 +1926,13 @@
                                 <items>
                                     <barButtonItem title="Back" id="MuZ-6t-tO2">
                                         <connections>
-                                            <segue destination="5w1-t2-Tmz" kind="show" identifier="goBack" id="KEA-1j-VSb"/>
+                                            <segue destination="5w1-t2-Tmz" kind="presentation" identifier="goBack" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="KEA-1j-VSb"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="bYP-pO-Emw"/>
                                     <barButtonItem title="Home" id="aCy-WJ-9OR">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="Yib-93-6zj"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="Yib-93-6zj"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -1888,26 +1988,900 @@
             </objects>
             <point key="canvasLocation" x="8297.5" y="311.5"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="8WC-Ui-1FK">
+            <objects>
+                <viewController id="sqa-oz-cny" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oOK-6Q-Bfg"/>
+                        <viewControllerLayoutGuide type="bottom" id="obU-QU-xMh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Z2p-aR-aw9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yuE-II-O8X">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Second Affirmative Prep" id="nd1-ii-6RB"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ETG-zm-S36">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Back" id="wXE-Xu-dhN">
+                                        <connections>
+                                            <segue destination="kO7-zf-P6l" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="qs9-jt-rmV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="fgA-Tn-nDN"/>
+                                    <barButtonItem title="Home" id="iX5-3a-LNG">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="WQN-qh-h98"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="g0y-1f-ack"/>
+                                    <barButtonItem title="2 AR" id="0s2-0z-2Ol">
+                                        <connections>
+                                            <segue destination="96r-WU-pqI" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="W7e-kI-xHf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xul-ou-18R">
+                                <rect key="frame" x="56" y="217" width="74" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="Ihh-7H-2Gn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Reset"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZj-rK-9im">
+                                <rect key="frame" x="254" y="217" width="67" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="mLf-gD-0dB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iho-7U-Mzf">
+                                <rect key="frame" x="20" y="49" width="335" height="117"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="80"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ETG-zm-S36" firstAttribute="leading" secondItem="Z2p-aR-aw9" secondAttribute="leadingMargin" constant="-20" id="4ff-Ff-Gb4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ETG-zm-S36" secondAttribute="trailing" constant="-20" id="8Wv-hj-8P3"/>
+                            <constraint firstItem="xul-ou-18R" firstAttribute="top" secondItem="Z2p-aR-aw9" secondAttribute="top" constant="217" id="Ecn-0a-en2"/>
+                            <constraint firstItem="Iho-7U-Mzf" firstAttribute="top" secondItem="yuE-II-O8X" secondAttribute="bottom" constant="5" id="FaZ-M0-fBp"/>
+                            <constraint firstItem="yuE-II-O8X" firstAttribute="leading" secondItem="Z2p-aR-aw9" secondAttribute="leadingMargin" constant="-20" id="Kc2-WD-59i"/>
+                            <constraint firstItem="obU-QU-xMh" firstAttribute="top" secondItem="ETG-zm-S36" secondAttribute="bottom" id="N56-ik-7Wn"/>
+                            <constraint firstItem="xul-ou-18R" firstAttribute="baseline" secondItem="jZj-rK-9im" secondAttribute="baseline" id="RiQ-se-uq7"/>
+                            <constraint firstItem="yuE-II-O8X" firstAttribute="top" secondItem="Z2p-aR-aw9" secondAttribute="topMargin" id="WZ8-xu-Ovd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jZj-rK-9im" secondAttribute="trailing" constant="38" id="Ym0-9C-zZI"/>
+                            <constraint firstItem="Iho-7U-Mzf" firstAttribute="leading" secondItem="Z2p-aR-aw9" secondAttribute="leadingMargin" id="ZK3-0V-2YQ"/>
+                            <constraint firstItem="xul-ou-18R" firstAttribute="top" secondItem="Iho-7U-Mzf" secondAttribute="bottom" constant="51" id="goF-Tg-gJd"/>
+                            <constraint firstItem="Iho-7U-Mzf" firstAttribute="trailing" secondItem="Z2p-aR-aw9" secondAttribute="trailingMargin" id="hJw-iu-fvr"/>
+                            <constraint firstItem="xul-ou-18R" firstAttribute="leading" secondItem="Z2p-aR-aw9" secondAttribute="leadingMargin" constant="40" id="hk5-Jx-v5D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yuE-II-O8X" secondAttribute="trailing" constant="-20" id="p2k-Tq-oQ8"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gno-PI-hSZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-159.5" y="1047.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tiT-S3-XmE">
+            <objects>
+                <viewController id="kO7-zf-P6l" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m80-pG-chJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Dv-Xz-43I"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xJp-gu-kDh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J4x-nx-Fue">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Negative Rebuttal" id="VrZ-yT-EmD"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="opT-IE-Wf8">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Back" id="2Kf-IN-OkR">
+                                        <connections>
+                                            <segue destination="dka-o2-oBf" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="eKV-BD-iuM"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Dy7-4F-V7b"/>
+                                    <barButtonItem title="Home" id="Jtl-Xr-f5C">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="h7m-gf-0Pt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Txg-pn-tdg"/>
+                                    <barButtonItem title="Aff Prep" id="E3E-gU-J5B">
+                                        <connections>
+                                            <segue destination="sqa-oz-cny" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="8md-YY-R8i"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31z-6j-0FO">
+                                <rect key="frame" x="56" y="217" width="74" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="vvk-tT-bVP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Reset"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hcl-HN-2FM">
+                                <rect key="frame" x="254" y="217" width="67" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="IeH-UV-pNG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="6:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YnA-yD-Wjn">
+                                <rect key="frame" x="20" y="49" width="335" height="117"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="80"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hcl-HN-2FM" secondAttribute="trailing" constant="38" id="8BH-IC-PAa"/>
+                            <constraint firstItem="J4x-nx-Fue" firstAttribute="top" secondItem="xJp-gu-kDh" secondAttribute="topMargin" id="Aua-jq-OTT"/>
+                            <constraint firstItem="YnA-yD-Wjn" firstAttribute="leading" secondItem="xJp-gu-kDh" secondAttribute="leadingMargin" id="ELl-oj-jbK"/>
+                            <constraint firstItem="YnA-yD-Wjn" firstAttribute="trailing" secondItem="xJp-gu-kDh" secondAttribute="trailingMargin" id="GUc-ts-y7X"/>
+                            <constraint firstItem="31z-6j-0FO" firstAttribute="top" secondItem="xJp-gu-kDh" secondAttribute="top" constant="217" id="PNc-Qh-xd6"/>
+                            <constraint firstItem="YnA-yD-Wjn" firstAttribute="top" secondItem="J4x-nx-Fue" secondAttribute="bottom" constant="5" id="R59-4p-qco"/>
+                            <constraint firstItem="31z-6j-0FO" firstAttribute="top" secondItem="YnA-yD-Wjn" secondAttribute="bottom" constant="51" id="SKo-RO-hm7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="J4x-nx-Fue" secondAttribute="trailing" constant="-20" id="Tfa-BV-0dM"/>
+                            <constraint firstItem="31z-6j-0FO" firstAttribute="baseline" secondItem="Hcl-HN-2FM" secondAttribute="baseline" id="UNX-D2-m3m"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="opT-IE-Wf8" secondAttribute="trailing" constant="-20" id="abu-D9-VUs"/>
+                            <constraint firstItem="31z-6j-0FO" firstAttribute="leading" secondItem="xJp-gu-kDh" secondAttribute="leadingMargin" constant="40" id="cNe-Hj-ZFv"/>
+                            <constraint firstItem="opT-IE-Wf8" firstAttribute="leading" secondItem="xJp-gu-kDh" secondAttribute="leadingMargin" constant="-20" id="dYf-LG-4zw"/>
+                            <constraint firstItem="J4x-nx-Fue" firstAttribute="leading" secondItem="xJp-gu-kDh" secondAttribute="leadingMargin" constant="-20" id="mmL-1O-SBb"/>
+                            <constraint firstItem="8Dv-Xz-43I" firstAttribute="top" secondItem="opT-IE-Wf8" secondAttribute="bottom" id="mxS-fz-raU"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pjc-c1-JTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-593.5" y="1047.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Seh-3q-HG9">
+            <objects>
+                <viewController id="dka-o2-oBf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gnB-rZ-X3R"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xgw-zr-A31"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T0t-CJ-INU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="97Y-Nr-0v4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Second Negative Prep" id="4pD-NL-Odt"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="giY-0W-3tP">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Back" id="DIA-ZG-ww0">
+                                        <connections>
+                                            <segue destination="4xM-QE-qOQ" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="slV-Zo-AOC"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="a2e-cE-2Ux"/>
+                                    <barButtonItem title="Home" id="OIi-ir-sZ7">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="nO7-t3-0kS"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="E7p-8e-t2Q"/>
+                                    <barButtonItem title="NR" id="1WI-9g-YEx">
+                                        <connections>
+                                            <segue destination="kO7-zf-P6l" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="MjL-PN-ZPl"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C9a-Lc-Dbe">
+                                <rect key="frame" x="56" y="217" width="74" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="N1H-d2-BaH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Reset"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3M-pP-FnF">
+                                <rect key="frame" x="254" y="217" width="67" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="EB2-bT-X9U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ucz-a5-gVA">
+                                <rect key="frame" x="20" y="49" width="335" height="117"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="80"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="giY-0W-3tP" firstAttribute="leading" secondItem="T0t-CJ-INU" secondAttribute="leadingMargin" constant="-20" id="2GG-4W-Jt3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="C3M-pP-FnF" secondAttribute="trailing" constant="38" id="3NT-Mc-fAo"/>
+                            <constraint firstItem="Ucz-a5-gVA" firstAttribute="top" secondItem="97Y-Nr-0v4" secondAttribute="bottom" constant="5" id="5eE-gC-KhP"/>
+                            <constraint firstItem="Ucz-a5-gVA" firstAttribute="leading" secondItem="T0t-CJ-INU" secondAttribute="leadingMargin" id="FeF-wF-MLV"/>
+                            <constraint firstItem="97Y-Nr-0v4" firstAttribute="leading" secondItem="T0t-CJ-INU" secondAttribute="leadingMargin" constant="-20" id="Jm3-iR-fRq"/>
+                            <constraint firstItem="Xgw-zr-A31" firstAttribute="top" secondItem="giY-0W-3tP" secondAttribute="bottom" id="LRS-Wl-vLg"/>
+                            <constraint firstItem="97Y-Nr-0v4" firstAttribute="top" secondItem="T0t-CJ-INU" secondAttribute="topMargin" id="SpA-fA-Pho"/>
+                            <constraint firstItem="C9a-Lc-Dbe" firstAttribute="leading" secondItem="T0t-CJ-INU" secondAttribute="leadingMargin" constant="40" id="Tkz-N9-JSh"/>
+                            <constraint firstItem="C9a-Lc-Dbe" firstAttribute="baseline" secondItem="C3M-pP-FnF" secondAttribute="baseline" id="dsF-Up-G4X"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="97Y-Nr-0v4" secondAttribute="trailing" constant="-20" id="gbl-7r-NJJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="giY-0W-3tP" secondAttribute="trailing" constant="-20" id="ljW-K5-3vm"/>
+                            <constraint firstItem="Ucz-a5-gVA" firstAttribute="trailing" secondItem="T0t-CJ-INU" secondAttribute="trailingMargin" id="tqH-VE-UnD"/>
+                            <constraint firstItem="C9a-Lc-Dbe" firstAttribute="top" secondItem="Ucz-a5-gVA" secondAttribute="bottom" constant="51" id="vnb-vG-xtv"/>
+                            <constraint firstItem="C9a-Lc-Dbe" firstAttribute="top" secondItem="T0t-CJ-INU" secondAttribute="top" constant="217" id="wrI-NT-sTC"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F3Y-f4-I39" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1013.5" y="1047.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="AKp-9f-Hbe">
+            <objects>
+                <viewController id="4xM-QE-qOQ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YL1-iK-ulx"/>
+                        <viewControllerLayoutGuide type="bottom" id="iOv-qU-Kgl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="huE-zE-Nvf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QnP-1b-xAS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="First Affirmative Rebuttal" id="vDF-GD-fhO"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D2P-Tm-I1l">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Back" id="eAD-PC-q1R">
+                                        <connections>
+                                            <segue destination="qXy-6d-WZl" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="9ig-mr-hx2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Xjg-pY-dMh"/>
+                                    <barButtonItem title="Home" id="rAW-VD-evy">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="3Xt-DI-9o2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="fFx-vL-SRj"/>
+                                    <barButtonItem title="Neg Prep" id="4lX-FD-7MS">
+                                        <connections>
+                                            <segue destination="dka-o2-oBf" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="BeR-tj-cQl"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqX-sU-Igk">
+                                <rect key="frame" x="56" y="217" width="74" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="a3A-gQ-zXL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Reset"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZf-6n-Dra">
+                                <rect key="frame" x="254" y="217" width="67" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="x1h-Ld-b1t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="4:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ve8-43-5kp">
+                                <rect key="frame" x="20" y="49" width="335" height="117"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="80"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iqX-sU-Igk" firstAttribute="baseline" secondItem="TZf-6n-Dra" secondAttribute="baseline" id="0Jx-a5-JPv"/>
+                            <constraint firstItem="D2P-Tm-I1l" firstAttribute="leading" secondItem="huE-zE-Nvf" secondAttribute="leadingMargin" constant="-20" id="26i-hH-IIq"/>
+                            <constraint firstItem="Ve8-43-5kp" firstAttribute="trailing" secondItem="huE-zE-Nvf" secondAttribute="trailingMargin" id="3MS-ct-PC7"/>
+                            <constraint firstItem="QnP-1b-xAS" firstAttribute="leading" secondItem="huE-zE-Nvf" secondAttribute="leadingMargin" constant="-20" id="4HH-Lq-Ii2"/>
+                            <constraint firstItem="Ve8-43-5kp" firstAttribute="top" secondItem="QnP-1b-xAS" secondAttribute="bottom" constant="5" id="7rt-OT-xKH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QnP-1b-xAS" secondAttribute="trailing" constant="-20" id="BjP-GG-nre"/>
+                            <constraint firstItem="iqX-sU-Igk" firstAttribute="top" secondItem="Ve8-43-5kp" secondAttribute="bottom" constant="51" id="N5p-Sa-oev"/>
+                            <constraint firstItem="Ve8-43-5kp" firstAttribute="leading" secondItem="huE-zE-Nvf" secondAttribute="leadingMargin" id="dJz-o3-Xuw"/>
+                            <constraint firstItem="QnP-1b-xAS" firstAttribute="top" secondItem="huE-zE-Nvf" secondAttribute="topMargin" id="euG-pV-9Bl"/>
+                            <constraint firstItem="iqX-sU-Igk" firstAttribute="leading" secondItem="huE-zE-Nvf" secondAttribute="leadingMargin" constant="40" id="hAR-Sq-PYC"/>
+                            <constraint firstItem="iOv-qU-Kgl" firstAttribute="top" secondItem="D2P-Tm-I1l" secondAttribute="bottom" id="qom-Dl-fdO"/>
+                            <constraint firstItem="iqX-sU-Igk" firstAttribute="top" secondItem="huE-zE-Nvf" secondAttribute="top" constant="217" id="rNt-CK-W3H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="D2P-Tm-I1l" secondAttribute="trailing" constant="-20" id="u9y-hV-T1X"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TZf-6n-Dra" secondAttribute="trailing" constant="38" id="z5Z-9Q-WPz"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R5V-83-TdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1445.5" y="1047.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kGC-e7-jqq">
+            <objects>
+                <viewController id="qXy-6d-WZl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D9q-lq-xVN"/>
+                        <viewControllerLayoutGuide type="bottom" id="h3W-rb-gVH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FvT-QQ-nZd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YSy-Vb-Hed">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="First Affirmative Prep" id="0Ju-sd-mzB"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rjs-V2-UhN">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Back" id="ofw-j0-yLh">
+                                        <connections>
+                                            <segue destination="SMI-32-zKO" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="WkW-qg-X7s"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="W63-AQ-8P7"/>
+                                    <barButtonItem title="Home" id="Ecu-XH-tKr">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="ucC-ed-NAJ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="a2S-jx-djL"/>
+                                    <barButtonItem title="1AR" id="NSg-R4-p0N">
+                                        <connections>
+                                            <segue destination="4xM-QE-qOQ" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="ZKo-7R-uTp"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ef-xe-Blr">
+                                <rect key="frame" x="56" y="217" width="74" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="Pdc-BJ-orn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Reset"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUy-X3-c0A">
+                                <rect key="frame" x="254" y="217" width="67" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="lXc-Ki-75R"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFN-yR-VR7">
+                                <rect key="frame" x="20" y="49" width="335" height="117"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="80"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YSy-Vb-Hed" firstAttribute="leading" secondItem="FvT-QQ-nZd" secondAttribute="leadingMargin" constant="-20" id="Bkc-5C-6ar"/>
+                            <constraint firstItem="h3W-rb-gVH" firstAttribute="top" secondItem="Rjs-V2-UhN" secondAttribute="bottom" id="ByJ-d7-RJc"/>
+                            <constraint firstItem="BFN-yR-VR7" firstAttribute="leading" secondItem="FvT-QQ-nZd" secondAttribute="leadingMargin" id="Lhd-us-sTB"/>
+                            <constraint firstItem="9Ef-xe-Blr" firstAttribute="leading" secondItem="FvT-QQ-nZd" secondAttribute="leadingMargin" constant="40" id="TOP-39-u2e"/>
+                            <constraint firstItem="9Ef-xe-Blr" firstAttribute="baseline" secondItem="mUy-X3-c0A" secondAttribute="baseline" id="ZxO-I9-hHT"/>
+                            <constraint firstItem="YSy-Vb-Hed" firstAttribute="top" secondItem="FvT-QQ-nZd" secondAttribute="topMargin" id="axR-dR-1UG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rjs-V2-UhN" secondAttribute="trailing" constant="-20" id="hPY-Zc-n2l"/>
+                            <constraint firstItem="BFN-yR-VR7" firstAttribute="top" secondItem="YSy-Vb-Hed" secondAttribute="bottom" constant="5" id="iee-Uq-H6T"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mUy-X3-c0A" secondAttribute="trailing" constant="38" id="lMU-Dy-O0J"/>
+                            <constraint firstItem="9Ef-xe-Blr" firstAttribute="top" secondItem="FvT-QQ-nZd" secondAttribute="top" constant="217" id="srL-nY-6g2"/>
+                            <constraint firstItem="Rjs-V2-UhN" firstAttribute="leading" secondItem="FvT-QQ-nZd" secondAttribute="leadingMargin" constant="-20" id="thh-3z-Oi3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YSy-Vb-Hed" secondAttribute="trailing" constant="-20" id="wJD-kP-BEZ"/>
+                            <constraint firstItem="9Ef-xe-Blr" firstAttribute="top" secondItem="BFN-yR-VR7" secondAttribute="bottom" constant="51" id="wZ0-ev-aIu"/>
+                            <constraint firstItem="BFN-yR-VR7" firstAttribute="trailing" secondItem="FvT-QQ-nZd" secondAttribute="trailingMargin" id="yTS-rf-bfd"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T33-Yi-WlY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1857.5" y="1047.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="raC-Bb-nLw">
+            <objects>
+                <viewController id="SMI-32-zKO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R72-cy-GDz"/>
+                        <viewControllerLayoutGuide type="bottom" id="uHL-hP-UaN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JOE-EP-D3q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lAp-Th-rO3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Second CX" id="xN3-3u-ava"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4EU-Hj-Ccr">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Back" id="hEz-Ub-6KM">
+                                        <connections>
+                                            <segue destination="mOA-rL-kGi" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="ICv-bb-LZi"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="F5M-PP-Z2b"/>
+                                    <barButtonItem title="Home" id="ym3-x2-dDq">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="srk-Km-PXW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="tOz-NK-q8J"/>
+                                    <barButtonItem title="CX" id="7pc-do-p6O">
+                                        <connections>
+                                            <segue destination="qXy-6d-WZl" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="hDX-pR-6s5"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ib2-UG-r3L">
+                                <rect key="frame" x="56" y="217" width="74" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="Lu2-lW-qlF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Reset"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hu4-8D-Pts">
+                                <rect key="frame" x="254" y="217" width="67" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="HzV-Ts-uI8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbP-oQ-Xnx">
+                                <rect key="frame" x="20" y="49" width="335" height="117"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="80"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ib2-UG-r3L" firstAttribute="top" secondItem="JOE-EP-D3q" secondAttribute="top" constant="217" id="9T8-0k-5DE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4EU-Hj-Ccr" secondAttribute="trailing" constant="-20" id="CZ2-k0-OCO"/>
+                            <constraint firstItem="Ib2-UG-r3L" firstAttribute="top" secondItem="dbP-oQ-Xnx" secondAttribute="bottom" constant="51" id="CnI-Wp-ewe"/>
+                            <constraint firstItem="lAp-Th-rO3" firstAttribute="leading" secondItem="JOE-EP-D3q" secondAttribute="leadingMargin" constant="-20" id="CzQ-tw-XO7"/>
+                            <constraint firstItem="Ib2-UG-r3L" firstAttribute="leading" secondItem="JOE-EP-D3q" secondAttribute="leadingMargin" constant="40" id="Djp-Me-kqv"/>
+                            <constraint firstItem="lAp-Th-rO3" firstAttribute="top" secondItem="JOE-EP-D3q" secondAttribute="topMargin" id="HFM-YX-1c8"/>
+                            <constraint firstItem="dbP-oQ-Xnx" firstAttribute="top" secondItem="lAp-Th-rO3" secondAttribute="bottom" constant="5" id="Qym-lm-BvP"/>
+                            <constraint firstItem="dbP-oQ-Xnx" firstAttribute="leading" secondItem="JOE-EP-D3q" secondAttribute="leadingMargin" id="Yj2-PT-R87"/>
+                            <constraint firstItem="uHL-hP-UaN" firstAttribute="top" secondItem="4EU-Hj-Ccr" secondAttribute="bottom" id="Z5Z-B5-pcP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lAp-Th-rO3" secondAttribute="trailing" constant="-20" id="ej3-RL-5Th"/>
+                            <constraint firstItem="Ib2-UG-r3L" firstAttribute="baseline" secondItem="Hu4-8D-Pts" secondAttribute="baseline" id="fmO-eD-9Mu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hu4-8D-Pts" secondAttribute="trailing" constant="38" id="frn-iI-fIu"/>
+                            <constraint firstItem="4EU-Hj-Ccr" firstAttribute="leading" secondItem="JOE-EP-D3q" secondAttribute="leadingMargin" constant="-20" id="fyI-8x-htI"/>
+                            <constraint firstItem="dbP-oQ-Xnx" firstAttribute="trailing" secondItem="JOE-EP-D3q" secondAttribute="trailingMargin" id="xZU-LW-DUR"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JyX-fU-iuY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1857.5" y="317.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bJ0-Qh-gLH">
+            <objects>
+                <viewController id="mOA-rL-kGi" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="esb-cc-PQQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="T2k-hJ-5pW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jA1-xL-MSB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hBu-Lj-I3J">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Negative Constructive" id="zdh-hR-8sJ"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="acX-eU-Skp">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Back" id="zNe-9s-zSY">
+                                        <connections>
+                                            <segue destination="aUp-9F-Wtf" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="myW-Jb-lDD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="kIf-gX-ewh"/>
+                                    <barButtonItem title="Home" id="o9M-YU-8uO">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="CEV-Nn-6Ws"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="8eT-N7-tvZ"/>
+                                    <barButtonItem title="CX" id="VUG-7R-ncQ">
+                                        <connections>
+                                            <segue destination="SMI-32-zKO" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="PuS-y4-GfJ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pX7-sx-7KQ">
+                                <rect key="frame" x="56" y="217" width="74" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="UxC-Rn-DcU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Reset"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALF-Ys-aIR">
+                                <rect key="frame" x="254" y="217" width="67" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="0eU-3x-1Qv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="7:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2En-Z1-CDa">
+                                <rect key="frame" x="20" y="49" width="335" height="117"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="80"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pX7-sx-7KQ" firstAttribute="top" secondItem="2En-Z1-CDa" secondAttribute="bottom" constant="51" id="4yI-y3-hJ7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="acX-eU-Skp" secondAttribute="trailing" constant="-20" id="8uJ-Ne-sej"/>
+                            <constraint firstItem="pX7-sx-7KQ" firstAttribute="baseline" secondItem="ALF-Ys-aIR" secondAttribute="baseline" id="9Dd-dV-a4r"/>
+                            <constraint firstItem="hBu-Lj-I3J" firstAttribute="leading" secondItem="jA1-xL-MSB" secondAttribute="leadingMargin" constant="-20" id="BSW-pr-Ueb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hBu-Lj-I3J" secondAttribute="trailing" constant="-20" id="BZc-08-OJM"/>
+                            <constraint firstItem="pX7-sx-7KQ" firstAttribute="top" secondItem="jA1-xL-MSB" secondAttribute="top" constant="217" id="DCP-L9-ENf"/>
+                            <constraint firstItem="T2k-hJ-5pW" firstAttribute="top" secondItem="acX-eU-Skp" secondAttribute="bottom" id="Q9t-Dl-KzC"/>
+                            <constraint firstItem="2En-Z1-CDa" firstAttribute="trailing" secondItem="jA1-xL-MSB" secondAttribute="trailingMargin" id="aDe-Qg-70x"/>
+                            <constraint firstItem="2En-Z1-CDa" firstAttribute="top" secondItem="hBu-Lj-I3J" secondAttribute="bottom" constant="5" id="d2h-xR-WmV"/>
+                            <constraint firstItem="2En-Z1-CDa" firstAttribute="leading" secondItem="jA1-xL-MSB" secondAttribute="leadingMargin" id="d4L-ai-2dG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ALF-Ys-aIR" secondAttribute="trailing" constant="38" id="jsT-ky-Xs6"/>
+                            <constraint firstItem="pX7-sx-7KQ" firstAttribute="leading" secondItem="jA1-xL-MSB" secondAttribute="leadingMargin" constant="40" id="oak-pc-QEt"/>
+                            <constraint firstItem="hBu-Lj-I3J" firstAttribute="top" secondItem="jA1-xL-MSB" secondAttribute="topMargin" id="srU-W3-pAX"/>
+                            <constraint firstItem="acX-eU-Skp" firstAttribute="leading" secondItem="jA1-xL-MSB" secondAttribute="leadingMargin" constant="-20" id="yfl-mY-d8h"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Lp-H1-akt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1445.5" y="317.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hEy-gc-ofU">
+            <objects>
+                <viewController id="aUp-9F-Wtf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EQO-os-Zdt"/>
+                        <viewControllerLayoutGuide type="bottom" id="5sn-hY-VXn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zQb-p1-Efh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uVy-bT-qad">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="First Negative Prep" id="uZ0-r4-jIN"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ijc-Fa-fiC">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Back" id="Pcl-J1-Je8">
+                                        <connections>
+                                            <segue destination="nPG-aG-nTi" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="Sx1-c7-v8h"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="FGi-2x-28M"/>
+                                    <barButtonItem title="Home" id="mti-Mc-3zg">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="19f-TJ-WFp"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="jQj-sL-lxw"/>
+                                    <barButtonItem title="NC" id="R3M-Ik-IpJ">
+                                        <connections>
+                                            <segue destination="mOA-rL-kGi" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="sLj-hC-Lwb"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOZ-yb-DTm">
+                                <rect key="frame" x="56" y="217" width="74" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="Qee-Xe-Nig"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Reset"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAF-mb-H6m">
+                                <rect key="frame" x="254" y="217" width="67" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="utN-3B-76K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTE-6Y-JBE">
+                                <rect key="frame" x="20" y="49" width="335" height="117"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="80"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uVy-bT-qad" firstAttribute="top" secondItem="zQb-p1-Efh" secondAttribute="topMargin" id="5t9-bJ-eGg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uVy-bT-qad" secondAttribute="trailing" constant="-20" id="Edq-de-4yi"/>
+                            <constraint firstItem="UTE-6Y-JBE" firstAttribute="leading" secondItem="zQb-p1-Efh" secondAttribute="leadingMargin" id="Gn4-ax-U93"/>
+                            <constraint firstItem="5sn-hY-VXn" firstAttribute="top" secondItem="ijc-Fa-fiC" secondAttribute="bottom" id="WLl-TR-7A3"/>
+                            <constraint firstItem="SOZ-yb-DTm" firstAttribute="top" secondItem="zQb-p1-Efh" secondAttribute="top" constant="217" id="cLg-jQ-eMz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ijc-Fa-fiC" secondAttribute="trailing" constant="-20" id="dd5-f4-zey"/>
+                            <constraint firstItem="ijc-Fa-fiC" firstAttribute="leading" secondItem="zQb-p1-Efh" secondAttribute="leadingMargin" constant="-20" id="e9W-UY-y1X"/>
+                            <constraint firstItem="UTE-6Y-JBE" firstAttribute="trailing" secondItem="zQb-p1-Efh" secondAttribute="trailingMargin" id="eAQ-Hd-0fZ"/>
+                            <constraint firstItem="SOZ-yb-DTm" firstAttribute="leading" secondItem="zQb-p1-Efh" secondAttribute="leadingMargin" constant="40" id="fGW-cj-Mof"/>
+                            <constraint firstItem="uVy-bT-qad" firstAttribute="leading" secondItem="zQb-p1-Efh" secondAttribute="leadingMargin" constant="-20" id="jim-NL-2WR"/>
+                            <constraint firstItem="SOZ-yb-DTm" firstAttribute="baseline" secondItem="lAF-mb-H6m" secondAttribute="baseline" id="jv6-FZ-iIU"/>
+                            <constraint firstItem="UTE-6Y-JBE" firstAttribute="top" secondItem="uVy-bT-qad" secondAttribute="bottom" constant="5" id="meh-bx-b8F"/>
+                            <constraint firstItem="SOZ-yb-DTm" firstAttribute="top" secondItem="UTE-6Y-JBE" secondAttribute="bottom" constant="51" id="nfG-ZO-zim"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lAF-mb-H6m" secondAttribute="trailing" constant="38" id="yJn-Nu-8Fl"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OPX-DW-Fw2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1013.5" y="317.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="SX4-dP-jeY">
+            <objects>
+                <viewController id="nPG-aG-nTi" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cLG-ae-iSM"/>
+                        <viewControllerLayoutGuide type="bottom" id="d3g-aA-GT6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Rn-Ph-FbW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VUZ-vj-uQP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="First CX" id="ySO-GY-3nP"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vWS-DA-j3a">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Back" id="dpl-D0-IM8">
+                                        <connections>
+                                            <segue destination="cxg-Oe-u2a" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="7M1-xH-7ca"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="b6y-RG-sre"/>
+                                    <barButtonItem title="Home" id="U07-1c-yE9">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="Y1T-Ea-doo"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="cCi-g3-12I"/>
+                                    <barButtonItem title="Neg Prep" id="ys5-UU-yIY">
+                                        <connections>
+                                            <segue destination="aUp-9F-Wtf" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="Lpq-lL-Ypu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9r-Dk-81o">
+                                <rect key="frame" x="56" y="217" width="74" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="DCa-QL-Odo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Reset"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlD-SH-WVt">
+                                <rect key="frame" x="254" y="217" width="67" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="p5D-PB-gVf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CnT-MW-DoW">
+                                <rect key="frame" x="20" y="49" width="335" height="117"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="80"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="R9r-Dk-81o" firstAttribute="leading" secondItem="4Rn-Ph-FbW" secondAttribute="leadingMargin" constant="40" id="0ji-H6-Hha"/>
+                            <constraint firstItem="CnT-MW-DoW" firstAttribute="top" secondItem="VUZ-vj-uQP" secondAttribute="bottom" constant="5" id="3Ka-2a-XDL"/>
+                            <constraint firstItem="VUZ-vj-uQP" firstAttribute="top" secondItem="4Rn-Ph-FbW" secondAttribute="topMargin" id="7IE-Ec-Eya"/>
+                            <constraint firstItem="CnT-MW-DoW" firstAttribute="leading" secondItem="4Rn-Ph-FbW" secondAttribute="leadingMargin" id="9CB-lK-qid"/>
+                            <constraint firstItem="R9r-Dk-81o" firstAttribute="baseline" secondItem="XlD-SH-WVt" secondAttribute="baseline" id="F0D-Sg-40D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vWS-DA-j3a" secondAttribute="trailing" constant="-20" id="MBh-NB-RnP"/>
+                            <constraint firstItem="vWS-DA-j3a" firstAttribute="leading" secondItem="4Rn-Ph-FbW" secondAttribute="leadingMargin" constant="-20" id="PRv-iY-g2s"/>
+                            <constraint firstItem="CnT-MW-DoW" firstAttribute="trailing" secondItem="4Rn-Ph-FbW" secondAttribute="trailingMargin" id="Pxs-wz-Q1p"/>
+                            <constraint firstItem="R9r-Dk-81o" firstAttribute="top" secondItem="4Rn-Ph-FbW" secondAttribute="top" constant="217" id="ToQ-Yr-FOA"/>
+                            <constraint firstItem="VUZ-vj-uQP" firstAttribute="leading" secondItem="4Rn-Ph-FbW" secondAttribute="leadingMargin" constant="-20" id="YUt-qE-NBt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VUZ-vj-uQP" secondAttribute="trailing" constant="-20" id="dVZ-An-ZVN"/>
+                            <constraint firstItem="R9r-Dk-81o" firstAttribute="top" secondItem="CnT-MW-DoW" secondAttribute="bottom" constant="51" id="nLg-ix-CCn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XlD-SH-WVt" secondAttribute="trailing" constant="38" id="pJC-GX-wbK"/>
+                            <constraint firstItem="d3g-aA-GT6" firstAttribute="top" secondItem="vWS-DA-j3a" secondAttribute="bottom" id="taV-uo-qEx"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Luh-jk-MdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-593.5" y="317.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xz4-bc-laK">
+            <objects>
+                <viewController id="96r-WU-pqI" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9aL-o5-PJK"/>
+                        <viewControllerLayoutGuide type="bottom" id="BbO-S9-kWQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ez5-IL-R3a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UmO-5g-egh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Second Affirmative Rebuttal" id="jan-5V-6J6"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cBq-ax-0GD">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Back" id="9Uh-Ii-VtO">
+                                        <connections>
+                                            <segue destination="sqa-oz-cny" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="BEi-Ds-bG6"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="y1o-W7-NhO"/>
+                                    <barButtonItem title="Home" id="uQ5-pF-bo4">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="kAD-5j-Gy7"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yu3-jw-gjn">
+                                <rect key="frame" x="56" y="217" width="74" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="HI6-jP-dAD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Reset"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAU-wm-Eae">
+                                <rect key="frame" x="254" y="217" width="67" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="7If-Hg-sVS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKX-xW-hcG">
+                                <rect key="frame" x="20" y="49" width="335" height="117"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="80"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yu3-jw-gjn" firstAttribute="top" secondItem="Ez5-IL-R3a" secondAttribute="top" constant="217" id="6WX-mh-Ana"/>
+                            <constraint firstItem="yu3-jw-gjn" firstAttribute="leading" secondItem="Ez5-IL-R3a" secondAttribute="leadingMargin" constant="40" id="6iC-9z-LaQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cAU-wm-Eae" secondAttribute="trailing" constant="38" id="AiW-iO-cci"/>
+                            <constraint firstItem="yu3-jw-gjn" firstAttribute="top" secondItem="EKX-xW-hcG" secondAttribute="bottom" constant="51" id="HYa-xj-UTm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UmO-5g-egh" secondAttribute="trailing" constant="-20" id="OGC-4u-rJS"/>
+                            <constraint firstItem="cBq-ax-0GD" firstAttribute="leading" secondItem="Ez5-IL-R3a" secondAttribute="leadingMargin" constant="-20" id="Okt-0k-nRL"/>
+                            <constraint firstItem="UmO-5g-egh" firstAttribute="top" secondItem="Ez5-IL-R3a" secondAttribute="topMargin" id="Xqp-fc-Wzc"/>
+                            <constraint firstItem="BbO-S9-kWQ" firstAttribute="top" secondItem="cBq-ax-0GD" secondAttribute="bottom" id="Zfq-7p-Bjm"/>
+                            <constraint firstItem="EKX-xW-hcG" firstAttribute="top" secondItem="UmO-5g-egh" secondAttribute="bottom" constant="5" id="alA-1u-BfG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cBq-ax-0GD" secondAttribute="trailing" constant="-20" id="dpN-BU-gAR"/>
+                            <constraint firstItem="EKX-xW-hcG" firstAttribute="leading" secondItem="Ez5-IL-R3a" secondAttribute="leadingMargin" id="e8f-C0-m9h"/>
+                            <constraint firstItem="EKX-xW-hcG" firstAttribute="trailing" secondItem="Ez5-IL-R3a" secondAttribute="trailingMargin" id="hkr-h7-2In"/>
+                            <constraint firstItem="yu3-jw-gjn" firstAttribute="baseline" secondItem="cAU-wm-Eae" secondAttribute="baseline" id="ilN-Ij-f7B"/>
+                            <constraint firstItem="UmO-5g-egh" firstAttribute="leading" secondItem="Ez5-IL-R3a" secondAttribute="leadingMargin" constant="-20" id="zmH-dr-aM7"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m2r-Dm-NKf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="313.5" y="1047.5"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="IjN-yw-Ky9"/>
-        <segue reference="NzO-uh-L5O"/>
-        <segue reference="bBc-hd-C9c"/>
+        <segue reference="BeR-tj-cQl"/>
+        <segue reference="ZKo-7R-uTp"/>
+        <segue reference="hDX-pR-6s5"/>
+        <segue reference="PuS-y4-GfJ"/>
+        <segue reference="sLj-hC-Lwb"/>
+        <segue reference="Lpq-lL-Ypu"/>
+        <segue reference="Sx1-c7-v8h"/>
+        <segue reference="7M1-xH-7ca"/>
+        <segue reference="Y1T-Ea-doo"/>
+        <segue reference="0DX-vx-3ZX"/>
+        <segue reference="2Yx-Oc-HgT"/>
+        <segue reference="otO-Q0-iDR"/>
+        <segue reference="MjL-PN-ZPl"/>
+        <segue reference="yqs-Ih-iwu"/>
+        <segue reference="v8w-Ss-jRj"/>
+        <segue reference="0lp-w5-jJr"/>
+        <segue reference="IGg-dS-Sax"/>
+        <segue reference="WD6-l3-75v"/>
+        <segue reference="Q12-hZ-zJ8"/>
         <segue reference="cO3-tf-XLy"/>
         <segue reference="KGd-6o-0Wm"/>
         <segue reference="SyV-ij-dqY"/>
-        <segue reference="wyJ-pZ-gBG"/>
-        <segue reference="Q12-hZ-zJ8"/>
-        <segue reference="WD6-l3-75v"/>
-        <segue reference="IGg-dS-Sax"/>
-        <segue reference="0lp-w5-jJr"/>
-        <segue reference="v8w-Ss-jRj"/>
-        <segue reference="KEA-1j-VSb"/>
-        <segue reference="U2w-Y9-L1U"/>
+        <segue reference="UR2-en-cqP"/>
+        <segue reference="bBc-hd-C9c"/>
+        <segue reference="NzO-uh-L5O"/>
+        <segue reference="bDe-iV-QHk"/>
         <segue reference="QsN-RF-Obo"/>
-        <segue reference="rwI-1K-ZEl"/>
-        <segue reference="2Yx-Oc-HgT"/>
-        <segue reference="Nru-qd-tTO"/>
-        <segue reference="otO-Q0-iDR"/>
+        <segue reference="nKy-ns-JlV"/>
+        <segue reference="BEi-Ds-bG6"/>
     </inferredMetricsTieBreakers>
 </document>
