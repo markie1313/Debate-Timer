@@ -1988,10 +1988,10 @@
             </objects>
             <point key="canvasLocation" x="8297.5" y="311.5"/>
         </scene>
-        <!--View Controller-->
+        <!--View ControllerLD Aff Prep2-->
         <scene sceneID="8WC-Ui-1FK">
             <objects>
-                <viewController id="sqa-oz-cny" sceneMemberID="viewController">
+                <viewController id="sqa-oz-cny" customClass="ViewControllerLDAffPrep2" customModule="Debate_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oOK-6Q-Bfg"/>
                         <viewControllerLayoutGuide type="bottom" id="obU-QU-xMh"/>
@@ -2075,10 +2075,10 @@
             </objects>
             <point key="canvasLocation" x="-159.5" y="1047.5"/>
         </scene>
-        <!--View Controller-->
+        <!--View ControllerLDNR-->
         <scene sceneID="tiT-S3-XmE">
             <objects>
-                <viewController id="kO7-zf-P6l" sceneMemberID="viewController">
+                <viewController id="kO7-zf-P6l" customClass="ViewControllerLDNR" customModule="Debate_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="m80-pG-chJ"/>
                         <viewControllerLayoutGuide type="bottom" id="8Dv-Xz-43I"/>
@@ -2162,10 +2162,10 @@
             </objects>
             <point key="canvasLocation" x="-593.5" y="1047.5"/>
         </scene>
-        <!--View Controller-->
+        <!--View ControllerLD Neg Prep2-->
         <scene sceneID="Seh-3q-HG9">
             <objects>
-                <viewController id="dka-o2-oBf" sceneMemberID="viewController">
+                <viewController id="dka-o2-oBf" customClass="ViewControllerLDNegPrep2" customModule="Debate_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gnB-rZ-X3R"/>
                         <viewControllerLayoutGuide type="bottom" id="Xgw-zr-A31"/>
@@ -2249,10 +2249,10 @@
             </objects>
             <point key="canvasLocation" x="-1013.5" y="1047.5"/>
         </scene>
-        <!--View Controller-->
+        <!--View ControllerLDAR1-->
         <scene sceneID="AKp-9f-Hbe">
             <objects>
-                <viewController id="4xM-QE-qOQ" sceneMemberID="viewController">
+                <viewController id="4xM-QE-qOQ" customClass="ViewControllerLDAR1" customModule="Debate_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YL1-iK-ulx"/>
                         <viewControllerLayoutGuide type="bottom" id="iOv-qU-Kgl"/>
@@ -2336,10 +2336,10 @@
             </objects>
             <point key="canvasLocation" x="-1445.5" y="1047.5"/>
         </scene>
-        <!--View Controller-->
+        <!--View ControllerLD Aff Prep1-->
         <scene sceneID="kGC-e7-jqq">
             <objects>
-                <viewController id="qXy-6d-WZl" sceneMemberID="viewController">
+                <viewController id="qXy-6d-WZl" customClass="ViewControllerLDAffPrep1" customModule="Debate_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="D9q-lq-xVN"/>
                         <viewControllerLayoutGuide type="bottom" id="h3W-rb-gVH"/>
@@ -2423,10 +2423,10 @@
             </objects>
             <point key="canvasLocation" x="-1857.5" y="1047.5"/>
         </scene>
-        <!--View Controller-->
+        <!--View ControllerLD2CX-->
         <scene sceneID="raC-Bb-nLw">
             <objects>
-                <viewController id="SMI-32-zKO" sceneMemberID="viewController">
+                <viewController id="SMI-32-zKO" customClass="ViewControllerLD2CX" customModule="Debate_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="R72-cy-GDz"/>
                         <viewControllerLayoutGuide type="bottom" id="uHL-hP-UaN"/>
@@ -2510,10 +2510,10 @@
             </objects>
             <point key="canvasLocation" x="-1857.5" y="317.5"/>
         </scene>
-        <!--View Controller-->
+        <!--View ControllerLDNC-->
         <scene sceneID="bJ0-Qh-gLH">
             <objects>
-                <viewController id="mOA-rL-kGi" sceneMemberID="viewController">
+                <viewController id="mOA-rL-kGi" customClass="ViewControllerLDNC" customModule="Debate_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="esb-cc-PQQ"/>
                         <viewControllerLayoutGuide type="bottom" id="T2k-hJ-5pW"/>
@@ -2597,10 +2597,10 @@
             </objects>
             <point key="canvasLocation" x="-1445.5" y="317.5"/>
         </scene>
-        <!--View Controller-->
+        <!--View ControllerLD Neg Prep1-->
         <scene sceneID="hEy-gc-ofU">
             <objects>
-                <viewController id="aUp-9F-Wtf" sceneMemberID="viewController">
+                <viewController id="aUp-9F-Wtf" customClass="ViewControllerLDNegPrep1" customModule="Debate_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EQO-os-Zdt"/>
                         <viewControllerLayoutGuide type="bottom" id="5sn-hY-VXn"/>
@@ -2684,10 +2684,10 @@
             </objects>
             <point key="canvasLocation" x="-1013.5" y="317.5"/>
         </scene>
-        <!--View Controller-->
+        <!--View ControllerLD1CX-->
         <scene sceneID="SX4-dP-jeY">
             <objects>
-                <viewController id="nPG-aG-nTi" sceneMemberID="viewController">
+                <viewController id="nPG-aG-nTi" customClass="ViewControllerLD1CX" customModule="Debate_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cLG-ae-iSM"/>
                         <viewControllerLayoutGuide type="bottom" id="d3g-aA-GT6"/>
@@ -2771,10 +2771,10 @@
             </objects>
             <point key="canvasLocation" x="-593.5" y="317.5"/>
         </scene>
-        <!--View Controller-->
+        <!--View ControllerLDAR2-->
         <scene sceneID="xz4-bc-laK">
             <objects>
-                <viewController id="96r-WU-pqI" sceneMemberID="viewController">
+                <viewController id="96r-WU-pqI" customClass="ViewControllerLDAR2" customModule="Debate_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9aL-o5-PJK"/>
                         <viewControllerLayoutGuide type="bottom" id="BbO-S9-kWQ"/>
@@ -2862,26 +2862,26 @@
         <segue reference="Lpq-lL-Ypu"/>
         <segue reference="Sx1-c7-v8h"/>
         <segue reference="7M1-xH-7ca"/>
-        <segue reference="Y1T-Ea-doo"/>
-        <segue reference="0DX-vx-3ZX"/>
-        <segue reference="2Yx-Oc-HgT"/>
-        <segue reference="otO-Q0-iDR"/>
         <segue reference="MjL-PN-ZPl"/>
-        <segue reference="yqs-Ih-iwu"/>
+        <segue reference="KEA-1j-VSb"/>
         <segue reference="v8w-Ss-jRj"/>
-        <segue reference="0lp-w5-jJr"/>
-        <segue reference="IGg-dS-Sax"/>
-        <segue reference="WD6-l3-75v"/>
-        <segue reference="Q12-hZ-zJ8"/>
         <segue reference="cO3-tf-XLy"/>
         <segue reference="KGd-6o-0Wm"/>
         <segue reference="SyV-ij-dqY"/>
-        <segue reference="UR2-en-cqP"/>
+        <segue reference="wyJ-pZ-gBG"/>
+        <segue reference="Q12-hZ-zJ8"/>
+        <segue reference="oeA-17-VbV"/>
         <segue reference="bBc-hd-C9c"/>
         <segue reference="NzO-uh-L5O"/>
         <segue reference="bDe-iV-QHk"/>
         <segue reference="QsN-RF-Obo"/>
         <segue reference="nKy-ns-JlV"/>
         <segue reference="BEi-Ds-bG6"/>
+        <segue reference="kAD-5j-Gy7"/>
+        <segue reference="otO-Q0-iDR"/>
+        <segue reference="2Yx-Oc-HgT"/>
+        <segue reference="rwI-1K-ZEl"/>
+        <segue reference="IGg-dS-Sax"/>
+        <segue reference="ujg-g8-PZQ"/>
     </inferredMetricsTieBreakers>
 </document>
