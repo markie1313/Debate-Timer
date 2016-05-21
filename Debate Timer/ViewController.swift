@@ -2270,7 +2270,7 @@ class ViewControllerLDNegPrep1: UIViewController {
     
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
-            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateStopwatch"), userInfo: nil, repeats: true)
+            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
             startStopButton.setTitle("Stop", forState: .Normal)
         } else {
@@ -2335,14 +2335,6 @@ class ViewControllerLDNegPrep1: UIViewController {
             newTimer.seconds = Int(negPrepSec as! String)!
             timerText.text = "\(negPrepMin):\(negPrepSec)"
         }
-
-        /*
-        originalPrepMin = Int(negPrepMin as! String)!
-        originalPrepSec = Int(negPrepSec as! String)!
-        timerText.text = "\(negPrepMin):\(negPrepSec)"
-        newTimer.minutes = Int(negPrepMin as! String)!
-        newTimer.seconds = Int(negPrepSec as! String)!
- */
     }
     
     func updateStopwatch() {
@@ -2538,7 +2530,14 @@ class ViewControllerLD2CX: UIViewController {
         timerText.text = newTimer.updateStopwatch()
     }
     
-    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "goNext" {
+            let svc = segue.destinationViewController as! ViewControllerLDAffPrep1
+            svc.isNew = "yes"
+        }
+    }
+    
+   override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "goHome" || identifier == "goBack" || identifier == "goNext" {
             if newTimer.startStopwatch == false {
                 var alert:UIAlertController?
@@ -2567,9 +2566,10 @@ class ViewControllerLDAffPrep1: UIViewController {
     var affPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("affPrepMin")!
     var affPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("affPrepSec")!
     var newTimer = StopWatch2(isNegPrep: false, isAffPrep: true)
-    var timerMinutes: Int = 4
-    var timerLabel: String = "5:00"
-    var originalPrepMin: Int = 4
+    var isNew : String! = ""
+    var timerMinutes: Int = 2
+    var timerLabel: String = "3:00"
+    var originalPrepMin: Int = 2
     var originalPrepSec: Int = 60
     
     @IBOutlet var timerText: UILabel!
@@ -2632,11 +2632,16 @@ class ViewControllerLDAffPrep1: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        originalPrepMin = Int(affPrepMin as! String)!
-        originalPrepSec = Int(affPrepSec as! String)!
-        timerText.text = "\(affPrepMin):\(affPrepSec)"
-        newTimer.minutes = Int(affPrepMin as! String)!
-        newTimer.seconds = Int(affPrepSec as! String)!
+        if isNew == "yes" {
+            newTimer.minutes = 2
+            newTimer.seconds = 60
+        } else {
+            var affPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("affPrepMin")!
+            var affPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("affPrepSec")!
+            newTimer.minutes = Int(affPrepMin as! String)!
+            newTimer.seconds = Int(affPrepSec as! String)!
+            timerText.text = "\(affPrepMin):\(affPrepSec)"
+        }
     }
     
     func updateStopwatch() {
