@@ -2129,7 +2129,7 @@ class ViewControllerLDAC: UIViewController {
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
-        if identifier == "goHome" || identifier == "goBack" {
+        if identifier == "goHome" || identifier == "goBack" || identifier == "goNext" {
             if newTimer.startStopwatch == false {
                 var alert:UIAlertController?
                 alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
@@ -2223,6 +2223,13 @@ class ViewControllerLD1CX: UIViewController {
         timerText.text = newTimer.updateStopwatch()
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "goNext" {
+            let svc = segue.destinationViewController as! ViewControllerLDNegPrep1
+            svc.isNew = "yes"
+        }
+    }
+
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "goHome" || identifier == "goBack" || identifier == "goNext" {
             if newTimer.startStopwatch == false {
@@ -2252,9 +2259,10 @@ class ViewControllerLDNegPrep1: UIViewController {
     var negPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("negPrepMin")!
     var negPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("negPrepSec")!
     var newTimer = StopWatch2(isNegPrep: true, isAffPrep: false)
-    var timerMinutes: Int = 4
-    var timerLabel: String = "5:00"
-    var originalPrepMin: Int = 4
+    var isNew: String! = ""
+    var timerMinutes: Int = 2
+    var timerLabel: String = "3:00"
+    var originalPrepMin: Int = 2
     var originalPrepSec: Int = 60
     
     @IBOutlet var timerText: UILabel!
@@ -2317,11 +2325,24 @@ class ViewControllerLDNegPrep1: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if isNew == "yes" {
+            newTimer.minutes = 2
+            newTimer.seconds = 60
+        } else {
+            var negPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("negPrepMin")!
+            var negPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("negPrepSec")!
+            newTimer.minutes = Int(negPrepMin as! String)!
+            newTimer.seconds = Int(negPrepSec as! String)!
+            timerText.text = "\(negPrepMin):\(negPrepSec)"
+        }
+
+        /*
         originalPrepMin = Int(negPrepMin as! String)!
         originalPrepSec = Int(negPrepSec as! String)!
         timerText.text = "\(negPrepMin):\(negPrepSec)"
         newTimer.minutes = Int(negPrepMin as! String)!
         newTimer.seconds = Int(negPrepSec as! String)!
+ */
     }
     
     func updateStopwatch() {

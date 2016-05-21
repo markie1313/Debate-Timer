@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -8,10 +8,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View ControllerLDAC-->
         <scene sceneID="fc5-kM-ois">
             <objects>
-                <viewController id="cxg-Oe-u2a" sceneMemberID="viewController">
+                <viewController id="cxg-Oe-u2a" customClass="ViewControllerLDAC" customModule="Debate_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TF0-Ul-Rue"/>
                         <viewControllerLayoutGuide type="bottom" id="3kw-ss-dPJ"/>
@@ -31,19 +31,19 @@
                                 <items>
                                     <barButtonItem title="Back" id="emE-8n-k0n">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="JJL-vQ-8bc"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="JJL-vQ-8bc"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="LNi-WQ-5SN"/>
                                     <barButtonItem title="Home" id="Z0T-tq-iuM">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="fwQ-od-Y7n"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="fwQ-od-Y7n"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="r0k-1Z-sTh"/>
                                     <barButtonItem title="CX" id="fIs-nP-gYm">
                                         <connections>
-                                            <segue destination="nPG-aG-nTi" kind="presentation" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="MdN-38-MOa"/>
+                                            <segue destination="nPG-aG-nTi" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="MdN-38-MOa"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -55,6 +55,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetTimer:" destination="cxg-Oe-u2a" eventType="touchUpInside" id="iwA-GN-57c"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="seF-kg-DzA">
                                 <rect key="frame" x="254" y="217" width="67" height="36"/>
@@ -63,6 +66,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startStopTimer:" destination="cxg-Oe-u2a" eventType="touchUpInside" id="nWB-fs-Rwz"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="6:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWt-DW-ctw">
                                 <rect key="frame" x="20" y="49" width="335" height="117"/>
@@ -90,6 +96,10 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="startStopButton" destination="seF-kg-DzA" id="yhM-11-hZp"/>
+                        <outlet property="timerText" destination="yWt-DW-ctw" id="Xbt-S5-9Dx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4MO-XT-Hph" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2035,6 +2045,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetTimer:" destination="sqa-oz-cny" eventType="touchUpInside" id="f0b-ti-uhg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZj-rK-9im">
                                 <rect key="frame" x="254" y="217" width="67" height="36"/>
@@ -2043,6 +2056,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startStopTimer:" destination="sqa-oz-cny" eventType="touchUpInside" id="rZ5-1P-weT"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iho-7U-Mzf">
                                 <rect key="frame" x="20" y="49" width="335" height="117"/>
@@ -2070,6 +2086,10 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="startStopButton" destination="jZj-rK-9im" id="Hgh-ao-fSx"/>
+                        <outlet property="timerText" destination="Iho-7U-Mzf" id="MH9-53-lYf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gno-PI-hSZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2122,6 +2142,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetTimer:" destination="kO7-zf-P6l" eventType="touchUpInside" id="RkS-45-blG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hcl-HN-2FM">
                                 <rect key="frame" x="254" y="217" width="67" height="36"/>
@@ -2130,6 +2153,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startStopTimer:" destination="kO7-zf-P6l" eventType="touchUpInside" id="WZg-FM-ed4"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="6:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YnA-yD-Wjn">
                                 <rect key="frame" x="20" y="49" width="335" height="117"/>
@@ -2157,6 +2183,10 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="startStopButton" destination="Hcl-HN-2FM" id="OxD-rP-6Vr"/>
+                        <outlet property="timerText" destination="YnA-yD-Wjn" id="9Q6-65-aEc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pjc-c1-JTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2209,6 +2239,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetTimer:" destination="dka-o2-oBf" eventType="touchUpInside" id="CiN-cO-pwW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3M-pP-FnF">
                                 <rect key="frame" x="254" y="217" width="67" height="36"/>
@@ -2217,6 +2250,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startStopTimer:" destination="dka-o2-oBf" eventType="touchUpInside" id="VJj-7v-0Rc"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ucz-a5-gVA">
                                 <rect key="frame" x="20" y="49" width="335" height="117"/>
@@ -2244,6 +2280,10 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="startStopButton" destination="C3M-pP-FnF" id="9AU-Dv-7fr"/>
+                        <outlet property="timerText" destination="Ucz-a5-gVA" id="P7G-is-7dE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F3Y-f4-I39" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2296,6 +2336,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetTimer:" destination="4xM-QE-qOQ" eventType="touchUpInside" id="btW-W3-gZy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZf-6n-Dra">
                                 <rect key="frame" x="254" y="217" width="67" height="36"/>
@@ -2304,6 +2347,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startStopTimer:" destination="4xM-QE-qOQ" eventType="touchUpInside" id="LZ2-sk-lHd"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="4:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ve8-43-5kp">
                                 <rect key="frame" x="20" y="49" width="335" height="117"/>
@@ -2331,6 +2377,10 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="startStopButton" destination="TZf-6n-Dra" id="paH-Bx-dhQ"/>
+                        <outlet property="timerText" destination="Ve8-43-5kp" id="d1d-eg-0gd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R5V-83-TdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2383,6 +2433,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetTimer:" destination="qXy-6d-WZl" eventType="touchUpInside" id="gim-a8-soh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUy-X3-c0A">
                                 <rect key="frame" x="254" y="217" width="67" height="36"/>
@@ -2391,6 +2444,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startStopTimer:" destination="qXy-6d-WZl" eventType="touchUpInside" id="hvj-mD-I9T"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFN-yR-VR7">
                                 <rect key="frame" x="20" y="49" width="335" height="117"/>
@@ -2418,6 +2474,10 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="startStopButton" destination="mUy-X3-c0A" id="mlB-bp-nr3"/>
+                        <outlet property="timerText" destination="BFN-yR-VR7" id="DXE-8t-We6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T33-Yi-WlY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2470,6 +2530,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetTimer:" destination="SMI-32-zKO" eventType="touchUpInside" id="cf7-Rq-rlW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hu4-8D-Pts">
                                 <rect key="frame" x="254" y="217" width="67" height="36"/>
@@ -2478,6 +2541,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startStopTimer:" destination="SMI-32-zKO" eventType="touchUpInside" id="yuZ-eL-dhi"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbP-oQ-Xnx">
                                 <rect key="frame" x="20" y="49" width="335" height="117"/>
@@ -2505,6 +2571,10 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="startStopButton" destination="Hu4-8D-Pts" id="g4n-Jc-RmN"/>
+                        <outlet property="timerText" destination="dbP-oQ-Xnx" id="fwo-vN-b67"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JyX-fU-iuY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2557,6 +2627,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetTimer:" destination="mOA-rL-kGi" eventType="touchUpInside" id="AAv-Su-GbS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALF-Ys-aIR">
                                 <rect key="frame" x="254" y="217" width="67" height="36"/>
@@ -2565,6 +2638,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startStopTimer:" destination="mOA-rL-kGi" eventType="touchUpInside" id="NFX-wU-GBd"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="7:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2En-Z1-CDa">
                                 <rect key="frame" x="20" y="49" width="335" height="117"/>
@@ -2592,6 +2668,10 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="startStopButton" destination="ALF-Ys-aIR" id="oP3-VE-eVR"/>
+                        <outlet property="timerText" destination="2En-Z1-CDa" id="j1F-IS-e9x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Lp-H1-akt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2644,6 +2724,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetTimer:" destination="aUp-9F-Wtf" eventType="touchUpInside" id="Xcd-wf-DTg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAF-mb-H6m">
                                 <rect key="frame" x="254" y="217" width="67" height="36"/>
@@ -2652,6 +2735,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startStopTimer:" destination="aUp-9F-Wtf" eventType="touchUpInside" id="VjM-8A-SxN"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTE-6Y-JBE">
                                 <rect key="frame" x="20" y="49" width="335" height="117"/>
@@ -2679,6 +2765,10 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="startStopButton" destination="lAF-mb-H6m" id="Iju-mX-eYp"/>
+                        <outlet property="timerText" destination="UTE-6Y-JBE" id="isi-Is-4nH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OPX-DW-Fw2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2731,6 +2821,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetTimer:" destination="nPG-aG-nTi" eventType="touchUpInside" id="yuz-Pv-dBH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlD-SH-WVt">
                                 <rect key="frame" x="254" y="217" width="67" height="36"/>
@@ -2739,6 +2832,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startStopTimer:" destination="nPG-aG-nTi" eventType="touchUpInside" id="nDR-hm-26D"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CnT-MW-DoW">
                                 <rect key="frame" x="20" y="49" width="335" height="117"/>
@@ -2766,6 +2862,10 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="startStopButton" destination="XlD-SH-WVt" id="jQw-v6-rOX"/>
+                        <outlet property="timerText" destination="CnT-MW-DoW" id="hUU-Pi-wpd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Luh-jk-MdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2812,6 +2912,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetTimer:" destination="96r-WU-pqI" eventType="touchUpInside" id="7uP-Wi-WKU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAU-wm-Eae">
                                 <rect key="frame" x="254" y="217" width="67" height="36"/>
@@ -2820,6 +2923,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startStopTimer:" destination="96r-WU-pqI" eventType="touchUpInside" id="96Y-fH-fdu"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKX-xW-hcG">
                                 <rect key="frame" x="20" y="49" width="335" height="117"/>
@@ -2847,6 +2953,10 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="startStopButton" destination="cAU-wm-Eae" id="flh-bd-ua1"/>
+                        <outlet property="timerText" destination="EKX-xW-hcG" id="Lig-Gr-7Y8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m2r-Dm-NKf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2854,34 +2964,34 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="BeR-tj-cQl"/>
-        <segue reference="ZKo-7R-uTp"/>
-        <segue reference="hDX-pR-6s5"/>
-        <segue reference="PuS-y4-GfJ"/>
-        <segue reference="sLj-hC-Lwb"/>
-        <segue reference="Lpq-lL-Ypu"/>
-        <segue reference="Sx1-c7-v8h"/>
-        <segue reference="7M1-xH-7ca"/>
-        <segue reference="MjL-PN-ZPl"/>
-        <segue reference="KEA-1j-VSb"/>
-        <segue reference="v8w-Ss-jRj"/>
+        <segue reference="NzO-uh-L5O"/>
+        <segue reference="bBc-hd-C9c"/>
         <segue reference="cO3-tf-XLy"/>
         <segue reference="KGd-6o-0Wm"/>
         <segue reference="SyV-ij-dqY"/>
         <segue reference="wyJ-pZ-gBG"/>
         <segue reference="Q12-hZ-zJ8"/>
         <segue reference="oeA-17-VbV"/>
-        <segue reference="bBc-hd-C9c"/>
-        <segue reference="NzO-uh-L5O"/>
+        <segue reference="7M1-xH-7ca"/>
+        <segue reference="MdN-38-MOa"/>
         <segue reference="bDe-iV-QHk"/>
         <segue reference="QsN-RF-Obo"/>
         <segue reference="nKy-ns-JlV"/>
-        <segue reference="BEi-Ds-bG6"/>
-        <segue reference="kAD-5j-Gy7"/>
+        <segue reference="IGg-dS-Sax"/>
+        <segue reference="ujg-g8-PZQ"/>
+        <segue reference="ucC-ed-NAJ"/>
+        <segue reference="hDX-pR-6s5"/>
+        <segue reference="WkW-qg-X7s"/>
+        <segue reference="ZKo-7R-uTp"/>
+        <segue reference="BeR-tj-cQl"/>
+        <segue reference="MjL-PN-ZPl"/>
         <segue reference="otO-Q0-iDR"/>
         <segue reference="2Yx-Oc-HgT"/>
         <segue reference="rwI-1K-ZEl"/>
-        <segue reference="IGg-dS-Sax"/>
-        <segue reference="ujg-g8-PZQ"/>
+        <segue reference="v8w-Ss-jRj"/>
+        <segue reference="KEA-1j-VSb"/>
+        <segue reference="BEi-Ds-bG6"/>
+        <segue reference="myW-Jb-lDD"/>
+        <segue reference="sLj-hC-Lwb"/>
     </inferredMetricsTieBreakers>
 </document>
