@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB9EEFA11D15B0C100A0E56E /* reset.png in Resources */ = {isa = PBXBuildFile; fileRef = EB9EEF9D1D15B0C100A0E56E /* reset.png */; };
+		EB9EEFA21D15B0C100A0E56E /* go.png in Resources */ = {isa = PBXBuildFile; fileRef = EB9EEF9E1D15B0C100A0E56E /* go.png */; };
+		EB9EEFA31D15B0C100A0E56E /* private-sign.png in Resources */ = {isa = PBXBuildFile; fileRef = EB9EEF9F1D15B0C100A0E56E /* private-sign.png */; };
+		EB9EEFA41D15B0C100A0E56E /* play-button.png in Resources */ = {isa = PBXBuildFile; fileRef = EB9EEFA01D15B0C100A0E56E /* play-button.png */; };
+		EB9EEFB71D16FA3200A0E56E /* forwardArrow3_opt.png in Resources */ = {isa = PBXBuildFile; fileRef = EB9EEFB51D16FA3200A0E56E /* forwardArrow3_opt.png */; };
+		EB9EEFB81D16FA3200A0E56E /* backArrow3_opt.png in Resources */ = {isa = PBXBuildFile; fileRef = EB9EEFB61D16FA3200A0E56E /* backArrow3_opt.png */; };
+		EB9EEFBC1D171BE200A0E56E /* home3.png in Resources */ = {isa = PBXBuildFile; fileRef = EB9EEFBB1D171BE200A0E56E /* home3.png */; };
 		EBDBA8F51CAD404B00F865A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBA8F41CAD404B00F865A4 /* AppDelegate.swift */; };
 		EBDBA8F71CAD404B00F865A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBA8F61CAD404B00F865A4 /* ViewController.swift */; };
 		EBDBA8FA1CAD404B00F865A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBDBA8F81CAD404B00F865A4 /* Main.storyboard */; };
@@ -17,6 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB9EEF9D1D15B0C100A0E56E /* reset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reset.png; sourceTree = "<group>"; };
+		EB9EEF9E1D15B0C100A0E56E /* go.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = go.png; sourceTree = "<group>"; };
+		EB9EEF9F1D15B0C100A0E56E /* private-sign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "private-sign.png"; sourceTree = "<group>"; };
+		EB9EEFA01D15B0C100A0E56E /* play-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-button.png"; sourceTree = "<group>"; };
+		EB9EEFB51D16FA3200A0E56E /* forwardArrow3_opt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forwardArrow3_opt.png; sourceTree = "<group>"; };
+		EB9EEFB61D16FA3200A0E56E /* backArrow3_opt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backArrow3_opt.png; sourceTree = "<group>"; };
+		EB9EEFBB1D171BE200A0E56E /* home3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home3.png; sourceTree = "<group>"; };
 		EBDBA8F11CAD404B00F865A4 /* Debate Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Debate Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBDBA8F41CAD404B00F865A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBDBA8F61CAD404B00F865A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +80,13 @@
 				EBDBA9001CAD404B00F865A4 /* Info.plist */,
 				EBF8F4E71CB2D65B00BF317B /* StopWatch2.swift */,
 				EBDBA9061CAD44D800F865A4 /* StopWatch.swift */,
+				EB9EEF9D1D15B0C100A0E56E /* reset.png */,
+				EB9EEF9E1D15B0C100A0E56E /* go.png */,
+				EB9EEF9F1D15B0C100A0E56E /* private-sign.png */,
+				EB9EEFA01D15B0C100A0E56E /* play-button.png */,
+				EB9EEFB51D16FA3200A0E56E /* forwardArrow3_opt.png */,
+				EB9EEFB61D16FA3200A0E56E /* backArrow3_opt.png */,
+				EB9EEFBB1D171BE200A0E56E /* home3.png */,
 			);
 			path = "Debate Timer";
 			sourceTree = "<group>";
@@ -129,8 +150,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB9EEFA21D15B0C100A0E56E /* go.png in Resources */,
+				EB9EEFB81D16FA3200A0E56E /* backArrow3_opt.png in Resources */,
+				EB9EEFBC1D171BE200A0E56E /* home3.png in Resources */,
+				EB9EEFA11D15B0C100A0E56E /* reset.png in Resources */,
 				EBDBA8FF1CAD404B00F865A4 /* LaunchScreen.storyboard in Resources */,
+				EB9EEFA41D15B0C100A0E56E /* play-button.png in Resources */,
 				EBDBA8FC1CAD404B00F865A4 /* Assets.xcassets in Resources */,
+				EB9EEFB71D16FA3200A0E56E /* forwardArrow3_opt.png in Resources */,
+				EB9EEFA31D15B0C100A0E56E /* private-sign.png in Resources */,
 				EBDBA8FA1CAD404B00F865A4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,18 +10,18 @@ import UIKit
 import Foundation
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
 class ViewController1AC: UIViewController {
@@ -30,9 +30,11 @@ class ViewController1AC: UIViewController {
     @IBOutlet var timerText: UILabel!
     @IBOutlet var resetButton: UIButton!
     @IBOutlet var startStopButton: UIButton!
+    @IBOutlet var backButton: UIButton!
+    @IBOutlet var nextButton: UIButton!
     
     @IBAction func resetTimer(sender: AnyObject) {
-    
+        
         if newTimer.startStopwatch == true {
             
             newTimer.seconds = 60
@@ -41,37 +43,37 @@ class ViewController1AC: UIViewController {
             timerText.text = newTimer.stopWatchString
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
-
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
+            
         } else {
             
             var alertController:UIAlertController?
             alertController = UIAlertController(title: "Alert",
-                message: "Are you sure you want to reset?",
-                preferredStyle: .Alert)
+                                                message: "Are you sure you want to reset?",
+                                                preferredStyle: .Alert)
             
             let firstAction = UIAlertAction(title: "No",
-                style: UIAlertActionStyle.Cancel,
-                handler: nil
+                                            style: UIAlertActionStyle.Cancel,
+                                            handler: nil
             )
             
             let secondAction = UIAlertAction(title: "Yes",
-                style: UIAlertActionStyle.Default,
-                handler: {(paramAction:UIAlertAction!) in
-                    self.newTimer.seconds = 60
-                    self.newTimer.minutes = 7
-                    self.newTimer.stopWatchString = "8:00"
-                    self.timerText.text = self.newTimer.stopWatchString
-                    self.newTimer.timer.invalidate()
-                    self.newTimer.startStopwatch = true
-                    self.startStopButton.setTitle("Start", forState: .Normal)
+                                             style: UIAlertActionStyle.Default,
+                                             handler: {(paramAction:UIAlertAction!) in
+                                                self.newTimer.seconds = 60
+                                                self.newTimer.minutes = 7
+                                                self.newTimer.stopWatchString = "8:00"
+                                                self.timerText.text = self.newTimer.stopWatchString
+                                                self.newTimer.timer.invalidate()
+                                                self.newTimer.startStopwatch = true
+                                                self.startStopButton.setImage(UIImage(named:"go.png"), forState: .Normal)
             })
             
             alertController!.addAction(firstAction)
             alertController!.addAction(secondAction)
             self.presentViewController(alertController!,
-                animated: true,
-                completion: nil)
+                                       animated: true,
+                                       completion: nil)
         }
     }
     
@@ -79,9 +81,9 @@ class ViewController1AC: UIViewController {
         
         if newTimer.startStopwatch == true {
             
-            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateStopwatch"), userInfo: nil, repeats: true)
+            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
-            startStopButton.setTitle("Stop", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"private-sign.png"), forState: UIControlState.Normal)
             // if the button had an image, we would do:
             //startStopButton.setImage(UIImage(named: "whatever.jpt", forState: UIControlState.Normal)
             
@@ -90,20 +92,21 @@ class ViewController1AC: UIViewController {
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
             // If I was using an image for the button, I would maybe change it here...
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
+            //            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         }
-
+        
     }
     
     //Now, I’m going to have to add parameters to updateStopwatch so I can do the different times.
     //Actually, it looks good - all it does is update the existing values
     func updateStopwatch() {
         
-            timerText.text = newTimer.updateStopwatch()
-   
+        timerText.text = newTimer.updateStopwatch()
+        
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -111,22 +114,22 @@ class ViewController1AC: UIViewController {
         newTimer.seconds = 60
         timerText.text = "8:00"
     }
-  
+    
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
-        if identifier == "goBack" || identifier == "segue1CX" {
+        if identifier == "goBack" || identifier == "goNext" {
             if newTimer.startStopwatch == false {
                 var alert:UIAlertController?
                 alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
                 
                 let firstAction = UIAlertAction(title: "OK",
-                    style: UIAlertActionStyle.Cancel,
-                    handler: nil
+                                                style: UIAlertActionStyle.Cancel,
+                                                handler: nil
                 )
                 
                 alert!.addAction(firstAction)
                 self.presentViewController(alert!,
-                    animated: true,
-                    completion: nil)
+                                           animated: true,
+                                           completion: nil)
                 
             } else {
                 return true
@@ -134,7 +137,7 @@ class ViewController1AC: UIViewController {
         }
         return true
     }
-
+    
 }
 
 class ViewController1CX: UIViewController {
@@ -147,9 +150,9 @@ class ViewController1CX: UIViewController {
         
         if newTimer.startStopwatch == true {
             
-            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateStopwatch"), userInfo: nil, repeats: true)
+            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
-            startStopButton.setTitle("Stop", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"private-sign.png"), forState: UIControlState.Normal)
             // if the button had an image, we would do:
             //startStopButton.setImage(UIImage(named: "whatever.jpt", forState: UIControlState.Normal)
             
@@ -158,7 +161,8 @@ class ViewController1CX: UIViewController {
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
             // If I was using an image for the button, I would maybe change it here...
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
+            //            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         }
     }
@@ -172,37 +176,37 @@ class ViewController1CX: UIViewController {
             timerText.text = newTimer.stopWatchString
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         } else {
             
             var alertController:UIAlertController?
             alertController = UIAlertController(title: "Alert",
-                message: "Are you sure you want to reset?",
-                preferredStyle: .Alert)
+                                                message: "Are you sure you want to reset?",
+                                                preferredStyle: .Alert)
             
             let firstAction = UIAlertAction(title: "No",
-                style: UIAlertActionStyle.Cancel,
-                handler: nil
+                                            style: UIAlertActionStyle.Cancel,
+                                            handler: nil
             )
             
             let secondAction = UIAlertAction(title: "Yes",
-                style: UIAlertActionStyle.Default,
-                handler: {(paramAction:UIAlertAction!) in
-                    self.newTimer.seconds = 60
-                    self.newTimer.minutes = 2
-                    self.newTimer.stopWatchString = "3:00"
-                    self.timerText.text = self.newTimer.stopWatchString
-                    self.newTimer.timer.invalidate()
-                    self.newTimer.startStopwatch = true
-                    self.startStopButton.setTitle("Start", forState: .Normal)
+                                             style: UIAlertActionStyle.Default,
+                                             handler: {(paramAction:UIAlertAction!) in
+                                                self.newTimer.seconds = 60
+                                                self.newTimer.minutes = 2
+                                                self.newTimer.stopWatchString = "3:00"
+                                                self.timerText.text = self.newTimer.stopWatchString
+                                                self.newTimer.timer.invalidate()
+                                                self.newTimer.startStopwatch = true
+                                                self.startStopButton.setImage(UIImage(named:"go.png"), forState: .Normal)
             })
             
             alertController!.addAction(firstAction)
             alertController!.addAction(secondAction)
             self.presentViewController(alertController!,
-                animated: true,
-                completion: nil)
+                                       animated: true,
+                                       completion: nil)
         }
     }
     
@@ -218,6 +222,7 @@ class ViewController1CX: UIViewController {
         newTimer.minutes = 2
         newTimer.seconds = 60
         timerText.text = "3:00"
+        startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -234,14 +239,14 @@ class ViewController1CX: UIViewController {
                 alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
                 
                 let firstAction = UIAlertAction(title: "OK",
-                    style: UIAlertActionStyle.Cancel,
-                    handler: nil
+                                                style: UIAlertActionStyle.Cancel,
+                                                handler: nil
                 )
                 
                 alert!.addAction(firstAction)
                 self.presentViewController(alert!,
-                    animated: true,
-                    completion: nil)
+                                           animated: true,
+                                           completion: nil)
                 
             } else {
                 return true
@@ -249,7 +254,7 @@ class ViewController1CX: UIViewController {
         }
         return true
     }
-
+    
     
 }
 
@@ -263,22 +268,22 @@ class ViewControllerFirstNegPrep: UIViewController {
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
             
-            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateStopwatch"), userInfo: nil, repeats: true)
+            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
-            startStopButton.setTitle("Stop", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"private-sign.png"), forState: UIControlState.Normal)
             // if the button had an image, we would do:
             //startStopButton.setImage(UIImage(named: "whatever.jpt", forState: UIControlState.Normal)
             
         } else {
             
-            var negPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("negPrepMin")!
-            var negPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("negPrepSec")!
-
+            let negPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("negPrepMin")!
+            let negPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("negPrepSec")!
+            
             print("\(negPrepMin):\(negPrepSec)")
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
             // If I was using an image for the button, I would maybe change it here...
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         }
     }
@@ -293,44 +298,44 @@ class ViewControllerFirstNegPrep: UIViewController {
             timerText.text = newTimer.stopWatchString
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         } else {
             
             var alertController:UIAlertController?
             alertController = UIAlertController(title: "Alert",
-                message: "Are you sure you want to reset?",
-                preferredStyle: .Alert)
+                                                message: "Are you sure you want to reset?",
+                                                preferredStyle: .Alert)
             
             let firstAction = UIAlertAction(title: "No",
-                style: UIAlertActionStyle.Cancel,
-                handler: nil
+                                            style: UIAlertActionStyle.Cancel,
+                                            handler: nil
             )
             
             let secondAction = UIAlertAction(title: "Yes",
-                style: UIAlertActionStyle.Default,
-                handler: {(paramAction:UIAlertAction!) in
-                    self.newTimer.seconds = 60
-                    self.newTimer.minutes = 4
-                    self.newTimer.stopWatchString = "5:00"
-                    self.timerText.text = self.newTimer.stopWatchString
-                    self.newTimer.timer.invalidate()
-                    self.newTimer.startStopwatch = true
-                    self.startStopButton.setTitle("Start", forState: .Normal)
+                                             style: UIAlertActionStyle.Default,
+                                             handler: {(paramAction:UIAlertAction!) in
+                                                self.newTimer.seconds = 60
+                                                self.newTimer.minutes = 4
+                                                self.newTimer.stopWatchString = "5:00"
+                                                self.timerText.text = self.newTimer.stopWatchString
+                                                self.newTimer.timer.invalidate()
+                                                self.newTimer.startStopwatch = true
+                                                self.startStopButton.setImage(UIImage(named:"go.png"), forState: .Normal)
             })
             
             alertController!.addAction(firstAction)
             alertController!.addAction(secondAction)
             self.presentViewController(alertController!,
-                animated: true,
-                completion: nil)
+                                       animated: true,
+                                       completion: nil)
         }
     }
     
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -338,8 +343,8 @@ class ViewControllerFirstNegPrep: UIViewController {
             newTimer.minutes = 4
             newTimer.seconds = 60
         } else {
-            var negPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("negPrepMin")!
-            var negPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("negPrepSec")!
+            let negPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("negPrepMin")!
+            let negPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("negPrepSec")!
             newTimer.minutes = Int(negPrepMin as! String)!
             newTimer.seconds = Int(negPrepSec as! String)!
             timerText.text = "\(negPrepMin):\(negPrepSec)"
@@ -354,14 +359,14 @@ class ViewControllerFirstNegPrep: UIViewController {
                 alert = UIAlertController(title: "Timer Running", message: "Please stop Neg prep time.", preferredStyle: .Alert)
                 
                 let firstAction = UIAlertAction(title: "OK",
-                    style: UIAlertActionStyle.Cancel,
-                    handler: nil
+                                                style: UIAlertActionStyle.Cancel,
+                                                handler: nil
                 )
                 
                 alert!.addAction(firstAction)
                 self.presentViewController(alert!,
-                    animated: true,
-                    completion: nil)
+                                           animated: true,
+                                           completion: nil)
                 
             } else {
                 return true
@@ -373,7 +378,7 @@ class ViewControllerFirstNegPrep: UIViewController {
 
 class ViewController1NC: UIViewController {
     var newTimer = StopWatch2(isNegPrep: false, isAffPrep: false)
-
+    
     @IBOutlet var timerText: UILabel!
     
     @IBOutlet var startStopButton: UIButton!
@@ -381,9 +386,9 @@ class ViewController1NC: UIViewController {
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
             
-            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateStopwatch"), userInfo: nil, repeats: true)
+            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
-            startStopButton.setTitle("Stop", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"private-sign.png"), forState: UIControlState.Normal)
             // if the button had an image, we would do:
             //startStopButton.setImage(UIImage(named: "whatever.jpt", forState: UIControlState.Normal)
             
@@ -392,7 +397,8 @@ class ViewController1NC: UIViewController {
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
             // If I was using an image for the button, I would maybe change it here...
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
+            //            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         }
     }
@@ -406,48 +412,48 @@ class ViewController1NC: UIViewController {
             timerText.text = newTimer.stopWatchString
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         } else {
             
             var alertController:UIAlertController?
             alertController = UIAlertController(title: "Alert",
-                message: "Are you sure you want to reset?",
-                preferredStyle: .Alert)
+                                                message: "Are you sure you want to reset?",
+                                                preferredStyle: .Alert)
             
             let firstAction = UIAlertAction(title: "No",
-                style: UIAlertActionStyle.Cancel,
-                handler: nil
+                                            style: UIAlertActionStyle.Cancel,
+                                            handler: nil
             )
             
             let secondAction = UIAlertAction(title: "Yes",
-                style: UIAlertActionStyle.Default,
-                handler: {(paramAction:UIAlertAction!) in
-                    self.newTimer.seconds = 60
-                    self.newTimer.minutes = 7
-                    self.newTimer.stopWatchString = "8:00"
-                    self.timerText.text = self.newTimer.stopWatchString
-                    self.newTimer.timer.invalidate()
-                    self.newTimer.startStopwatch = true
-                    self.startStopButton.setTitle("Start", forState: .Normal)
+                                             style: UIAlertActionStyle.Default,
+                                             handler: {(paramAction:UIAlertAction!) in
+                                                self.newTimer.seconds = 60
+                                                self.newTimer.minutes = 7
+                                                self.newTimer.stopWatchString = "8:00"
+                                                self.timerText.text = self.newTimer.stopWatchString
+                                                self.newTimer.timer.invalidate()
+                                                self.newTimer.startStopwatch = true
+                                                self.startStopButton.setImage(UIImage(named:"go.png"), forState: .Normal)
             })
             
             alertController!.addAction(firstAction)
             alertController!.addAction(secondAction)
             self.presentViewController(alertController!,
-                animated: true,
-                completion: nil)
+                                       animated: true,
+                                       completion: nil)
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var negPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("negPrepMin")!
-        var negPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("negPrepSec")!
+        let negPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("negPrepMin")!
+        let negPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("negPrepSec")!
         newTimer.minutes = 7
         newTimer.seconds = 60
-
+        
         print("\(negPrepMin):\(negPrepSec)")
     }
     
@@ -462,14 +468,14 @@ class ViewController1NC: UIViewController {
                 alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
                 
                 let firstAction = UIAlertAction(title: "OK",
-                    style: UIAlertActionStyle.Cancel,
-                    handler: nil
+                                                style: UIAlertActionStyle.Cancel,
+                                                handler: nil
                 )
                 
                 alert!.addAction(firstAction)
                 self.presentViewController(alert!,
-                    animated: true,
-                    completion: nil)
+                                           animated: true,
+                                           completion: nil)
                 
             } else {
                 return true
@@ -477,21 +483,21 @@ class ViewController1NC: UIViewController {
         }
         return true
     }
-
+    
 }
 
 class ViewController2CX: UIViewController {
     var newTimer = StopWatch2(isNegPrep: false, isAffPrep: false)
-
+    
     @IBOutlet var timerText: UILabel!
     @IBOutlet var startStopButton: UIButton!
     
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
             
-            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateStopwatch"), userInfo: nil, repeats: true)
+            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
-            startStopButton.setTitle("Stop", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"private-sign.png"), forState: UIControlState.Normal)
             // if the button had an image, we would do:
             //startStopButton.setImage(UIImage(named: "whatever.jpt", forState: UIControlState.Normal)
             
@@ -500,7 +506,8 @@ class ViewController2CX: UIViewController {
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
             // If I was using an image for the button, I would maybe change it here...
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
+            //            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         }
     }
@@ -514,37 +521,37 @@ class ViewController2CX: UIViewController {
             timerText.text = newTimer.stopWatchString
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         } else {
             
             var alertController:UIAlertController?
             alertController = UIAlertController(title: "Alert",
-                message: "Are you sure you want to reset?",
-                preferredStyle: .Alert)
+                                                message: "Are you sure you want to reset?",
+                                                preferredStyle: .Alert)
             
             let firstAction = UIAlertAction(title: "No",
-                style: UIAlertActionStyle.Cancel,
-                handler: nil
+                                            style: UIAlertActionStyle.Cancel,
+                                            handler: nil
             )
             
             let secondAction = UIAlertAction(title: "Yes",
-                style: UIAlertActionStyle.Default,
-                handler: {(paramAction:UIAlertAction!) in
-                    self.newTimer.seconds = 60
-                    self.newTimer.minutes = 2
-                    self.newTimer.stopWatchString = "3:00"
-                    self.timerText.text = self.newTimer.stopWatchString
-                    self.newTimer.timer.invalidate()
-                    self.newTimer.startStopwatch = true
-                    self.startStopButton.setTitle("Start", forState: .Normal)
+                                             style: UIAlertActionStyle.Default,
+                                             handler: {(paramAction:UIAlertAction!) in
+                                                self.newTimer.seconds = 60
+                                                self.newTimer.minutes = 2
+                                                self.newTimer.stopWatchString = "3:00"
+                                                self.timerText.text = self.newTimer.stopWatchString
+                                                self.newTimer.timer.invalidate()
+                                                self.newTimer.startStopwatch = true
+                                                self.startStopButton.setImage(UIImage(named:"go.png"), forState: .Normal)
             })
             
             alertController!.addAction(firstAction)
             alertController!.addAction(secondAction)
             self.presentViewController(alertController!,
-                animated: true,
-                completion: nil)
+                                       animated: true,
+                                       completion: nil)
         }
     }
     
@@ -555,11 +562,11 @@ class ViewController2CX: UIViewController {
         newTimer.seconds = 60
         
     }
- 
+    
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
     }
-
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "segue1AffPrep" {
             let svc = segue.destinationViewController as! ViewController1AffPrep
@@ -574,14 +581,14 @@ class ViewController2CX: UIViewController {
                 alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
                 
                 let firstAction = UIAlertAction(title: "OK",
-                    style: UIAlertActionStyle.Cancel,
-                    handler: nil
+                                                style: UIAlertActionStyle.Cancel,
+                                                handler: nil
                 )
                 
                 alert!.addAction(firstAction)
                 self.presentViewController(alert!,
-                    animated: true,
-                    completion: nil)
+                                           animated: true,
+                                           completion: nil)
                 
             } else {
                 return true
@@ -602,9 +609,9 @@ class ViewController1AffPrep: UIViewController {
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
             
-            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateStopwatch"), userInfo: nil, repeats: true)
+            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
-            startStopButton.setTitle("Stop", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"private-sign.png"), forState: UIControlState.Normal)
             // if the button had an image, we would do:
             //startStopButton.setImage(UIImage(named: "whatever.jpt", forState: UIControlState.Normal)
             
@@ -613,7 +620,8 @@ class ViewController1AffPrep: UIViewController {
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
             // If I was using an image for the button, I would maybe change it here...
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
+            //            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         }
     }
@@ -627,39 +635,39 @@ class ViewController1AffPrep: UIViewController {
             timerText.text = newTimer.stopWatchString
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         } else {
             
             var alertController:UIAlertController?
             alertController = UIAlertController(title: "Alert",
-                message: "Are you sure you want to reset?",
-                preferredStyle: .Alert)
+                                                message: "Are you sure you want to reset?",
+                                                preferredStyle: .Alert)
             
             let firstAction = UIAlertAction(title: "No",
-                style: UIAlertActionStyle.Cancel,
-                handler: nil
+                                            style: UIAlertActionStyle.Cancel,
+                                            handler: nil
             )
             
             let secondAction = UIAlertAction(title: "Yes",
-                style: UIAlertActionStyle.Default,
-                handler: {(paramAction:UIAlertAction!) in
-                    self.newTimer.seconds = 60
-                    self.newTimer.minutes = 4
-                    self.newTimer.stopWatchString = "5:00"
-                    self.timerText.text = self.newTimer.stopWatchString
-                    self.newTimer.timer.invalidate()
-                    self.newTimer.startStopwatch = true
-                    self.startStopButton.setTitle("Start", forState: .Normal)
+                                             style: UIAlertActionStyle.Default,
+                                             handler: {(paramAction:UIAlertAction!) in
+                                                self.newTimer.seconds = 60
+                                                self.newTimer.minutes = 4
+                                                self.newTimer.stopWatchString = "5:00"
+                                                self.timerText.text = self.newTimer.stopWatchString
+                                                self.newTimer.timer.invalidate()
+                                                self.newTimer.startStopwatch = true
+                                                self.startStopButton.setImage(UIImage(named:"go.png"), forState: .Normal)
             })
             
             alertController!.addAction(firstAction)
             alertController!.addAction(secondAction)
             self.presentViewController(alertController!,
-                animated: true,
-                completion: nil)
+                                       animated: true,
+                                       completion: nil)
         }
-}
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -667,20 +675,20 @@ class ViewController1AffPrep: UIViewController {
             newTimer.minutes = 4
             newTimer.seconds = 60
         } else {
-            var affPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("affPrepMin")!
-            var affPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("affPrepSec")!
+            let affPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("affPrepMin")!
+            let affPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("affPrepSec")!
             newTimer.minutes = Int(affPrepMin as! String)!
             newTimer.seconds = Int(affPrepSec as! String)!
             timerText.text = "\(affPrepMin):\(affPrepSec)"
-
+            
         }
         
     }
-
+    
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
     }
-
+    
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "goHome" || identifier == "goBack" || identifier == "segue2AC" {
             if newTimer.startStopwatch == false {
@@ -688,14 +696,14 @@ class ViewController1AffPrep: UIViewController {
                 alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
                 
                 let firstAction = UIAlertAction(title: "OK",
-                    style: UIAlertActionStyle.Cancel,
-                    handler: nil
+                                                style: UIAlertActionStyle.Cancel,
+                                                handler: nil
                 )
                 
                 alert!.addAction(firstAction)
                 self.presentViewController(alert!,
-                    animated: true,
-                    completion: nil)
+                                           animated: true,
+                                           completion: nil)
                 
             } else {
                 return true
@@ -703,21 +711,21 @@ class ViewController1AffPrep: UIViewController {
         }
         return true
     }
-
+    
 }
 
 class viewController2AC: UIViewController {
     var newTimer = StopWatch2(isNegPrep: false, isAffPrep: false)
-   
+    
     @IBOutlet var timerText: UILabel!
     @IBOutlet var startStopButton: UIButton!
     
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
             
-            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateStopwatch"), userInfo: nil, repeats: true)
+            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
-            startStopButton.setTitle("Stop", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"private-sign.png"), forState: UIControlState.Normal)
             // if the button had an image, we would do:
             //startStopButton.setImage(UIImage(named: "whatever.jpt", forState: UIControlState.Normal)
             
@@ -726,10 +734,11 @@ class viewController2AC: UIViewController {
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
             // If I was using an image for the button, I would maybe change it here...
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
+            //            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         }
-   }
+    }
     
     @IBAction func resetTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
@@ -740,37 +749,37 @@ class viewController2AC: UIViewController {
             timerText.text = newTimer.stopWatchString
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         } else {
             
             var alertController:UIAlertController?
             alertController = UIAlertController(title: "Alert",
-                message: "Are you sure you want to reset?",
-                preferredStyle: .Alert)
+                                                message: "Are you sure you want to reset?",
+                                                preferredStyle: .Alert)
             
             let firstAction = UIAlertAction(title: "No",
-                style: UIAlertActionStyle.Cancel,
-                handler: nil
+                                            style: UIAlertActionStyle.Cancel,
+                                            handler: nil
             )
             
             let secondAction = UIAlertAction(title: "Yes",
-                style: UIAlertActionStyle.Default,
-                handler: {(paramAction:UIAlertAction!) in
-                    self.newTimer.seconds = 60
-                    self.newTimer.minutes = 7
-                    self.newTimer.stopWatchString = "8:00"
-                    self.timerText.text = self.newTimer.stopWatchString
-                    self.newTimer.timer.invalidate()
-                    self.newTimer.startStopwatch = true
-                    self.startStopButton.setTitle("Start", forState: .Normal)
+                                             style: UIAlertActionStyle.Default,
+                                             handler: {(paramAction:UIAlertAction!) in
+                                                self.newTimer.seconds = 60
+                                                self.newTimer.minutes = 7
+                                                self.newTimer.stopWatchString = "8:00"
+                                                self.timerText.text = self.newTimer.stopWatchString
+                                                self.newTimer.timer.invalidate()
+                                                self.newTimer.startStopwatch = true
+                                                self.startStopButton.setImage(UIImage(named:"go.png"), forState: .Normal)
             })
             
             alertController!.addAction(firstAction)
             alertController!.addAction(secondAction)
             self.presentViewController(alertController!,
-                animated: true,
-                completion: nil)
+                                       animated: true,
+                                       completion: nil)
         }
     }
     
@@ -785,7 +794,7 @@ class viewController2AC: UIViewController {
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
     }
-
+    
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "goHome" || identifier == "goBack" || identifier == "segue3CX" {
             if newTimer.startStopwatch == false {
@@ -793,14 +802,14 @@ class viewController2AC: UIViewController {
                 alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
                 
                 let firstAction = UIAlertAction(title: "OK",
-                    style: UIAlertActionStyle.Cancel,
-                    handler: nil
+                                                style: UIAlertActionStyle.Cancel,
+                                                handler: nil
                 )
                 
                 alert!.addAction(firstAction)
                 self.presentViewController(alert!,
-                    animated: true,
-                    completion: nil)
+                                           animated: true,
+                                           completion: nil)
                 
             } else {
                 return true
@@ -808,7 +817,7 @@ class viewController2AC: UIViewController {
         }
         return true
     }
-
+    
 }
 
 class ViewController3CX: UIViewController {
@@ -822,9 +831,9 @@ class ViewController3CX: UIViewController {
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
             
-            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateStopwatch"), userInfo: nil, repeats: true)
+            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
-            startStopButton.setTitle("Stop", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"private-sign.png"), forState: UIControlState.Normal)
             // if the button had an image, we would do:
             //startStopButton.setImage(UIImage(named: "whatever.jpt", forState: UIControlState.Normal)
             
@@ -833,10 +842,11 @@ class ViewController3CX: UIViewController {
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
             // If I was using an image for the button, I would maybe change it here...
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
+            //            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         }
-   }
+    }
     
     @IBAction func resetTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
@@ -847,39 +857,39 @@ class ViewController3CX: UIViewController {
             timerText.text = newTimer.stopWatchString
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         } else {
             
             var alertController:UIAlertController?
             alertController = UIAlertController(title: "Alert",
-                message: "Are you sure you want to reset?",
-                preferredStyle: .Alert)
+                                                message: "Are you sure you want to reset?",
+                                                preferredStyle: .Alert)
             
             let firstAction = UIAlertAction(title: "No",
-                style: UIAlertActionStyle.Cancel,
-                handler: nil
+                                            style: UIAlertActionStyle.Cancel,
+                                            handler: nil
             )
             
             let secondAction = UIAlertAction(title: "Yes",
-                style: UIAlertActionStyle.Default,
-                handler: {(paramAction:UIAlertAction!) in
-                    self.newTimer.seconds = 60
-                    self.newTimer.minutes = self.timerMinutes
-                    self.newTimer.stopWatchString = self.timerLable
-                    self.timerText.text = self.newTimer.stopWatchString
-                    self.newTimer.timer.invalidate()
-                    self.newTimer.startStopwatch = true
-                    self.startStopButton.setTitle("Start", forState: .Normal)
+                                             style: UIAlertActionStyle.Default,
+                                             handler: {(paramAction:UIAlertAction!) in
+                                                self.newTimer.seconds = 60
+                                                self.newTimer.minutes = self.timerMinutes
+                                                self.newTimer.stopWatchString = self.timerLable
+                                                self.timerText.text = self.newTimer.stopWatchString
+                                                self.newTimer.timer.invalidate()
+                                                self.newTimer.startStopwatch = true
+                                                self.startStopButton.setImage(UIImage(named:"go.png"), forState: .Normal)
             })
             
             alertController!.addAction(firstAction)
             alertController!.addAction(secondAction)
             self.presentViewController(alertController!,
-                animated: true,
-                completion: nil)
+                                       animated: true,
+                                       completion: nil)
         }
-   }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -892,7 +902,7 @@ class ViewController3CX: UIViewController {
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
     }
-
+    
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "goHome" || identifier == "goBack" || identifier == "segue2NegPrep" {
             if newTimer.startStopwatch == false {
@@ -900,14 +910,14 @@ class ViewController3CX: UIViewController {
                 alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
                 
                 let firstAction = UIAlertAction(title: "OK",
-                    style: UIAlertActionStyle.Cancel,
-                    handler: nil
+                                                style: UIAlertActionStyle.Cancel,
+                                                handler: nil
                 )
                 
                 alert!.addAction(firstAction)
                 self.presentViewController(alert!,
-                    animated: true,
-                    completion: nil)
+                                           animated: true,
+                                           completion: nil)
                 
             } else {
                 return true
@@ -915,16 +925,16 @@ class ViewController3CX: UIViewController {
         }
         return true
     }
-
+    
 }
 
 class ViewControllerNegPrep2: UIViewController {
-    var negPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("negPrepMin")!
-    var negPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("negPrepSec")!
+    let negPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("negPrepMin")!
+    let negPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("negPrepSec")!
     var newTimer = StopWatch2(isNegPrep: true, isAffPrep: false)
     var timerMinutes: Int = 4
     var timerLabel: String = "5:00"
-// for a reset, need to store the original prep time left
+    // for a reset, need to store the original prep time left
     var originalPrepMin: Int = 4
     var originalPrepSec: Int = 60
     
@@ -934,18 +944,18 @@ class ViewControllerNegPrep2: UIViewController {
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
             
-            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateStopwatch"), userInfo: nil, repeats: true)
+            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
-            startStopButton.setTitle("Stop", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"private-sign.png"), forState: UIControlState.Normal)
             
         } else {
             
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         }
-   }
+    }
     
     @IBAction func resetTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
@@ -956,39 +966,39 @@ class ViewControllerNegPrep2: UIViewController {
             timerText.text = newTimer.stopWatchString
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         } else {
             
             var alertController:UIAlertController?
             alertController = UIAlertController(title: "Alert",
-                message: "Are you sure you want to reset?",
-                preferredStyle: .Alert)
+                                                message: "Are you sure you want to reset?",
+                                                preferredStyle: .Alert)
             
             let firstAction = UIAlertAction(title: "No",
-                style: UIAlertActionStyle.Cancel,
-                handler: nil
+                                            style: UIAlertActionStyle.Cancel,
+                                            handler: nil
             )
             
             let secondAction = UIAlertAction(title: "Yes",
-                style: UIAlertActionStyle.Default,
-                handler: {(paramAction:UIAlertAction!) in
-                    self.newTimer.seconds = 60
-                    self.newTimer.minutes = self.timerMinutes
-                    self.newTimer.stopWatchString = self.timerLabel
-                    self.timerText.text = self.newTimer.stopWatchString
-                    self.newTimer.timer.invalidate()
-                    self.newTimer.startStopwatch = true
-                    self.startStopButton.setTitle("Start", forState: .Normal)
+                                             style: UIAlertActionStyle.Default,
+                                             handler: {(paramAction:UIAlertAction!) in
+                                                self.newTimer.seconds = 60
+                                                self.newTimer.minutes = self.timerMinutes
+                                                self.newTimer.stopWatchString = self.timerLabel
+                                                self.timerText.text = self.newTimer.stopWatchString
+                                                self.newTimer.timer.invalidate()
+                                                self.newTimer.startStopwatch = true
+                                                self.startStopButton.setImage(UIImage(named:"go.png"), forState: .Normal)
             })
             
             alertController!.addAction(firstAction)
             alertController!.addAction(secondAction)
             self.presentViewController(alertController!,
-                animated: true,
-                completion: nil)
+                                       animated: true,
+                                       completion: nil)
         }
-   }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -1003,7 +1013,7 @@ class ViewControllerNegPrep2: UIViewController {
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
     }
-
+    
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "goHome" || identifier == "goBack" || identifier == "segue2NC" {
             if newTimer.startStopwatch == false {
@@ -1011,14 +1021,14 @@ class ViewControllerNegPrep2: UIViewController {
                 alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
                 
                 let firstAction = UIAlertAction(title: "OK",
-                    style: UIAlertActionStyle.Cancel,
-                    handler: nil
+                                                style: UIAlertActionStyle.Cancel,
+                                                handler: nil
                 )
                 
                 alert!.addAction(firstAction)
                 self.presentViewController(alert!,
-                    animated: true,
-                    completion: nil)
+                                           animated: true,
+                                           completion: nil)
                 
             } else {
                 return true
@@ -1026,32 +1036,32 @@ class ViewControllerNegPrep2: UIViewController {
         }
         return true
     }
-
+    
 }
 
 class ViewController2NC: UIViewController {
     var newTimer = StopWatch2(isNegPrep: false, isAffPrep: false)
     var timerMinutes: Int = 7
     var timerLabel: String = "8:00"
-  
+    
     @IBOutlet var timerText: UILabel!
     @IBOutlet var startStopButton: UIButton!
     
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
             
-            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateStopwatch"), userInfo: nil, repeats: true)
+            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
-            startStopButton.setTitle("Stop", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"private-sign.png"), forState: UIControlState.Normal)
             
         } else {
             
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         }
-   }
+    }
     
     @IBAction func resetTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
@@ -1062,39 +1072,39 @@ class ViewController2NC: UIViewController {
             timerText.text = newTimer.stopWatchString
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         } else {
             
             var alertController:UIAlertController?
             alertController = UIAlertController(title: "Alert",
-                message: "Are you sure you want to reset?",
-                preferredStyle: .Alert)
+                                                message: "Are you sure you want to reset?",
+                                                preferredStyle: .Alert)
             
             let firstAction = UIAlertAction(title: "No",
-                style: UIAlertActionStyle.Cancel,
-                handler: nil
+                                            style: UIAlertActionStyle.Cancel,
+                                            handler: nil
             )
             
             let secondAction = UIAlertAction(title: "Yes",
-                style: UIAlertActionStyle.Default,
-                handler: {(paramAction:UIAlertAction!) in
-                    self.newTimer.seconds = 60
-                    self.newTimer.minutes = self.timerMinutes
-                    self.newTimer.stopWatchString = self.timerLabel
-                    self.timerText.text = self.newTimer.stopWatchString
-                    self.newTimer.timer.invalidate()
-                    self.newTimer.startStopwatch = true
-                    self.startStopButton.setTitle("Start", forState: .Normal)
+                                             style: UIAlertActionStyle.Default,
+                                             handler: {(paramAction:UIAlertAction!) in
+                                                self.newTimer.seconds = 60
+                                                self.newTimer.minutes = self.timerMinutes
+                                                self.newTimer.stopWatchString = self.timerLabel
+                                                self.timerText.text = self.newTimer.stopWatchString
+                                                self.newTimer.timer.invalidate()
+                                                self.newTimer.startStopwatch = true
+                                                self.startStopButton.setImage(UIImage(named:"go.png"), forState: .Normal)
             })
             
             alertController!.addAction(firstAction)
             alertController!.addAction(secondAction)
             self.presentViewController(alertController!,
-                animated: true,
-                completion: nil)
+                                       animated: true,
+                                       completion: nil)
         }
-   }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -1115,14 +1125,14 @@ class ViewController2NC: UIViewController {
                 alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
                 
                 let firstAction = UIAlertAction(title: "OK",
-                    style: UIAlertActionStyle.Cancel,
-                    handler: nil
+                                                style: UIAlertActionStyle.Cancel,
+                                                handler: nil
                 )
                 
                 alert!.addAction(firstAction)
                 self.presentViewController(alert!,
-                    animated: true,
-                    completion: nil)
+                                           animated: true,
+                                           completion: nil)
                 
             } else {
                 return true
@@ -1130,7 +1140,7 @@ class ViewController2NC: UIViewController {
         }
         return true
     }
-
+    
 }
 
 class ViewController4CX: UIViewController {
@@ -1144,15 +1154,15 @@ class ViewController4CX: UIViewController {
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
             
-            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateStopwatch"), userInfo: nil, repeats: true)
+            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
-            startStopButton.setTitle("Stop", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"private-sign.png"), forState: UIControlState.Normal)
             
         } else {
             
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         }
     }
@@ -1166,39 +1176,39 @@ class ViewController4CX: UIViewController {
             timerText.text = newTimer.stopWatchString
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         } else {
             
             var alertController:UIAlertController?
             alertController = UIAlertController(title: "Alert",
-                message: "Are you sure you want to reset?",
-                preferredStyle: .Alert)
+                                                message: "Are you sure you want to reset?",
+                                                preferredStyle: .Alert)
             
             let firstAction = UIAlertAction(title: "No",
-                style: UIAlertActionStyle.Cancel,
-                handler: nil
+                                            style: UIAlertActionStyle.Cancel,
+                                            handler: nil
             )
             
             let secondAction = UIAlertAction(title: "Yes",
-                style: UIAlertActionStyle.Default,
-                handler: {(paramAction:UIAlertAction!) in
-                    self.newTimer.seconds = 60
-                    self.newTimer.minutes = self.timerMinutes
-                    self.newTimer.stopWatchString = self.timerLabel
-                    self.timerText.text = self.newTimer.stopWatchString
-                    self.newTimer.timer.invalidate()
-                    self.newTimer.startStopwatch = true
-                    self.startStopButton.setTitle("Start", forState: .Normal)
+                                             style: UIAlertActionStyle.Default,
+                                             handler: {(paramAction:UIAlertAction!) in
+                                                self.newTimer.seconds = 60
+                                                self.newTimer.minutes = self.timerMinutes
+                                                self.newTimer.stopWatchString = self.timerLabel
+                                                self.timerText.text = self.newTimer.stopWatchString
+                                                self.newTimer.timer.invalidate()
+                                                self.newTimer.startStopwatch = true
+                                                self.startStopButton.setImage(UIImage(named:"go.png"), forState: .Normal)
             })
             
             alertController!.addAction(firstAction)
             alertController!.addAction(secondAction)
             self.presentViewController(alertController!,
-                animated: true,
-                completion: nil)
+                                       animated: true,
+                                       completion: nil)
         }
-   }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -1219,14 +1229,14 @@ class ViewController4CX: UIViewController {
                 alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
                 
                 let firstAction = UIAlertAction(title: "OK",
-                    style: UIAlertActionStyle.Cancel,
-                    handler: nil
+                                                style: UIAlertActionStyle.Cancel,
+                                                handler: nil
                 )
                 
                 alert!.addAction(firstAction)
                 self.presentViewController(alert!,
-                    animated: true,
-                    completion: nil)
+                                           animated: true,
+                                           completion: nil)
                 
             } else {
                 return true
@@ -1237,8 +1247,8 @@ class ViewController4CX: UIViewController {
 }
 
 class ViewControllerNegPrep3: UIViewController {
-    var negPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("negPrepMin")!
-    var negPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("negPrepSec")!
+    let negPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("negPrepMin")!
+    let negPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("negPrepSec")!
     var newTimer = StopWatch2(isNegPrep: true, isAffPrep: false)
     var timerMinutes: Int = 4
     var timerLabel: String = "5:00"
@@ -1251,19 +1261,19 @@ class ViewControllerNegPrep3: UIViewController {
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
             
-            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateStopwatch"), userInfo: nil, repeats: true)
+            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
-            startStopButton.setTitle("Stop", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"private-sign.png"), forState: UIControlState.Normal)
             
         } else {
             
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         }
-   }
-
+    }
+    
     @IBAction func resetTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
             
@@ -1273,37 +1283,37 @@ class ViewControllerNegPrep3: UIViewController {
             timerText.text = newTimer.stopWatchString
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         } else {
             
             var alertController:UIAlertController?
             alertController = UIAlertController(title: "Alert",
-                message: "Are you sure you want to reset?",
-                preferredStyle: .Alert)
+                                                message: "Are you sure you want to reset?",
+                                                preferredStyle: .Alert)
             
             let firstAction = UIAlertAction(title: "No",
-                style: UIAlertActionStyle.Cancel,
-                handler: nil
+                                            style: UIAlertActionStyle.Cancel,
+                                            handler: nil
             )
             
             let secondAction = UIAlertAction(title: "Yes",
-                style: UIAlertActionStyle.Default,
-                handler: {(paramAction:UIAlertAction!) in
-                    self.newTimer.seconds = 60
-                    self.newTimer.minutes = self.timerMinutes
-                    self.newTimer.stopWatchString = self.timerLabel
-                    self.timerText.text = self.newTimer.stopWatchString
-                    self.newTimer.timer.invalidate()
-                    self.newTimer.startStopwatch = true
-                    self.startStopButton.setTitle("Start", forState: .Normal)
+                                             style: UIAlertActionStyle.Default,
+                                             handler: {(paramAction:UIAlertAction!) in
+                                                self.newTimer.seconds = 60
+                                                self.newTimer.minutes = self.timerMinutes
+                                                self.newTimer.stopWatchString = self.timerLabel
+                                                self.timerText.text = self.newTimer.stopWatchString
+                                                self.newTimer.timer.invalidate()
+                                                self.newTimer.startStopwatch = true
+                                                self.startStopButton.setImage(UIImage(named:"go.png"), forState: .Normal)
             })
             
             alertController!.addAction(firstAction)
             alertController!.addAction(secondAction)
             self.presentViewController(alertController!,
-                animated: true,
-                completion: nil)
+                                       animated: true,
+                                       completion: nil)
         }
     }
     
@@ -1328,14 +1338,14 @@ class ViewControllerNegPrep3: UIViewController {
                 alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
                 
                 let firstAction = UIAlertAction(title: "OK",
-                    style: UIAlertActionStyle.Cancel,
-                    handler: nil
+                                                style: UIAlertActionStyle.Cancel,
+                                                handler: nil
                 )
                 
                 alert!.addAction(firstAction)
                 self.presentViewController(alert!,
-                    animated: true,
-                    completion: nil)
+                                           animated: true,
+                                           completion: nil)
                 
             } else {
                 return true
@@ -1343,7 +1353,7 @@ class ViewControllerNegPrep3: UIViewController {
         }
         return true
     }
-
+    
 }
 
 class ViewController1NR: UIViewController {
@@ -1357,15 +1367,15 @@ class ViewController1NR: UIViewController {
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
             
-            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateStopwatch"), userInfo: nil, repeats: true)
+            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
-            startStopButton.setTitle("Stop", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"private-sign.png"), forState: UIControlState.Normal)
             
         } else {
             
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         }
     }
@@ -1379,37 +1389,37 @@ class ViewController1NR: UIViewController {
             timerText.text = newTimer.stopWatchString
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         } else {
             
             var alertController:UIAlertController?
             alertController = UIAlertController(title: "Alert",
-                message: "Are you sure you want to reset?",
-                preferredStyle: .Alert)
+                                                message: "Are you sure you want to reset?",
+                                                preferredStyle: .Alert)
             
             let firstAction = UIAlertAction(title: "No",
-                style: UIAlertActionStyle.Cancel,
-                handler: nil
+                                            style: UIAlertActionStyle.Cancel,
+                                            handler: nil
             )
             
             let secondAction = UIAlertAction(title: "Yes",
-                style: UIAlertActionStyle.Default,
-                handler: {(paramAction:UIAlertAction!) in
-                    self.newTimer.seconds = 60
-                    self.newTimer.minutes = self.timerMinutes
-                    self.newTimer.stopWatchString = self.timerLabel
-                    self.timerText.text = self.newTimer.stopWatchString
-                    self.newTimer.timer.invalidate()
-                    self.newTimer.startStopwatch = true
-                    self.startStopButton.setTitle("Start", forState: .Normal)
+                                             style: UIAlertActionStyle.Default,
+                                             handler: {(paramAction:UIAlertAction!) in
+                                                self.newTimer.seconds = 60
+                                                self.newTimer.minutes = self.timerMinutes
+                                                self.newTimer.stopWatchString = self.timerLabel
+                                                self.timerText.text = self.newTimer.stopWatchString
+                                                self.newTimer.timer.invalidate()
+                                                self.newTimer.startStopwatch = true
+                                                self.startStopButton.setImage(UIImage(named:"go.png"), forState: .Normal)
             })
             
             alertController!.addAction(firstAction)
             alertController!.addAction(secondAction)
             self.presentViewController(alertController!,
-                animated: true,
-                completion: nil)
+                                       animated: true,
+                                       completion: nil)
         }
     }
     
@@ -1432,14 +1442,14 @@ class ViewController1NR: UIViewController {
                 alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
                 
                 let firstAction = UIAlertAction(title: "OK",
-                    style: UIAlertActionStyle.Cancel,
-                    handler: nil
+                                                style: UIAlertActionStyle.Cancel,
+                                                handler: nil
                 )
                 
                 alert!.addAction(firstAction)
                 self.presentViewController(alert!,
-                    animated: true,
-                    completion: nil)
+                                           animated: true,
+                                           completion: nil)
                 
             } else {
                 return true
@@ -1450,26 +1460,26 @@ class ViewController1NR: UIViewController {
 }
 
 class ViewControllerAffPrep2: UIViewController {
-    var affPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("affPrepMin")!
-    var affPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("affPrepSec")!
+    let affPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("affPrepMin")!
+    let affPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("affPrepSec")!
     var newTimer = StopWatch2(isNegPrep: false, isAffPrep: true)
     var timerMinutes: Int = 4
     var timerLabel: String = "5:00"
     var originalPrepMin: Int = 4
     var originalPrepSec: Int = 60
-
+    
     @IBOutlet var timerText: UILabel!
     @IBOutlet var startStopButton: UIButton!
-   
+    
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
-            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateStopwatch"), userInfo: nil, repeats: true)
+            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
-            startStopButton.setTitle("Stop", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"private-sign.png"), forState: UIControlState.Normal)
         } else {
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
         }
     }
     
@@ -1482,40 +1492,40 @@ class ViewControllerAffPrep2: UIViewController {
             timerText.text = newTimer.stopWatchString
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         } else {
             
             var alertController:UIAlertController?
             alertController = UIAlertController(title: "Alert",
-                message: "Are you sure you want to reset?",
-                preferredStyle: .Alert)
+                                                message: "Are you sure you want to reset?",
+                                                preferredStyle: .Alert)
             
             let firstAction = UIAlertAction(title: "No",
-                style: UIAlertActionStyle.Cancel,
-                handler: nil
+                                            style: UIAlertActionStyle.Cancel,
+                                            handler: nil
             )
             
             let secondAction = UIAlertAction(title: "Yes",
-                style: UIAlertActionStyle.Default,
-                handler: {(paramAction:UIAlertAction!) in
-                    self.newTimer.seconds = 60
-                    self.newTimer.minutes = self.timerMinutes
-                    self.newTimer.stopWatchString = self.timerLabel
-                    self.timerText.text = self.newTimer.stopWatchString
-                    self.newTimer.timer.invalidate()
-                    self.newTimer.startStopwatch = true
-                    self.startStopButton.setTitle("Start", forState: .Normal)
+                                             style: UIAlertActionStyle.Default,
+                                             handler: {(paramAction:UIAlertAction!) in
+                                                self.newTimer.seconds = 60
+                                                self.newTimer.minutes = self.timerMinutes
+                                                self.newTimer.stopWatchString = self.timerLabel
+                                                self.timerText.text = self.newTimer.stopWatchString
+                                                self.newTimer.timer.invalidate()
+                                                self.newTimer.startStopwatch = true
+                                                self.startStopButton.setImage(UIImage(named:"go.png"), forState: .Normal)
             })
             
             alertController!.addAction(firstAction)
             alertController!.addAction(secondAction)
             self.presentViewController(alertController!,
-                animated: true,
-                completion: nil)
+                                       animated: true,
+                                       completion: nil)
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         originalPrepMin = Int(affPrepMin as! String)!
@@ -1537,14 +1547,14 @@ class ViewControllerAffPrep2: UIViewController {
                 alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
                 
                 let firstAction = UIAlertAction(title: "OK",
-                    style: UIAlertActionStyle.Cancel,
-                    handler: nil
+                                                style: UIAlertActionStyle.Cancel,
+                                                handler: nil
                 )
                 
                 alert!.addAction(firstAction)
                 self.presentViewController(alert!,
-                    animated: true,
-                    completion: nil)
+                                           animated: true,
+                                           completion: nil)
                 
             } else {
                 return true
@@ -1552,7 +1562,7 @@ class ViewControllerAffPrep2: UIViewController {
         }
         return true
     }
-
+    
 }
 
 class ViewController1AR: UIViewController {
@@ -1566,14 +1576,14 @@ class ViewController1AR: UIViewController {
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
             
-            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateStopwatch"), userInfo: nil, repeats: true)
+            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
-            startStopButton.setTitle("Stop", forState: .Normal)
-
+            startStopButton.setImage(UIImage(named:"private-sign.png"), forState: UIControlState.Normal)
+            
         } else {
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
         }
     }
     
@@ -1586,37 +1596,37 @@ class ViewController1AR: UIViewController {
             timerText.text = newTimer.stopWatchString
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         } else {
             
             var alertController:UIAlertController?
             alertController = UIAlertController(title: "Alert",
-                message: "Are you sure you want to reset?",
-                preferredStyle: .Alert)
+                                                message: "Are you sure you want to reset?",
+                                                preferredStyle: .Alert)
             
             let firstAction = UIAlertAction(title: "No",
-                style: UIAlertActionStyle.Cancel,
-                handler: nil
+                                            style: UIAlertActionStyle.Cancel,
+                                            handler: nil
             )
             
             let secondAction = UIAlertAction(title: "Yes",
-                style: UIAlertActionStyle.Default,
-                handler: {(paramAction:UIAlertAction!) in
-                    self.newTimer.seconds = 60
-                    self.newTimer.minutes = self.timerMinutes
-                    self.newTimer.stopWatchString = self.timerLabel
-                    self.timerText.text = self.newTimer.stopWatchString
-                    self.newTimer.timer.invalidate()
-                    self.newTimer.startStopwatch = true
-                    self.startStopButton.setTitle("Start", forState: .Normal)
+                                             style: UIAlertActionStyle.Default,
+                                             handler: {(paramAction:UIAlertAction!) in
+                                                self.newTimer.seconds = 60
+                                                self.newTimer.minutes = self.timerMinutes
+                                                self.newTimer.stopWatchString = self.timerLabel
+                                                self.timerText.text = self.newTimer.stopWatchString
+                                                self.newTimer.timer.invalidate()
+                                                self.newTimer.startStopwatch = true
+                                                self.startStopButton.setImage(UIImage(named:"go.png"), forState: .Normal)
             })
             
             alertController!.addAction(firstAction)
             alertController!.addAction(secondAction)
             self.presentViewController(alertController!,
-                animated: true,
-                completion: nil)
+                                       animated: true,
+                                       completion: nil)
         }
     }
     
@@ -1631,7 +1641,7 @@ class ViewController1AR: UIViewController {
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
     }
-
+    
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "goHome" || identifier == "goBack" || identifier == "segue4NegPrep" {
             if newTimer.startStopwatch == false {
@@ -1639,14 +1649,14 @@ class ViewController1AR: UIViewController {
                 alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
                 
                 let firstAction = UIAlertAction(title: "OK",
-                    style: UIAlertActionStyle.Cancel,
-                    handler: nil
+                                                style: UIAlertActionStyle.Cancel,
+                                                handler: nil
                 )
                 
                 alert!.addAction(firstAction)
                 self.presentViewController(alert!,
-                    animated: true,
-                    completion: nil)
+                                           animated: true,
+                                           completion: nil)
                 
             } else {
                 return true
@@ -1657,8 +1667,8 @@ class ViewController1AR: UIViewController {
 }
 
 class ViewControllerNegPrep4: UIViewController {
-    var negPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("negPrepMin")!
-    var negPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("negPrepSec")!
+    let negPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("negPrepMin")!
+    let negPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("negPrepSec")!
     var newTimer = StopWatch2(isNegPrep: true, isAffPrep: false)
     var timerMinutes: Int = 4
     var timerLabel: String = "5:00"
@@ -1670,13 +1680,13 @@ class ViewControllerNegPrep4: UIViewController {
     
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
-            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateStopwatch"), userInfo: nil, repeats: true)
+            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
-            startStopButton.setTitle("Stop", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"private-sign.png"), forState: UIControlState.Normal)
         } else {
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
         }
     }
     
@@ -1689,40 +1699,40 @@ class ViewControllerNegPrep4: UIViewController {
             timerText.text = newTimer.stopWatchString
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         } else {
             
             var alertController:UIAlertController?
             alertController = UIAlertController(title: "Alert",
-                message: "Are you sure you want to reset?",
-                preferredStyle: .Alert)
+                                                message: "Are you sure you want to reset?",
+                                                preferredStyle: .Alert)
             
             let firstAction = UIAlertAction(title: "No",
-                style: UIAlertActionStyle.Cancel,
-                handler: nil
+                                            style: UIAlertActionStyle.Cancel,
+                                            handler: nil
             )
             
             let secondAction = UIAlertAction(title: "Yes",
-                style: UIAlertActionStyle.Default,
-                handler: {(paramAction:UIAlertAction!) in
-                    self.newTimer.seconds = 60
-                    self.newTimer.minutes = self.timerMinutes
-                    self.newTimer.stopWatchString = self.timerLabel
-                    self.timerText.text = self.newTimer.stopWatchString
-                    self.newTimer.timer.invalidate()
-                    self.newTimer.startStopwatch = true
-                    self.startStopButton.setTitle("Start", forState: .Normal)
+                                             style: UIAlertActionStyle.Default,
+                                             handler: {(paramAction:UIAlertAction!) in
+                                                self.newTimer.seconds = 60
+                                                self.newTimer.minutes = self.timerMinutes
+                                                self.newTimer.stopWatchString = self.timerLabel
+                                                self.timerText.text = self.newTimer.stopWatchString
+                                                self.newTimer.timer.invalidate()
+                                                self.newTimer.startStopwatch = true
+                                                self.startStopButton.setImage(UIImage(named:"go.png"), forState: .Normal)
             })
             
             alertController!.addAction(firstAction)
             alertController!.addAction(secondAction)
             self.presentViewController(alertController!,
-                animated: true,
-                completion: nil)
+                                       animated: true,
+                                       completion: nil)
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         originalPrepMin = Int(negPrepMin as! String)!
@@ -1735,7 +1745,7 @@ class ViewControllerNegPrep4: UIViewController {
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
     }
-
+    
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "goHome" || identifier == "goBack" || identifier == "segue2NR" {
             if newTimer.startStopwatch == false {
@@ -1743,14 +1753,14 @@ class ViewControllerNegPrep4: UIViewController {
                 alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
                 
                 let firstAction = UIAlertAction(title: "OK",
-                    style: UIAlertActionStyle.Cancel,
-                    handler: nil
+                                                style: UIAlertActionStyle.Cancel,
+                                                handler: nil
                 )
                 
                 alert!.addAction(firstAction)
                 self.presentViewController(alert!,
-                    animated: true,
-                    completion: nil)
+                                           animated: true,
+                                           completion: nil)
                 
             } else {
                 return true
@@ -1770,15 +1780,15 @@ class ViewController2NR: UIViewController {
     
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
-            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateStopwatch"), userInfo: nil, repeats: true)
+            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
-            startStopButton.setTitle("Stop", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"private-sign.png"), forState: UIControlState.Normal)
         } else {
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
         }
-}
+    }
     
     @IBAction func resetTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
@@ -1788,33 +1798,33 @@ class ViewController2NR: UIViewController {
             timerText.text = newTimer.stopWatchString
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
         } else {
             var alertController:UIAlertController?
             alertController = UIAlertController(title: "Alert",
-                message: "Are you sure you want to reset?",
-                preferredStyle: .Alert)
+                                                message: "Are you sure you want to reset?",
+                                                preferredStyle: .Alert)
             let firstAction = UIAlertAction(title: "No",
-                style: UIAlertActionStyle.Cancel,
-                handler: nil
+                                            style: UIAlertActionStyle.Cancel,
+                                            handler: nil
             )
             let secondAction = UIAlertAction(title: "Yes",
-                style: UIAlertActionStyle.Default,
-                handler: {(paramAction:UIAlertAction!) in
-                    self.newTimer.seconds = 60
-                    self.newTimer.minutes = self.timerMinutes
-                    self.newTimer.stopWatchString = self.timerLabel
-                    self.timerText.text = self.newTimer.stopWatchString
-                    self.newTimer.timer.invalidate()
-                    self.newTimer.startStopwatch = true
-                    self.startStopButton.setTitle("Start", forState: .Normal)
+                                             style: UIAlertActionStyle.Default,
+                                             handler: {(paramAction:UIAlertAction!) in
+                                                self.newTimer.seconds = 60
+                                                self.newTimer.minutes = self.timerMinutes
+                                                self.newTimer.stopWatchString = self.timerLabel
+                                                self.timerText.text = self.newTimer.stopWatchString
+                                                self.newTimer.timer.invalidate()
+                                                self.newTimer.startStopwatch = true
+                                                self.startStopButton.setImage(UIImage(named:"go.png"), forState: .Normal)
             })
             
             alertController!.addAction(firstAction)
             alertController!.addAction(secondAction)
             self.presentViewController(alertController!,
-                animated: true,
-                completion: nil)
+                                       animated: true,
+                                       completion: nil)
         }
     }
     
@@ -1829,7 +1839,7 @@ class ViewController2NR: UIViewController {
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
     }
-
+    
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "goHome" || identifier == "goBack" || identifier == "segue3AffPrep" {
             if newTimer.startStopwatch == false {
@@ -1837,14 +1847,14 @@ class ViewController2NR: UIViewController {
                 alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
                 
                 let firstAction = UIAlertAction(title: "OK",
-                    style: UIAlertActionStyle.Cancel,
-                    handler: nil
+                                                style: UIAlertActionStyle.Cancel,
+                                                handler: nil
                 )
                 
                 alert!.addAction(firstAction)
                 self.presentViewController(alert!,
-                    animated: true,
-                    completion: nil)
+                                           animated: true,
+                                           completion: nil)
                 
             } else {
                 return true
@@ -1855,8 +1865,8 @@ class ViewController2NR: UIViewController {
 }
 
 class ViewControllerAffPrep3: UIViewController {
-    var affPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("affPrepMin")!
-    var affPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("affPrepSec")!
+    let affPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("affPrepMin")!
+    let affPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("affPrepSec")!
     var newTimer = StopWatch2(isNegPrep: false, isAffPrep: true)
     var timerMinutes: Int = 4
     var timerLabel: String = "5:00"
@@ -1869,15 +1879,15 @@ class ViewControllerAffPrep3: UIViewController {
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
             
-            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateStopwatch"), userInfo: nil, repeats: true)
+            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
-            startStopButton.setTitle("Stop", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"private-sign.png"), forState: UIControlState.Normal)
             
         } else {
             
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         }
     }
@@ -1891,37 +1901,37 @@ class ViewControllerAffPrep3: UIViewController {
             timerText.text = newTimer.stopWatchString
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         } else {
             
             var alertController:UIAlertController?
             alertController = UIAlertController(title: "Alert",
-                message: "Are you sure you want to reset?",
-                preferredStyle: .Alert)
+                                                message: "Are you sure you want to reset?",
+                                                preferredStyle: .Alert)
             
             let firstAction = UIAlertAction(title: "No",
-                style: UIAlertActionStyle.Cancel,
-                handler: nil
+                                            style: UIAlertActionStyle.Cancel,
+                                            handler: nil
             )
             
             let secondAction = UIAlertAction(title: "Yes",
-                style: UIAlertActionStyle.Default,
-                handler: {(paramAction:UIAlertAction!) in
-                    self.newTimer.seconds = 60
-                    self.newTimer.minutes = self.timerMinutes
-                    self.newTimer.stopWatchString = self.timerLabel
-                    self.timerText.text = self.newTimer.stopWatchString
-                    self.newTimer.timer.invalidate()
-                    self.newTimer.startStopwatch = true
-                    self.startStopButton.setTitle("Start", forState: .Normal)
+                                             style: UIAlertActionStyle.Default,
+                                             handler: {(paramAction:UIAlertAction!) in
+                                                self.newTimer.seconds = 60
+                                                self.newTimer.minutes = self.timerMinutes
+                                                self.newTimer.stopWatchString = self.timerLabel
+                                                self.timerText.text = self.newTimer.stopWatchString
+                                                self.newTimer.timer.invalidate()
+                                                self.newTimer.startStopwatch = true
+                                                self.startStopButton.setImage(UIImage(named:"go.png"), forState: .Normal)
             })
             
             alertController!.addAction(firstAction)
             alertController!.addAction(secondAction)
             self.presentViewController(alertController!,
-                animated: true,
-                completion: nil)
+                                       animated: true,
+                                       completion: nil)
         }
     }
     
@@ -1938,7 +1948,7 @@ class ViewControllerAffPrep3: UIViewController {
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
     }
-
+    
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "goHome" || identifier == "goBack" || identifier == "segue2AR" {
             if newTimer.startStopwatch == false {
@@ -1946,14 +1956,14 @@ class ViewControllerAffPrep3: UIViewController {
                 alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
                 
                 let firstAction = UIAlertAction(title: "OK",
-                    style: UIAlertActionStyle.Cancel,
-                    handler: nil
+                                                style: UIAlertActionStyle.Cancel,
+                                                handler: nil
                 )
                 
                 alert!.addAction(firstAction)
                 self.presentViewController(alert!,
-                    animated: true,
-                    completion: nil)
+                                           animated: true,
+                                           completion: nil)
                 
             } else {
                 return true
@@ -1973,15 +1983,15 @@ class ViewController2AR: UIViewController {
     
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
-            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateStopwatch"), userInfo: nil, repeats: true)
+            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
-            startStopButton.setTitle("Stop", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"private-sign.png"), forState: UIControlState.Normal)
         } else {
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
         }
-   }
+    }
     
     @IBAction func resetTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
@@ -1991,33 +2001,33 @@ class ViewController2AR: UIViewController {
             timerText.text = newTimer.stopWatchString
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
         } else {
             var alertController:UIAlertController?
             alertController = UIAlertController(title: "Alert",
-                message: "Are you sure you want to reset?",
-                preferredStyle: .Alert)
+                                                message: "Are you sure you want to reset?",
+                                                preferredStyle: .Alert)
             let firstAction = UIAlertAction(title: "No",
-                style: UIAlertActionStyle.Cancel,
-                handler: nil
+                                            style: UIAlertActionStyle.Cancel,
+                                            handler: nil
             )
             let secondAction = UIAlertAction(title: "Yes",
-                style: UIAlertActionStyle.Default,
-                handler: {(paramAction:UIAlertAction!) in
-                    self.newTimer.seconds = 60
-                    self.newTimer.minutes = self.timerMinutes
-                    self.newTimer.stopWatchString = self.timerLabel
-                    self.timerText.text = self.newTimer.stopWatchString
-                    self.newTimer.timer.invalidate()
-                    self.newTimer.startStopwatch = true
-                    self.startStopButton.setTitle("Start", forState: .Normal)
+                                             style: UIAlertActionStyle.Default,
+                                             handler: {(paramAction:UIAlertAction!) in
+                                                self.newTimer.seconds = 60
+                                                self.newTimer.minutes = self.timerMinutes
+                                                self.newTimer.stopWatchString = self.timerLabel
+                                                self.timerText.text = self.newTimer.stopWatchString
+                                                self.newTimer.timer.invalidate()
+                                                self.newTimer.startStopwatch = true
+                                                self.startStopButton.setImage(UIImage(named:"go.png"), forState: .Normal)
             })
             
             alertController!.addAction(firstAction)
             alertController!.addAction(secondAction)
             self.presentViewController(alertController!,
-                animated: true,
-                completion: nil)
+                                       animated: true,
+                                       completion: nil)
         }
     }
     
@@ -2040,14 +2050,14 @@ class ViewController2AR: UIViewController {
                 alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
                 
                 let firstAction = UIAlertAction(title: "OK",
-                    style: UIAlertActionStyle.Cancel,
-                    handler: nil
+                                                style: UIAlertActionStyle.Cancel,
+                                                handler: nil
                 )
                 
                 alert!.addAction(firstAction)
                 self.presentViewController(alert!,
-                    animated: true,
-                    completion: nil)
+                                           animated: true,
+                                           completion: nil)
                 
             } else {
                 return true
@@ -2055,7 +2065,7 @@ class ViewController2AR: UIViewController {
         }
         return true
     }
-
+    
 }
 
 class ViewControllerLDAC: UIViewController {
@@ -2068,13 +2078,13 @@ class ViewControllerLDAC: UIViewController {
     
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
-            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateStopwatch"), userInfo: nil, repeats: true)
+            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
-            startStopButton.setTitle("Stop", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"private-sign.png"), forState: UIControlState.Normal)
         } else {
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
         }
     }
     
@@ -2086,7 +2096,7 @@ class ViewControllerLDAC: UIViewController {
             timerText.text = newTimer.stopWatchString
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
         } else {
             var alertController:UIAlertController?
             alertController = UIAlertController(title: "Alert",
@@ -2105,7 +2115,7 @@ class ViewControllerLDAC: UIViewController {
                                                 self.timerText.text = self.newTimer.stopWatchString
                                                 self.newTimer.timer.invalidate()
                                                 self.newTimer.startStopwatch = true
-                                                self.startStopButton.setTitle("Start", forState: .Normal)
+                                                self.startStopButton.setImage(UIImage(named:"go.png"), forState: .Normal)
             })
             
             alertController!.addAction(firstAction)
@@ -2163,13 +2173,13 @@ class ViewControllerLD1CX: UIViewController {
     
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
-            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateStopwatch"), userInfo: nil, repeats: true)
+            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
-            startStopButton.setTitle("Stop", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"private-sign.png"), forState: UIControlState.Normal)
         } else {
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
         }
     }
     
@@ -2181,7 +2191,7 @@ class ViewControllerLD1CX: UIViewController {
             timerText.text = newTimer.stopWatchString
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
         } else {
             var alertController:UIAlertController?
             alertController = UIAlertController(title: "Alert",
@@ -2200,7 +2210,7 @@ class ViewControllerLD1CX: UIViewController {
                                                 self.timerText.text = self.newTimer.stopWatchString
                                                 self.newTimer.timer.invalidate()
                                                 self.newTimer.startStopwatch = true
-                                                self.startStopButton.setTitle("Start", forState: .Normal)
+                                                self.startStopButton.setImage(UIImage(named:"go.png"), forState: .Normal)
             })
             
             alertController!.addAction(firstAction)
@@ -2229,7 +2239,7 @@ class ViewControllerLD1CX: UIViewController {
             svc.isNew = "yes"
         }
     }
-
+    
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "goHome" || identifier == "goBack" || identifier == "goNext" {
             if newTimer.startStopwatch == false {
@@ -2256,8 +2266,8 @@ class ViewControllerLD1CX: UIViewController {
 }
 
 class ViewControllerLDNegPrep1: UIViewController {
-    var negPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("negPrepMin")!
-    var negPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("negPrepSec")!
+    let negPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("negPrepMin")!
+    let negPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("negPrepSec")!
     var newTimer = StopWatch2(isNegPrep: true, isAffPrep: false)
     var isNew: String! = ""
     var timerMinutes: Int = 2
@@ -2272,11 +2282,11 @@ class ViewControllerLDNegPrep1: UIViewController {
         if newTimer.startStopwatch == true {
             newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
-            startStopButton.setTitle("Stop", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"private-sign.png"), forState: UIControlState.Normal)
         } else {
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
         }
     }
     
@@ -2289,7 +2299,7 @@ class ViewControllerLDNegPrep1: UIViewController {
             timerText.text = newTimer.stopWatchString
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         } else {
             
@@ -2312,7 +2322,7 @@ class ViewControllerLDNegPrep1: UIViewController {
                                                 self.timerText.text = self.newTimer.stopWatchString
                                                 self.newTimer.timer.invalidate()
                                                 self.newTimer.startStopwatch = true
-                                                self.startStopButton.setTitle("Start", forState: .Normal)
+                                                self.startStopButton.setImage(UIImage(named:"go.png"), forState: .Normal)
             })
             
             alertController!.addAction(firstAction)
@@ -2329,8 +2339,8 @@ class ViewControllerLDNegPrep1: UIViewController {
             newTimer.minutes = 2
             newTimer.seconds = 60
         } else {
-            var negPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("negPrepMin")!
-            var negPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("negPrepSec")!
+            let negPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("negPrepMin")!
+            let negPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("negPrepSec")!
             newTimer.minutes = Int(negPrepMin as! String)!
             newTimer.seconds = Int(negPrepSec as! String)!
             timerText.text = "\(negPrepMin):\(negPrepSec)"
@@ -2375,13 +2385,13 @@ class ViewControllerLDNC: UIViewController {
     
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
-            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateStopwatch"), userInfo: nil, repeats: true)
+            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
-            startStopButton.setTitle("Stop", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"private-sign.png"), forState: UIControlState.Normal)
         } else {
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
         }
     }
     
@@ -2393,7 +2403,7 @@ class ViewControllerLDNC: UIViewController {
             timerText.text = newTimer.stopWatchString
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
         } else {
             var alertController:UIAlertController?
             alertController = UIAlertController(title: "Alert",
@@ -2412,7 +2422,7 @@ class ViewControllerLDNC: UIViewController {
                                                 self.timerText.text = self.newTimer.stopWatchString
                                                 self.newTimer.timer.invalidate()
                                                 self.newTimer.startStopwatch = true
-                                                self.startStopButton.setTitle("Start", forState: .Normal)
+                                                self.startStopButton.setImage(UIImage(named:"go.png"), forState: .Normal)
             })
             
             alertController!.addAction(firstAction)
@@ -2470,13 +2480,13 @@ class ViewControllerLD2CX: UIViewController {
     
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
-            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateStopwatch"), userInfo: nil, repeats: true)
+            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
-            startStopButton.setTitle("Stop", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"private-sign.png"), forState: UIControlState.Normal)
         } else {
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
         }
     }
     
@@ -2488,7 +2498,7 @@ class ViewControllerLD2CX: UIViewController {
             timerText.text = newTimer.stopWatchString
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
         } else {
             var alertController:UIAlertController?
             alertController = UIAlertController(title: "Alert",
@@ -2507,7 +2517,7 @@ class ViewControllerLD2CX: UIViewController {
                                                 self.timerText.text = self.newTimer.stopWatchString
                                                 self.newTimer.timer.invalidate()
                                                 self.newTimer.startStopwatch = true
-                                                self.startStopButton.setTitle("Start", forState: .Normal)
+                                                self.startStopButton.setImage(UIImage(named:"go.png"), forState: .Normal)
             })
             
             alertController!.addAction(firstAction)
@@ -2537,7 +2547,7 @@ class ViewControllerLD2CX: UIViewController {
         }
     }
     
-   override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "goHome" || identifier == "goBack" || identifier == "goNext" {
             if newTimer.startStopwatch == false {
                 var alert:UIAlertController?
@@ -2563,8 +2573,8 @@ class ViewControllerLD2CX: UIViewController {
 }
 
 class ViewControllerLDAffPrep1: UIViewController {
-    var affPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("affPrepMin")!
-    var affPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("affPrepSec")!
+    let affPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("affPrepMin")!
+    let affPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("affPrepSec")!
     var newTimer = StopWatch2(isNegPrep: false, isAffPrep: true)
     var isNew : String! = ""
     var timerMinutes: Int = 2
@@ -2577,13 +2587,13 @@ class ViewControllerLDAffPrep1: UIViewController {
     
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
-            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateStopwatch"), userInfo: nil, repeats: true)
+            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
-            startStopButton.setTitle("Stop", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"private-sign.png"), forState: UIControlState.Normal)
         } else {
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
         }
     }
     
@@ -2596,7 +2606,7 @@ class ViewControllerLDAffPrep1: UIViewController {
             timerText.text = newTimer.stopWatchString
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         } else {
             
@@ -2619,7 +2629,7 @@ class ViewControllerLDAffPrep1: UIViewController {
                                                 self.timerText.text = self.newTimer.stopWatchString
                                                 self.newTimer.timer.invalidate()
                                                 self.newTimer.startStopwatch = true
-                                                self.startStopButton.setTitle("Start", forState: .Normal)
+                                                self.startStopButton.setImage(UIImage(named:"go.png"), forState: .Normal)
             })
             
             alertController!.addAction(firstAction)
@@ -2636,8 +2646,8 @@ class ViewControllerLDAffPrep1: UIViewController {
             newTimer.minutes = 2
             newTimer.seconds = 60
         } else {
-            var affPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("affPrepMin")!
-            var affPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("affPrepSec")!
+            let affPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("affPrepMin")!
+            let affPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("affPrepSec")!
             newTimer.minutes = Int(affPrepMin as! String)!
             newTimer.seconds = Int(affPrepSec as! String)!
             timerText.text = "\(affPrepMin):\(affPrepSec)"
@@ -2682,13 +2692,13 @@ class ViewControllerLDAR1: UIViewController {
     
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
-            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateStopwatch"), userInfo: nil, repeats: true)
+            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
-            startStopButton.setTitle("Stop", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"private-sign.png"), forState: UIControlState.Normal)
         } else {
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
         }
     }
     
@@ -2700,7 +2710,7 @@ class ViewControllerLDAR1: UIViewController {
             timerText.text = newTimer.stopWatchString
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
         } else {
             var alertController:UIAlertController?
             alertController = UIAlertController(title: "Alert",
@@ -2719,7 +2729,7 @@ class ViewControllerLDAR1: UIViewController {
                                                 self.timerText.text = self.newTimer.stopWatchString
                                                 self.newTimer.timer.invalidate()
                                                 self.newTimer.startStopwatch = true
-                                                self.startStopButton.setTitle("Start", forState: .Normal)
+                                                self.startStopButton.setImage(UIImage(named:"go.png"), forState: .Normal)
             })
             
             alertController!.addAction(firstAction)
@@ -2768,8 +2778,8 @@ class ViewControllerLDAR1: UIViewController {
 }
 
 class ViewControllerLDNegPrep2: UIViewController {
-    var negPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("negPrepMin")!
-    var negPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("negPrepSec")!
+    let negPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("negPrepMin")!
+    let negPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("negPrepSec")!
     var newTimer = StopWatch2(isNegPrep: true, isAffPrep: false)
     var timerMinutes: Int = 4
     var timerLabel: String = "5:00"
@@ -2781,13 +2791,13 @@ class ViewControllerLDNegPrep2: UIViewController {
     
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
-            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateStopwatch"), userInfo: nil, repeats: true)
+            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
-            startStopButton.setTitle("Stop", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"private-sign.png"), forState: UIControlState.Normal)
         } else {
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
         }
     }
     
@@ -2800,7 +2810,7 @@ class ViewControllerLDNegPrep2: UIViewController {
             timerText.text = newTimer.stopWatchString
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         } else {
             
@@ -2823,7 +2833,7 @@ class ViewControllerLDNegPrep2: UIViewController {
                                                 self.timerText.text = self.newTimer.stopWatchString
                                                 self.newTimer.timer.invalidate()
                                                 self.newTimer.startStopwatch = true
-                                                self.startStopButton.setTitle("Start", forState: .Normal)
+                                                self.startStopButton.setImage(UIImage(named:"go.png"), forState: .Normal)
             })
             
             alertController!.addAction(firstAction)
@@ -2881,13 +2891,13 @@ class ViewControllerLDNR: UIViewController {
     
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
-            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateStopwatch"), userInfo: nil, repeats: true)
+            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
-            startStopButton.setTitle("Stop", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"private-sign.png"), forState: UIControlState.Normal)
         } else {
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
         }
     }
     
@@ -2899,7 +2909,7 @@ class ViewControllerLDNR: UIViewController {
             timerText.text = newTimer.stopWatchString
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
         } else {
             var alertController:UIAlertController?
             alertController = UIAlertController(title: "Alert",
@@ -2918,7 +2928,7 @@ class ViewControllerLDNR: UIViewController {
                                                 self.timerText.text = self.newTimer.stopWatchString
                                                 self.newTimer.timer.invalidate()
                                                 self.newTimer.startStopwatch = true
-                                                self.startStopButton.setTitle("Start", forState: .Normal)
+                                                self.startStopButton.setImage(UIImage(named:"go.png"), forState: .Normal)
             })
             
             alertController!.addAction(firstAction)
@@ -2967,8 +2977,8 @@ class ViewControllerLDNR: UIViewController {
 }
 
 class ViewControllerLDAffPrep2: UIViewController {
-    var affPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("affPrepMin")!
-    var affPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("affPrepSec")!
+    let affPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("affPrepMin")!
+    let affPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("affPrepSec")!
     var newTimer = StopWatch2(isNegPrep: false, isAffPrep: true)
     var timerMinutes: Int = 4
     var timerLabel: String = "5:00"
@@ -2980,13 +2990,13 @@ class ViewControllerLDAffPrep2: UIViewController {
     
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
-            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateStopwatch"), userInfo: nil, repeats: true)
+            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
-            startStopButton.setTitle("Stop", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"private-sign.png"), forState: UIControlState.Normal)
         } else {
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
         }
     }
     
@@ -2999,7 +3009,7 @@ class ViewControllerLDAffPrep2: UIViewController {
             timerText.text = newTimer.stopWatchString
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
             
         } else {
             
@@ -3022,7 +3032,7 @@ class ViewControllerLDAffPrep2: UIViewController {
                                                 self.timerText.text = self.newTimer.stopWatchString
                                                 self.newTimer.timer.invalidate()
                                                 self.newTimer.startStopwatch = true
-                                                self.startStopButton.setTitle("Start", forState: .Normal)
+                                                self.startStopButton.setImage(UIImage(named:"go.png"), forState: .Normal)
             })
             
             alertController!.addAction(firstAction)
@@ -3080,13 +3090,13 @@ class ViewControllerLDAR2: UIViewController {
     
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
-            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateStopwatch"), userInfo: nil, repeats: true)
+            newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
-            startStopButton.setTitle("Stop", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"private-sign.png"), forState: UIControlState.Normal)
         } else {
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
         }
     }
     
@@ -3098,7 +3108,7 @@ class ViewControllerLDAR2: UIViewController {
             timerText.text = newTimer.stopWatchString
             newTimer.timer.invalidate()
             newTimer.startStopwatch = true
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named:"go.png"), forState: UIControlState.Normal)
         } else {
             var alertController:UIAlertController?
             alertController = UIAlertController(title: "Alert",
@@ -3117,7 +3127,7 @@ class ViewControllerLDAR2: UIViewController {
                                                 self.timerText.text = self.newTimer.stopWatchString
                                                 self.newTimer.timer.invalidate()
                                                 self.newTimer.startStopwatch = true
-                                                self.startStopButton.setTitle("Start", forState: .Normal)
+                                                self.startStopButton.setImage(UIImage(named:"go.png"), forState: .Normal)
             })
             
             alertController!.addAction(firstAction)
