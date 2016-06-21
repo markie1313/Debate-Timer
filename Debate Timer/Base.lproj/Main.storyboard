@@ -48,21 +48,21 @@
                                 <rect key="frame" x="315" y="441" width="40" height="62"/>
                                 <state key="normal" title="Button" image="forwardArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="uDw-2S-LBM"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="uDw-2S-LBM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHz-zn-5vM" userLabel="Home Button">
                                 <rect key="frame" x="157" y="587" width="60" height="60"/>
                                 <state key="normal" title="Button" image="home3.png"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="oZP-Xb-3Km"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="oZP-Xb-3Km"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwS-Hw-o8B" userLabel="Back Button">
                                 <rect key="frame" x="20" y="441" width="40" height="62"/>
                                 <state key="normal" title="Button" image="backArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="nPG-aG-nTi" kind="presentation" id="hrS-jo-rPv"/>
+                                    <segue destination="nPG-aG-nTi" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="hrS-jo-rPv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -112,7 +112,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                 <state key="normal" title="Lincoln Douglas"/>
                                 <connections>
-                                    <segue destination="cxg-Oe-u2a" kind="show" id="OmW-zk-9jV"/>
+                                    <segue destination="cxg-Oe-u2a" kind="presentation" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="OmW-zk-9jV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -179,7 +179,7 @@
                                 <rect key="frame" x="315" y="441" width="40" height="62"/>
                                 <state key="normal" title="Button" image="forwardArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="re2-lv-y5m" kind="presentation" identifier="goNext" modalPresentationStyle="pageSheet" modalTransitionStyle="flipHorizontal" id="dXh-jw-41Y"/>
+                                    <segue destination="re2-lv-y5m" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="dXh-jw-41Y"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7Q-zV-tzh" userLabel="Home Button">
@@ -327,21 +327,21 @@
                                 <rect key="frame" x="157" y="587" width="60" height="60"/>
                                 <state key="normal" title="Button" image="home3.png"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="AbY-5q-ff7"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="AbY-5q-ff7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poN-ml-fop" userLabel="Back Button">
                                 <rect key="frame" x="20" y="441" width="40" height="60"/>
                                 <state key="normal" title="Button" image="backArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="re2-lv-y5m" kind="presentation" id="wWe-ku-M8g"/>
+                                    <segue destination="re2-lv-y5m" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="wWe-ku-M8g"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wiD-TE-aNk" userLabel="Next Button">
                                 <rect key="frame" x="315" y="441" width="40" height="62"/>
                                 <state key="normal" title="Button" image="forwardArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="P5X-Rw-BwG" kind="presentation" id="V2T-IX-YFO"/>
+                                    <segue destination="P5X-Rw-BwG" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="V2T-IX-YFO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -398,21 +398,21 @@
                                 <rect key="frame" x="157" y="587" width="60" height="60"/>
                                 <state key="normal" title="Button" image="home3.png"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="1KU-yt-JgH"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="1KU-yt-JgH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPm-1D-pq6" userLabel="Back Button">
                                 <rect key="frame" x="20" y="441" width="40" height="60"/>
                                 <state key="normal" title="Button" image="backArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="Ay1-X3-d53" kind="presentation" id="wb6-aa-lUP"/>
+                                    <segue destination="Ay1-X3-d53" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="wb6-aa-lUP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4o-bc-WpF" userLabel="Next Button">
                                 <rect key="frame" x="315" y="441" width="40" height="62"/>
                                 <state key="normal" title="Button" image="forwardArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="HaO-By-XlD" kind="presentation" id="BYa-O4-hyn"/>
+                                    <segue destination="HaO-By-XlD" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="BYa-O4-hyn"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -470,21 +470,21 @@
                                 <rect key="frame" x="157" y="587" width="60" height="60"/>
                                 <state key="normal" title="Button" image="home3.png"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="XQE-7R-Og8"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="XQE-7R-Og8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIP-lC-tx9" userLabel="Back Button">
                                 <rect key="frame" x="20" y="441" width="40" height="60"/>
                                 <state key="normal" title="Button" image="backArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="P5X-Rw-BwG" kind="presentation" id="Wyh-Dn-dME"/>
+                                    <segue destination="P5X-Rw-BwG" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="Wyh-Dn-dME"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0YA-88-hks" userLabel="Next Button">
                                 <rect key="frame" x="315" y="441" width="40" height="62"/>
                                 <state key="normal" title="Button" image="forwardArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="g0X-t9-hPG" kind="presentation" id="IEf-Ly-qp4"/>
+                                    <segue destination="g0X-t9-hPG" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="IEf-Ly-qp4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -542,21 +542,21 @@
                                 <rect key="frame" x="157" y="587" width="60" height="60"/>
                                 <state key="normal" title="Button" image="home3.png"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="eTg-cQ-aTv"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="eTg-cQ-aTv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAH-W3-Ton" userLabel="Back Button">
                                 <rect key="frame" x="20" y="441" width="40" height="60"/>
                                 <state key="normal" title="Button" image="backArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="HaO-By-XlD" kind="presentation" id="NfZ-mP-L6U"/>
+                                    <segue destination="HaO-By-XlD" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="NfZ-mP-L6U"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tmo-kQ-qwI" userLabel="Next Button">
                                 <rect key="frame" x="315" y="441" width="40" height="62"/>
                                 <state key="normal" title="Button" image="forwardArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="xlT-9q-47B" kind="presentation" id="8zK-Q6-Ezy"/>
+                                    <segue destination="xlT-9q-47B" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="8zK-Q6-Ezy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -614,21 +614,21 @@
                                 <rect key="frame" x="157" y="587" width="60" height="60"/>
                                 <state key="normal" title="Button" image="home3.png"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="Rms-l0-Iwc"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="Rms-l0-Iwc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2b-iD-d5i" userLabel="Back Button">
                                 <rect key="frame" x="20" y="441" width="40" height="60"/>
                                 <state key="normal" title="Button" image="backArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="g0X-t9-hPG" kind="presentation" id="rAs-NL-3jl"/>
+                                    <segue destination="g0X-t9-hPG" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="rAs-NL-3jl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTT-Sc-Cy8" userLabel="Next Button">
                                 <rect key="frame" x="315" y="441" width="40" height="62"/>
                                 <state key="normal" title="Button" image="forwardArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="LC8-aH-UlU" kind="presentation" id="z3y-Sk-86k"/>
+                                    <segue destination="LC8-aH-UlU" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="z3y-Sk-86k"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -686,21 +686,21 @@
                                 <rect key="frame" x="157" y="587" width="60" height="60"/>
                                 <state key="normal" title="Button" image="home3.png"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="KJs-Yj-kb2"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="KJs-Yj-kb2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7uP-Un-tI8" userLabel="Back Button">
                                 <rect key="frame" x="20" y="441" width="40" height="60"/>
                                 <state key="normal" title="Button" image="backArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="xlT-9q-47B" kind="presentation" id="dFT-xX-0GD"/>
+                                    <segue destination="xlT-9q-47B" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="dFT-xX-0GD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYs-vG-2gi" userLabel="Next Button">
                                 <rect key="frame" x="315" y="441" width="40" height="62"/>
                                 <state key="normal" title="Button" image="forwardArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="63k-Kx-57w" kind="presentation" id="0GF-vx-THj"/>
+                                    <segue destination="63k-Kx-57w" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="0GF-vx-THj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -758,21 +758,21 @@
                                 <rect key="frame" x="157" y="587" width="60" height="60"/>
                                 <state key="normal" title="Button" image="home3.png"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="thU-Gp-1ao"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="thU-Gp-1ao"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icb-kv-P6f" userLabel="Back Button">
                                 <rect key="frame" x="20" y="441" width="40" height="60"/>
                                 <state key="normal" title="Button" image="backArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="LC8-aH-UlU" kind="presentation" id="p7n-zc-jix"/>
+                                    <segue destination="LC8-aH-UlU" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="p7n-zc-jix"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKa-Vx-RQt" userLabel="Next Button">
                                 <rect key="frame" x="315" y="441" width="40" height="62"/>
                                 <state key="normal" title="Button" image="forwardArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="Cxv-Fz-3mi" kind="presentation" id="5Cb-gi-RLh"/>
+                                    <segue destination="Cxv-Fz-3mi" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="5Cb-gi-RLh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -830,21 +830,21 @@
                                 <rect key="frame" x="157" y="587" width="60" height="60"/>
                                 <state key="normal" title="Button" image="home3.png"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="n9q-xq-ZDg"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="n9q-xq-ZDg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9u-g3-gIL" userLabel="Back Button">
                                 <rect key="frame" x="20" y="441" width="40" height="60"/>
                                 <state key="normal" title="Button" image="backArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="63k-Kx-57w" kind="presentation" id="ftR-6p-k3B"/>
+                                    <segue destination="63k-Kx-57w" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="ftR-6p-k3B"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4uB-W6-RjX" userLabel="Next Button">
                                 <rect key="frame" x="315" y="441" width="40" height="62"/>
                                 <state key="normal" title="Button" image="forwardArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="vBK-Ty-wbR" kind="presentation" id="q6E-59-UUb"/>
+                                    <segue destination="vBK-Ty-wbR" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="q6E-59-UUb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -902,21 +902,21 @@
                                 <rect key="frame" x="157" y="587" width="60" height="60"/>
                                 <state key="normal" title="Button" image="home3.png"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="raq-pX-soE"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="raq-pX-soE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZ0-vy-SXM" userLabel="Back Button">
                                 <rect key="frame" x="20" y="441" width="40" height="60"/>
                                 <state key="normal" title="Button" image="backArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="Cxv-Fz-3mi" kind="presentation" id="Ryc-er-iuE"/>
+                                    <segue destination="Cxv-Fz-3mi" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="Ryc-er-iuE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMv-RM-QM2" userLabel="Next Button">
                                 <rect key="frame" x="315" y="441" width="40" height="62"/>
                                 <state key="normal" title="Button" image="forwardArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="iX6-qW-6bg" kind="presentation" id="Ll9-OQ-CkC"/>
+                                    <segue destination="iX6-qW-6bg" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="Ll9-OQ-CkC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -974,21 +974,21 @@
                                 <rect key="frame" x="157" y="587" width="60" height="60"/>
                                 <state key="normal" title="Button" image="home3.png"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="umx-xC-lEm"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="umx-xC-lEm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19x-JH-BIW" userLabel="Back Button">
                                 <rect key="frame" x="20" y="441" width="40" height="60"/>
                                 <state key="normal" title="Button" image="backArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="vBK-Ty-wbR" kind="presentation" id="zy3-uH-III"/>
+                                    <segue destination="vBK-Ty-wbR" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="zy3-uH-III"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ff3-Nf-uVY" userLabel="Next Button">
                                 <rect key="frame" x="315" y="441" width="40" height="62"/>
                                 <state key="normal" title="Button" image="forwardArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="DIq-4M-BFv" kind="presentation" id="KI0-xB-jwF"/>
+                                    <segue destination="DIq-4M-BFv" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="KI0-xB-jwF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1046,21 +1046,21 @@
                                 <rect key="frame" x="157" y="587" width="60" height="60"/>
                                 <state key="normal" title="Button" image="home3.png"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="9cE-eO-LJY"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="9cE-eO-LJY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B82-sg-XJ7" userLabel="Back Button">
                                 <rect key="frame" x="20" y="441" width="40" height="60"/>
                                 <state key="normal" title="Button" image="backArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="iX6-qW-6bg" kind="presentation" id="vfH-zH-Gvn"/>
+                                    <segue destination="iX6-qW-6bg" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="vfH-zH-Gvn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZk-wN-aqM" userLabel="Next Button">
                                 <rect key="frame" x="315" y="441" width="40" height="62"/>
                                 <state key="normal" title="Button" image="forwardArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="gwD-27-ntt" kind="presentation" id="7qX-TL-m8k"/>
+                                    <segue destination="gwD-27-ntt" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="7qX-TL-m8k"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1118,21 +1118,21 @@
                                 <rect key="frame" x="157" y="587" width="60" height="60"/>
                                 <state key="normal" title="Button" image="home3.png"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="kVS-wc-HbO"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="kVS-wc-HbO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8i-8g-84x" userLabel="Back Button">
                                 <rect key="frame" x="20" y="441" width="40" height="60"/>
                                 <state key="normal" title="Button" image="backArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="DIq-4M-BFv" kind="presentation" id="Yj2-fc-58d"/>
+                                    <segue destination="DIq-4M-BFv" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="Yj2-fc-58d"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGh-3a-cxI" userLabel="Next Button">
                                 <rect key="frame" x="315" y="441" width="40" height="62"/>
                                 <state key="normal" title="Button" image="forwardArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="zMk-5g-oSA" kind="presentation" id="vYN-kf-ULt"/>
+                                    <segue destination="zMk-5g-oSA" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="vYN-kf-ULt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1190,21 +1190,21 @@
                                 <rect key="frame" x="157" y="587" width="60" height="60"/>
                                 <state key="normal" title="Button" image="home3.png"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="wYK-N1-xWT"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="wYK-N1-xWT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3FN-2f-wy0" userLabel="Back Button">
                                 <rect key="frame" x="20" y="441" width="40" height="60"/>
                                 <state key="normal" title="Button" image="backArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="gwD-27-ntt" kind="presentation" id="bZg-9A-38J"/>
+                                    <segue destination="gwD-27-ntt" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="bZg-9A-38J"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7t-sf-1Rl" userLabel="Next Button">
                                 <rect key="frame" x="315" y="441" width="40" height="62"/>
                                 <state key="normal" title="Button" image="forwardArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="Tcz-dQ-tHq" kind="presentation" id="Pg9-TW-wXN"/>
+                                    <segue destination="Tcz-dQ-tHq" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="Pg9-TW-wXN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1262,21 +1262,21 @@
                                 <rect key="frame" x="157" y="587" width="60" height="60"/>
                                 <state key="normal" title="Button" image="home3.png"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="wIA-pd-Mk5"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="wIA-pd-Mk5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4Q-Ia-ffT" userLabel="Back Button">
                                 <rect key="frame" x="20" y="441" width="40" height="60"/>
                                 <state key="normal" title="Button" image="backArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="zMk-5g-oSA" kind="presentation" id="tWt-Wq-dZU"/>
+                                    <segue destination="zMk-5g-oSA" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="tWt-Wq-dZU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kc5-Hq-jiE" userLabel="Next Button">
                                 <rect key="frame" x="315" y="441" width="40" height="62"/>
                                 <state key="normal" title="Button" image="forwardArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="XzL-i2-v87" kind="presentation" id="F0d-Ol-Cte"/>
+                                    <segue destination="XzL-i2-v87" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="F0d-Ol-Cte"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1334,21 +1334,21 @@
                                 <rect key="frame" x="157" y="587" width="60" height="60"/>
                                 <state key="normal" title="Button" image="home3.png"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="xMD-b3-9Zq"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="xMD-b3-9Zq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eo0-rG-3Xe" userLabel="Back Button">
                                 <rect key="frame" x="20" y="441" width="40" height="60"/>
                                 <state key="normal" title="Button" image="backArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="Tcz-dQ-tHq" kind="presentation" id="X1z-Ny-eg1"/>
+                                    <segue destination="Tcz-dQ-tHq" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="X1z-Ny-eg1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAk-qg-OUk" userLabel="Next Button">
                                 <rect key="frame" x="315" y="441" width="40" height="62"/>
                                 <state key="normal" title="Button" image="forwardArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="5w1-t2-Tmz" kind="presentation" id="JhI-hX-nrX"/>
+                                    <segue destination="5w1-t2-Tmz" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="JhI-hX-nrX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1406,21 +1406,21 @@
                                 <rect key="frame" x="157" y="587" width="60" height="60"/>
                                 <state key="normal" title="Button" image="home3.png"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="c0b-Q6-dej"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="c0b-Q6-dej"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7m-Ps-cKQ" userLabel="Back Button">
                                 <rect key="frame" x="20" y="441" width="40" height="60"/>
                                 <state key="normal" title="Button" image="backArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="XzL-i2-v87" kind="presentation" id="hcH-5Z-mOU"/>
+                                    <segue destination="XzL-i2-v87" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="hcH-5Z-mOU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qk0-Qi-UK5" userLabel="Next Button">
                                 <rect key="frame" x="315" y="441" width="40" height="62"/>
                                 <state key="normal" title="Button" image="forwardArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="5CH-ub-Nmt" kind="presentation" id="qwb-yW-Jma"/>
+                                    <segue destination="5CH-ub-Nmt" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="qwb-yW-Jma"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1478,21 +1478,21 @@
                                 <rect key="frame" x="157" y="587" width="60" height="60"/>
                                 <state key="normal" title="Button" image="home3.png"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="9KY-rb-QSm"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="9KY-rb-QSm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARm-c4-xLv" userLabel="Back Button">
                                 <rect key="frame" x="20" y="441" width="40" height="60"/>
                                 <state key="normal" title="Button" image="backArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="5w1-t2-Tmz" kind="presentation" id="AMb-fQ-DCT"/>
+                                    <segue destination="5w1-t2-Tmz" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="AMb-fQ-DCT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GH0-Dz-Krg" userLabel="Next Button">
                                 <rect key="frame" x="315" y="441" width="40" height="62"/>
                                 <state key="normal" title="Button" image="forwardArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="ZPZ-Y4-68R"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="ZPZ-Y4-68R"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1550,21 +1550,21 @@
                                 <rect key="frame" x="157" y="587" width="60" height="60"/>
                                 <state key="normal" title="Button" image="home3.png"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="aNx-Sl-gI2"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="aNx-Sl-gI2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqa-mi-q5f" userLabel="Back Button">
                                 <rect key="frame" x="20" y="441" width="40" height="60"/>
                                 <state key="normal" title="Button" image="backArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="kO7-zf-P6l" kind="presentation" id="GDU-nZ-iSm"/>
+                                    <segue destination="kO7-zf-P6l" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="GDU-nZ-iSm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEk-TM-vOR" userLabel="Next Button">
                                 <rect key="frame" x="315" y="441" width="40" height="62"/>
                                 <state key="normal" title="Button" image="forwardArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="96r-WU-pqI" kind="presentation" id="Naj-lS-DaT"/>
+                                    <segue destination="96r-WU-pqI" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="Naj-lS-DaT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1622,21 +1622,21 @@
                                 <rect key="frame" x="157" y="587" width="60" height="60"/>
                                 <state key="normal" title="Button" image="home3.png"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="SnZ-Sx-brG"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="SnZ-Sx-brG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Se2-HQ-HS9" userLabel="Back Button">
                                 <rect key="frame" x="20" y="441" width="40" height="60"/>
                                 <state key="normal" title="Button" image="backArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="dka-o2-oBf" kind="presentation" id="irG-gJ-BFo"/>
+                                    <segue destination="dka-o2-oBf" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="irG-gJ-BFo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQy-3y-YT9" userLabel="Next Button">
                                 <rect key="frame" x="315" y="441" width="40" height="62"/>
                                 <state key="normal" title="Button" image="forwardArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="sqa-oz-cny" kind="presentation" id="nLi-zj-dZD"/>
+                                    <segue destination="sqa-oz-cny" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="nLi-zj-dZD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1694,21 +1694,21 @@
                                 <rect key="frame" x="157" y="587" width="60" height="60"/>
                                 <state key="normal" title="Button" image="home3.png"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="EKZ-8Z-bUH"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="EKZ-8Z-bUH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5an-Gu-A8k" userLabel="Back Button">
                                 <rect key="frame" x="20" y="441" width="40" height="60"/>
                                 <state key="normal" title="Button" image="backArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="4xM-QE-qOQ" kind="presentation" id="yAP-2c-cc5"/>
+                                    <segue destination="4xM-QE-qOQ" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="yAP-2c-cc5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKg-w0-gfC" userLabel="Next Button">
                                 <rect key="frame" x="315" y="441" width="40" height="62"/>
                                 <state key="normal" title="Button" image="forwardArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="kO7-zf-P6l" kind="presentation" id="11W-EE-yz7"/>
+                                    <segue destination="kO7-zf-P6l" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="11W-EE-yz7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1766,21 +1766,21 @@
                                 <rect key="frame" x="157" y="587" width="60" height="60"/>
                                 <state key="normal" title="Button" image="home3.png"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="fah-fW-k4C"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="fah-fW-k4C"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZjZ-1G-MF9" userLabel="Back Button">
                                 <rect key="frame" x="20" y="441" width="40" height="60"/>
                                 <state key="normal" title="Button" image="backArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="qXy-6d-WZl" kind="presentation" id="UVB-c0-1Ob"/>
+                                    <segue destination="qXy-6d-WZl" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="UVB-c0-1Ob"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGN-xe-nBL" userLabel="Next Button">
                                 <rect key="frame" x="315" y="441" width="40" height="62"/>
                                 <state key="normal" title="Button" image="forwardArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="dka-o2-oBf" kind="presentation" id="XMf-0h-gVU"/>
+                                    <segue destination="dka-o2-oBf" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="XMf-0h-gVU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1838,21 +1838,21 @@
                                 <rect key="frame" x="157" y="587" width="60" height="60"/>
                                 <state key="normal" title="Button" image="home3.png"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="Uyd-cB-1WL"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="Uyd-cB-1WL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7N-kx-YsC" userLabel="Back Button">
                                 <rect key="frame" x="20" y="441" width="40" height="60"/>
                                 <state key="normal" title="Button" image="backArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="SMI-32-zKO" kind="presentation" id="1I3-rf-osL"/>
+                                    <segue destination="SMI-32-zKO" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="1I3-rf-osL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vf-HX-nfY" userLabel="Next Button">
                                 <rect key="frame" x="315" y="441" width="40" height="62"/>
                                 <state key="normal" title="Button" image="forwardArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="4xM-QE-qOQ" kind="presentation" id="9W9-79-IUP"/>
+                                    <segue destination="4xM-QE-qOQ" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="9W9-79-IUP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1910,21 +1910,21 @@
                                 <rect key="frame" x="157" y="587" width="60" height="60"/>
                                 <state key="normal" title="Button" image="home3.png"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="WUM-Ko-Do4"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="WUM-Ko-Do4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGw-uv-rne" userLabel="Back Button">
                                 <rect key="frame" x="20" y="441" width="40" height="60"/>
                                 <state key="normal" title="Button" image="backArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="qXy-6d-WZl" kind="presentation" id="t3w-Jd-2MS"/>
+                                    <segue destination="qXy-6d-WZl" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="t3w-Jd-2MS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rp-KL-wZn" userLabel="Next Button">
                                 <rect key="frame" x="315" y="441" width="40" height="62"/>
                                 <state key="normal" title="Button" image="forwardArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="mOA-rL-kGi" kind="presentation" id="328-fA-gV4"/>
+                                    <segue destination="mOA-rL-kGi" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="328-fA-gV4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1982,21 +1982,21 @@
                                 <rect key="frame" x="157" y="587" width="60" height="60"/>
                                 <state key="normal" title="Button" image="home3.png"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="ZHL-po-6ib"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="ZHL-po-6ib"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeZ-cd-XRU" userLabel="Back Button">
                                 <rect key="frame" x="20" y="441" width="40" height="60"/>
                                 <state key="normal" title="Button" image="backArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="SMI-32-zKO" kind="presentation" id="Xmb-e2-d4a"/>
+                                    <segue destination="SMI-32-zKO" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="Xmb-e2-d4a"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uw9-4G-PnL" userLabel="Next Button">
                                 <rect key="frame" x="315" y="441" width="40" height="62"/>
                                 <state key="normal" title="Button" image="forwardArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="aUp-9F-Wtf" kind="presentation" id="TeH-7k-VgW"/>
+                                    <segue destination="aUp-9F-Wtf" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="TeH-7k-VgW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2054,21 +2054,21 @@
                                 <rect key="frame" x="157" y="587" width="60" height="60"/>
                                 <state key="normal" title="Button" image="home3.png"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="0dH-XT-mxd"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="0dH-XT-mxd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjS-m5-5sc" userLabel="Back Button">
                                 <rect key="frame" x="20" y="441" width="40" height="60"/>
                                 <state key="normal" title="Button" image="backArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="mOA-rL-kGi" kind="presentation" id="5BQ-Ek-4i8"/>
+                                    <segue destination="mOA-rL-kGi" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="5BQ-Ek-4i8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oto-At-Icx" userLabel="Next Button">
                                 <rect key="frame" x="315" y="441" width="40" height="62"/>
                                 <state key="normal" title="Button" image="forwardArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="nPG-aG-nTi" kind="presentation" id="RAo-hl-NIA"/>
+                                    <segue destination="nPG-aG-nTi" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="RAo-hl-NIA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2126,21 +2126,21 @@
                                 <rect key="frame" x="157" y="587" width="60" height="60"/>
                                 <state key="normal" title="Button" image="home3.png"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="9HZ-78-yht"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="9HZ-78-yht"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQG-Y0-apk" userLabel="Back Button">
                                 <rect key="frame" x="20" y="441" width="40" height="60"/>
                                 <state key="normal" title="Button" image="backArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="aUp-9F-Wtf" kind="presentation" id="r7g-bA-bhA"/>
+                                    <segue destination="aUp-9F-Wtf" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="r7g-bA-bhA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Of9-Eg-i8G" userLabel="Next Button">
                                 <rect key="frame" x="315" y="441" width="40" height="62"/>
                                 <state key="normal" title="Button" image="forwardArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="cxg-Oe-u2a" kind="presentation" id="7F3-Bg-Pfv"/>
+                                    <segue destination="cxg-Oe-u2a" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="7F3-Bg-Pfv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2197,19 +2197,22 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kV6-OK-m1i" userLabel="Home Button">
                                 <rect key="frame" x="157" y="587" width="60" height="60"/>
                                 <state key="normal" title="Button" image="home3.png"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="b5r-SE-OON"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTA-uq-FpW" userLabel="Back Button">
                                 <rect key="frame" x="20" y="441" width="40" height="60"/>
                                 <state key="normal" title="Button" image="backArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="sqa-oz-cny" kind="presentation" id="4fL-dG-JfX"/>
+                                    <segue destination="sqa-oz-cny" kind="presentation" identifier="goBack" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="4fL-dG-JfX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPB-43-blt" userLabel="Next Button">
                                 <rect key="frame" x="315" y="441" width="40" height="62"/>
                                 <state key="normal" title="Button" image="forwardArrow3_opt.png"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="Itj-E9-Ha7"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="Itj-E9-Ha7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2234,34 +2237,34 @@
         <image name="reset.png" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AMb-fQ-DCT"/>
+        <segue reference="JhI-hX-nrX"/>
         <segue reference="hcH-5Z-mOU"/>
         <segue reference="X1z-Ny-eg1"/>
-        <segue reference="tWt-Wq-dZU"/>
-        <segue reference="bZg-9A-38J"/>
-        <segue reference="Yj2-fc-58d"/>
-        <segue reference="vfH-zH-Gvn"/>
-        <segue reference="zy3-uH-III"/>
-        <segue reference="Ryc-er-iuE"/>
-        <segue reference="ftR-6p-k3B"/>
+        <segue reference="4fL-dG-JfX"/>
+        <segue reference="Itj-E9-Ha7"/>
+        <segue reference="0DX-vx-3ZX"/>
+        <segue reference="0GF-vx-THj"/>
         <segue reference="p7n-zc-jix"/>
         <segue reference="dFT-xX-0GD"/>
         <segue reference="rAs-NL-3jl"/>
         <segue reference="NfZ-mP-L6U"/>
-        <segue reference="Wyh-Dn-dME"/>
-        <segue reference="wb6-aa-lUP"/>
-        <segue reference="4fL-dG-JfX"/>
-        <segue reference="Itj-E9-Ha7"/>
-        <segue reference="GDU-nZ-iSm"/>
-        <segue reference="irG-gJ-BFo"/>
-        <segue reference="yAP-2c-cc5"/>
-        <segue reference="UVB-c0-1Ob"/>
-        <segue reference="1I3-rf-osL"/>
-        <segue reference="328-fA-gV4"/>
-        <segue reference="TeH-7k-VgW"/>
+        <segue reference="5Cb-gi-RLh"/>
+        <segue reference="vfH-zH-Gvn"/>
+        <segue reference="KI0-xB-jwF"/>
+        <segue reference="7qX-TL-m8k"/>
+        <segue reference="vYN-kf-ULt"/>
+        <segue reference="zy3-uH-III"/>
+        <segue reference="5BQ-Ek-4i8"/>
+        <segue reference="r7g-bA-bhA"/>
         <segue reference="RAo-hl-NIA"/>
         <segue reference="7F3-Bg-Pfv"/>
-        <segue reference="dXh-jw-41Y"/>
-        <segue reference="tzI-uc-0YW"/>
+        <segue reference="Xmb-e2-d4a"/>
+        <segue reference="t3w-Jd-2MS"/>
+        <segue reference="9W9-79-IUP"/>
+        <segue reference="XMf-0h-gVU"/>
+        <segue reference="11W-EE-yz7"/>
+        <segue reference="wWe-ku-M8g"/>
+        <segue reference="wb6-aa-lUP"/>
+        <segue reference="V2T-IX-YFO"/>
     </inferredMetricsTieBreakers>
 </document>
