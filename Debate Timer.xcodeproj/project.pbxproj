@@ -14,6 +14,8 @@
 		EB9EEFB71D16FA3200A0E56E /* forwardArrow3_opt.png in Resources */ = {isa = PBXBuildFile; fileRef = EB9EEFB51D16FA3200A0E56E /* forwardArrow3_opt.png */; };
 		EB9EEFB81D16FA3200A0E56E /* backArrow3_opt.png in Resources */ = {isa = PBXBuildFile; fileRef = EB9EEFB61D16FA3200A0E56E /* backArrow3_opt.png */; };
 		EB9EEFBC1D171BE200A0E56E /* home3.png in Resources */ = {isa = PBXBuildFile; fileRef = EB9EEFBB1D171BE200A0E56E /* home3.png */; };
+		EB9EEFBE1D19BB7C00A0E56E /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = EB9EEFBD1D19BB7C00A0E56E /* Icon-76.png */; };
+		EB9EEFC01D1C3CC100A0E56E /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9EEFBF1D1C3CC100A0E56E /* TransitionManager.swift */; };
 		EBDBA8F51CAD404B00F865A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBA8F41CAD404B00F865A4 /* AppDelegate.swift */; };
 		EBDBA8F71CAD404B00F865A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBA8F61CAD404B00F865A4 /* ViewController.swift */; };
 		EBDBA8FA1CAD404B00F865A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBDBA8F81CAD404B00F865A4 /* Main.storyboard */; };
@@ -31,6 +33,8 @@
 		EB9EEFB51D16FA3200A0E56E /* forwardArrow3_opt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forwardArrow3_opt.png; sourceTree = "<group>"; };
 		EB9EEFB61D16FA3200A0E56E /* backArrow3_opt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backArrow3_opt.png; sourceTree = "<group>"; };
 		EB9EEFBB1D171BE200A0E56E /* home3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home3.png; sourceTree = "<group>"; };
+		EB9EEFBD1D19BB7C00A0E56E /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		EB9EEFBF1D1C3CC100A0E56E /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		EBDBA8F11CAD404B00F865A4 /* Debate Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Debate Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBDBA8F41CAD404B00F865A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBDBA8F61CAD404B00F865A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +79,7 @@
 				EBDBA8F41CAD404B00F865A4 /* AppDelegate.swift */,
 				EBDBA8F61CAD404B00F865A4 /* ViewController.swift */,
 				EBDBA8F81CAD404B00F865A4 /* Main.storyboard */,
+				EB9EEFBF1D1C3CC100A0E56E /* TransitionManager.swift */,
 				EBDBA8FB1CAD404B00F865A4 /* Assets.xcassets */,
 				EBDBA8FD1CAD404B00F865A4 /* LaunchScreen.storyboard */,
 				EBDBA9001CAD404B00F865A4 /* Info.plist */,
@@ -87,6 +92,7 @@
 				EB9EEFB51D16FA3200A0E56E /* forwardArrow3_opt.png */,
 				EB9EEFB61D16FA3200A0E56E /* backArrow3_opt.png */,
 				EB9EEFBB1D171BE200A0E56E /* home3.png */,
+				EB9EEFBD1D19BB7C00A0E56E /* Icon-76.png */,
 			);
 			path = "Debate Timer";
 			sourceTree = "<group>";
@@ -156,6 +162,7 @@
 				EB9EEFA11D15B0C100A0E56E /* reset.png in Resources */,
 				EBDBA8FF1CAD404B00F865A4 /* LaunchScreen.storyboard in Resources */,
 				EB9EEFA41D15B0C100A0E56E /* play-button.png in Resources */,
+				EB9EEFBE1D19BB7C00A0E56E /* Icon-76.png in Resources */,
 				EBDBA8FC1CAD404B00F865A4 /* Assets.xcassets in Resources */,
 				EB9EEFB71D16FA3200A0E56E /* forwardArrow3_opt.png in Resources */,
 				EB9EEFA31D15B0C100A0E56E /* private-sign.png in Resources */,
@@ -171,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBDBA9071CAD44D800F865A4 /* StopWatch.swift in Sources */,
+				EB9EEFC01D1C3CC100A0E56E /* TransitionManager.swift in Sources */,
 				EBDBA8F71CAD404B00F865A4 /* ViewController.swift in Sources */,
 				EBDBA8F51CAD404B00F865A4 /* AppDelegate.swift in Sources */,
 				EBF8F4E81CB2D65B00BF317B /* StopWatch2.swift in Sources */,

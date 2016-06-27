@@ -8,8 +8,26 @@
 
 import UIKit
 import Foundation
+var whichDirection = ""
+
+let transitionManager = TransitionManager()
 
 class ViewController: UIViewController {
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        whichDirection = "R"
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
+        
+    }
+    
+    @IBAction func unwindToViewController(sender: UIStoryboardSegue) {
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +50,14 @@ class ViewController1AC: UIViewController {
     @IBOutlet var startStopButton: UIButton!
     @IBOutlet var backButton: UIButton!
     @IBOutlet var nextButton: UIButton!
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
+    }
     
     @IBAction func resetTimer(sender: AnyObject) {
         
@@ -117,6 +143,11 @@ class ViewController1AC: UIViewController {
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "goBack" || identifier == "goNext" {
+            if identifier == "goBack" {
+                whichDirection = "L"
+            }else{
+                whichDirection = "R"
+            }
             if newTimer.startStopwatch == false {
                 var alert:UIAlertController?
                 alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
@@ -226,14 +257,24 @@ class ViewController1CX: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "segueFirstNegPrep" {
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
+        if segue.identifier == "goNext" {
             let svc = segue.destinationViewController as! ViewControllerFirstNegPrep
             svc.isNew = "yes"
         }
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
-        if identifier == "goHome" || identifier == "goBack" || identifier == "segueFirstNegPrep" {
+        if identifier == "goBack" {
+            whichDirection = "L"
+        }else{
+            whichDirection = "R"
+        }
+        if identifier == "goHome" || identifier == "goBack" || identifier == "goNext" {
             if newTimer.startStopwatch == false {
                 var alert:UIAlertController?
                 alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
@@ -287,7 +328,6 @@ class ViewControllerFirstNegPrep: UIViewController {
             
         }
     }
-    
     
     @IBAction func resetTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
