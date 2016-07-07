@@ -10,9 +10,12 @@ import UIKit
 import Foundation
 var whichDirection = ""
 
-let transitionManager = TransitionManager()
+let transitionManager = TransitionManager2()
 
 class ViewController: UIViewController {
+    
+    @IBAction func unwindToViewController(sender: UIStoryboardSegue) {
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         whichDirection = "R"
@@ -24,9 +27,6 @@ class ViewController: UIViewController {
         // the segue to use our custom TransitionManager object to manage the transition animation
         toViewController.transitioningDelegate = transitionManager
         
-    }
-    
-    @IBAction func unwindToViewController(sender: UIStoryboardSegue) {
     }
     
     override func viewDidLoad() {
@@ -2116,6 +2116,21 @@ class ViewControllerLDAC: UIViewController {
     @IBOutlet var timerText: UILabel!
     @IBOutlet var startStopButton: UIButton!
     
+    @IBAction func unwindToViewControllerLCAC(sender: UIStoryboardSegue) {
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        whichDirection = "R"
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
+        
+    }
+    
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
             newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
@@ -2193,7 +2208,7 @@ class ViewControllerLDAC: UIViewController {
                 self.presentViewController(alert!,
                                            animated: true,
                                            completion: nil)
-                
+                return false
             } else {
                 return true
             }
@@ -2210,6 +2225,9 @@ class ViewControllerLD1CX: UIViewController {
     
     @IBOutlet var timerText: UILabel!
     @IBOutlet var startStopButton: UIButton!
+    
+    @IBAction func unwindToViewControllerLD1CX(sender: UIStoryboardSegue) {
+    }
     
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
@@ -2277,7 +2295,18 @@ class ViewControllerLD1CX: UIViewController {
         if segue.identifier == "goNext" {
             let svc = segue.destinationViewController as! ViewControllerLDNegPrep1
             svc.isNew = "yes"
+            print(segue.identifier)
+        } else {
+            print(segue.identifier)
         }
+        whichDirection = "R"
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
@@ -2304,7 +2333,11 @@ class ViewControllerLD1CX: UIViewController {
     }
     
 }
-
+/*
+ add the func unwindToViewControllerWhatev
+ add prepareForSegue
+    if it already has this, it's ok, just add the transition manager code to the original
+ */
 class ViewControllerLDNegPrep1: UIViewController {
     let negPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("negPrepMin")!
     let negPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("negPrepSec")!
@@ -2317,6 +2350,20 @@ class ViewControllerLDNegPrep1: UIViewController {
     
     @IBOutlet var timerText: UILabel!
     @IBOutlet var startStopButton: UIButton!
+    
+    @IBAction func unwindToViewControllerLDNegPrep1(sender: UIStoryboardSegue) {
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        whichDirection = "R"
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
+    }
     
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
@@ -2423,6 +2470,9 @@ class ViewControllerLDNC: UIViewController {
     @IBOutlet var timerText: UILabel!
     @IBOutlet var startStopButton: UIButton!
     
+    @IBAction func unwindToViewControllerLDNC(sender: UIStoryboardSegue) {
+    }
+    
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
             newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
@@ -2508,6 +2558,17 @@ class ViewControllerLDNC: UIViewController {
         return true
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        whichDirection = "R"
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
+    }
+    
 }
 
 class ViewControllerLD2CX: UIViewController {
@@ -2517,6 +2578,9 @@ class ViewControllerLD2CX: UIViewController {
     
     @IBOutlet var timerText: UILabel!
     @IBOutlet var startStopButton: UIButton!
+    
+    @IBAction func unwindToViewControllerLD2CX(sender: UIStoryboardSegue) {
+    }
     
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
@@ -2585,6 +2649,14 @@ class ViewControllerLD2CX: UIViewController {
             let svc = segue.destinationViewController as! ViewControllerLDAffPrep1
             svc.isNew = "yes"
         }
+            whichDirection = "R"
+            
+            // this gets a reference to the screen that we're about to transition to
+            let toViewController = segue.destinationViewController as UIViewController
+            
+            // instead of using the default transition animation, we'll ask
+            // the segue to use our custom TransitionManager object to manage the transition animation
+            toViewController.transitioningDelegate = transitionManager
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
@@ -2624,6 +2696,9 @@ class ViewControllerLDAffPrep1: UIViewController {
     
     @IBOutlet var timerText: UILabel!
     @IBOutlet var startStopButton: UIButton!
+    
+    @IBAction func unwindToViewControllerLDAffPrep1(sender: UIStoryboardSegue) {
+    }
     
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
@@ -2720,6 +2795,18 @@ class ViewControllerLDAffPrep1: UIViewController {
         }
         return true
     }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        whichDirection = "R"
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
+    }
+    
 }
 
 class ViewControllerLDAR1: UIViewController {
@@ -2730,7 +2817,10 @@ class ViewControllerLDAR1: UIViewController {
     @IBOutlet var timerText: UILabel!
     @IBOutlet var startStopButton: UIButton!
     
-    @IBAction func startStopTimer(sender: AnyObject) {
+    @IBAction func unwindToViewControllerLDAR1(sender: UIStoryboardSegue) {
+    }
+    
+   @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
             newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
@@ -2815,6 +2905,17 @@ class ViewControllerLDAR1: UIViewController {
         return true
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        whichDirection = "R"
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
+    }
+    
 }
 
 class ViewControllerLDNegPrep2: UIViewController {
@@ -2829,7 +2930,10 @@ class ViewControllerLDNegPrep2: UIViewController {
     @IBOutlet var timerText: UILabel!
     @IBOutlet var startStopButton: UIButton!
     
-    @IBAction func startStopTimer(sender: AnyObject) {
+    @IBAction func unwindToViewControllerLDNegPrep2(sender: UIStoryboardSegue) {
+    }
+    
+   @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
             newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
@@ -2919,6 +3023,17 @@ class ViewControllerLDNegPrep2: UIViewController {
         }
         return true
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        whichDirection = "R"
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
+    }
 }
 
 class ViewControllerLDNR: UIViewController {
@@ -2928,6 +3043,9 @@ class ViewControllerLDNR: UIViewController {
     
     @IBOutlet var timerText: UILabel!
     @IBOutlet var startStopButton: UIButton!
+    
+    @IBAction func unwindToViewControllerLDNR(sender: UIStoryboardSegue) {
+    }
     
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
@@ -3014,6 +3132,17 @@ class ViewControllerLDNR: UIViewController {
         return true
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        whichDirection = "R"
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
+    }
+    
 }
 
 class ViewControllerLDAffPrep2: UIViewController {
@@ -3027,6 +3156,9 @@ class ViewControllerLDAffPrep2: UIViewController {
     
     @IBOutlet var timerText: UILabel!
     @IBOutlet var startStopButton: UIButton!
+    
+    @IBAction func unwindToViewControllerLDAffPrep2(sender: UIStoryboardSegue) {
+    }
     
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
@@ -3118,6 +3250,18 @@ class ViewControllerLDAffPrep2: UIViewController {
         }
         return true
     }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        whichDirection = "R"
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
+    }
+    
 }
 
 class ViewControllerLDAR2: UIViewController {
@@ -3127,6 +3271,9 @@ class ViewControllerLDAR2: UIViewController {
     
     @IBOutlet var timerText: UILabel!
     @IBOutlet var startStopButton: UIButton!
+    
+    @IBAction func unwindToViewControllerLDAR2(sender: UIStoryboardSegue) {
+    }
     
     @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
@@ -3212,6 +3359,18 @@ class ViewControllerLDAR2: UIViewController {
         }
         return true
     }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        whichDirection = "R"
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
+    }
     
+
 }
 

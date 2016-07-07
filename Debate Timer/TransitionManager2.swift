@@ -1,19 +1,16 @@
 //
 //  TransitionManager.swift
-//  Debate Timer
+//  moarTransitions
 //
-//  Created by Mark Lindberg on 6/23/16.
-//  Got this from http://mathewsanders.com/animated-transitions-in-swift/
+//  Created by Mark Lindberg on 7/2/16.
 //  Copyright © 2016 Phredster. All rights reserved.
 //
 
 import UIKit
 
-class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate {
-    
-    private var presenting = true
-    
+class TransitionManager2: NSObject,UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate {
     // MARK: UIViewControllerAnimatedTransitioning protocol methods
+    private var presenting = true
     
     // animate a change from one viewcontroller to another
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
@@ -26,14 +23,15 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
         let offScreenRight = CGAffineTransformMakeTranslation(container!.frame.width, 0)
         let offScreenLeft = CGAffineTransformMakeTranslation(-container!.frame.width, 0)
         
-        // prepare the toView for the animation
-        if (whichDirection == "L"){
+        // start the toView to the right of the screen
+        if (self.presenting){
             toView.transform = offScreenRight
-            //print("whichDirection should be 'L' = " + whichDirection)
+            print("Please shoot me, 2")
         }
         else {
-            //fromView.transform = offScreenRight
-            //print("whichDirection should be 'R' = " + whichDirection)
+            //            toView.transform = offScreenLeft
+            //           fromView.transform = offScreenLeft
+            print("Please shoot me")
         }
         
         // add the both views to our view controller
@@ -51,15 +49,17 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
         // we also use the block animation usingSpringWithDamping for a little bounce
         UIView.animateWithDuration(duration, delay: 0.0, usingSpringWithDamping: 0.75, initialSpringVelocity: 0.8, options: [], animations: {
             
-            if (whichDirection == "L"){
+            if (self.presenting){
                 fromView.transform = offScreenLeft
-                //print("whichDirection should be 'L' = " + whichDirection)
+                //toView.transform = offScreenRight
+                print("Please shoot me, 3")
             }
             else {
+                //            toView.transform = offScreenLeft
                 fromView.transform = offScreenRight
-                //print("whichDirection should be 'R' = " + whichDirection)
+                print("Please shoot me, 4")
             }
-//            fromView.transform = offScreenLeft
+            
             toView.transform = CGAffineTransformIdentity
             
             }, completion: { finished in
@@ -67,14 +67,13 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
                 // tell our transitionContext object that we've finished animating
                 transitionContext.completeTransition(true)
                 
-        })
-    }
+        })    }
     
     // return how many seconds the transiton animation will take
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-        return 1.0
+        return 0.5
     }
-
+    
     // MARK: UIViewControllerTransitioningDelegate protocol methods
     
     // return the animataor when presenting a viewcontroller
