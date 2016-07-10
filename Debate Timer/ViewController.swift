@@ -161,7 +161,7 @@ class ViewController1AC: UIViewController {
                 self.presentViewController(alert!,
                                            animated: true,
                                            completion: nil)
-                
+                return false
             } else {
                 return true
             }
@@ -288,7 +288,7 @@ class ViewController1CX: UIViewController {
                 self.presentViewController(alert!,
                                            animated: true,
                                            completion: nil)
-                
+                return false
             } else {
                 return true
             }
@@ -407,7 +407,7 @@ class ViewControllerFirstNegPrep: UIViewController {
                 self.presentViewController(alert!,
                                            animated: true,
                                            completion: nil)
-                
+                return false
             } else {
                 return true
             }
@@ -516,7 +516,7 @@ class ViewController1NC: UIViewController {
                 self.presentViewController(alert!,
                                            animated: true,
                                            completion: nil)
-                
+                return false
             } else {
                 return true
             }
@@ -629,7 +629,7 @@ class ViewController2CX: UIViewController {
                 self.presentViewController(alert!,
                                            animated: true,
                                            completion: nil)
-                
+                return false
             } else {
                 return true
             }
@@ -744,7 +744,7 @@ class ViewController1AffPrep: UIViewController {
                 self.presentViewController(alert!,
                                            animated: true,
                                            completion: nil)
-                
+                return false
             } else {
                 return true
             }
@@ -850,7 +850,7 @@ class viewController2AC: UIViewController {
                 self.presentViewController(alert!,
                                            animated: true,
                                            completion: nil)
-                
+                return false
             } else {
                 return true
             }
@@ -958,7 +958,7 @@ class ViewController3CX: UIViewController {
                 self.presentViewController(alert!,
                                            animated: true,
                                            completion: nil)
-                
+                return false
             } else {
                 return true
             }
@@ -1069,7 +1069,7 @@ class ViewControllerNegPrep2: UIViewController {
                 self.presentViewController(alert!,
                                            animated: true,
                                            completion: nil)
-                
+                return false
             } else {
                 return true
             }
@@ -1173,7 +1173,7 @@ class ViewController2NC: UIViewController {
                 self.presentViewController(alert!,
                                            animated: true,
                                            completion: nil)
-                
+                return false
             } else {
                 return true
             }
@@ -1277,7 +1277,7 @@ class ViewController4CX: UIViewController {
                 self.presentViewController(alert!,
                                            animated: true,
                                            completion: nil)
-                
+                return false
             } else {
                 return true
             }
@@ -1386,7 +1386,7 @@ class ViewControllerNegPrep3: UIViewController {
                 self.presentViewController(alert!,
                                            animated: true,
                                            completion: nil)
-                
+                return false
             } else {
                 return true
             }
@@ -1490,7 +1490,7 @@ class ViewController1NR: UIViewController {
                 self.presentViewController(alert!,
                                            animated: true,
                                            completion: nil)
-                
+                return false
             } else {
                 return true
             }
@@ -1595,7 +1595,7 @@ class ViewControllerAffPrep2: UIViewController {
                 self.presentViewController(alert!,
                                            animated: true,
                                            completion: nil)
-                
+                return false
             } else {
                 return true
             }
@@ -1697,7 +1697,7 @@ class ViewController1AR: UIViewController {
                 self.presentViewController(alert!,
                                            animated: true,
                                            completion: nil)
-                
+                return false
             } else {
                 return true
             }
@@ -1801,7 +1801,7 @@ class ViewControllerNegPrep4: UIViewController {
                 self.presentViewController(alert!,
                                            animated: true,
                                            completion: nil)
-                
+                return false
             } else {
                 return true
             }
@@ -1895,7 +1895,7 @@ class ViewController2NR: UIViewController {
                 self.presentViewController(alert!,
                                            animated: true,
                                            completion: nil)
-                
+                return false
             } else {
                 return true
             }
@@ -2004,7 +2004,7 @@ class ViewControllerAffPrep3: UIViewController {
                 self.presentViewController(alert!,
                                            animated: true,
                                            completion: nil)
-                
+                return false
             } else {
                 return true
             }
@@ -2098,7 +2098,7 @@ class ViewController2AR: UIViewController {
                 self.presentViewController(alert!,
                                            animated: true,
                                            completion: nil)
-                
+                return false
             } else {
                 return true
             }
@@ -2324,7 +2324,7 @@ class ViewControllerLD1CX: UIViewController {
                 self.presentViewController(alert!,
                                            animated: true,
                                            completion: nil)
-                
+                return false
             } else {
                 return true
             }
@@ -2336,7 +2336,7 @@ class ViewControllerLD1CX: UIViewController {
 /*
  add the func unwindToViewControllerWhatev
  add prepareForSegue
-    if it already has this, it's ok, just add the transition manager code to the original
+ if it already has this, it's ok, just add the transition manager code to the original
  */
 class ViewControllerLDNegPrep1: UIViewController {
     let negPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("negPrepMin")!
@@ -2453,7 +2453,7 @@ class ViewControllerLDNegPrep1: UIViewController {
                 self.presentViewController(alert!,
                                            animated: true,
                                            completion: nil)
-                
+                return false
             } else {
                 return true
             }
@@ -2550,7 +2550,7 @@ class ViewControllerLDNC: UIViewController {
                 self.presentViewController(alert!,
                                            animated: true,
                                            completion: nil)
-                
+                return false
             } else {
                 return true
             }
@@ -2649,14 +2649,14 @@ class ViewControllerLD2CX: UIViewController {
             let svc = segue.destinationViewController as! ViewControllerLDAffPrep1
             svc.isNew = "yes"
         }
-            whichDirection = "R"
-            
-            // this gets a reference to the screen that we're about to transition to
-            let toViewController = segue.destinationViewController as UIViewController
-            
-            // instead of using the default transition animation, we'll ask
-            // the segue to use our custom TransitionManager object to manage the transition animation
-            toViewController.transitioningDelegate = transitionManager
+        whichDirection = "R"
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
@@ -2674,7 +2674,7 @@ class ViewControllerLD2CX: UIViewController {
                 self.presentViewController(alert!,
                                            animated: true,
                                            completion: nil)
-                
+                return false
             } else {
                 return true
             }
@@ -2788,14 +2788,14 @@ class ViewControllerLDAffPrep1: UIViewController {
                 self.presentViewController(alert!,
                                            animated: true,
                                            completion: nil)
-                
+                return false
             } else {
                 return true
             }
         }
         return true
     }
-
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         whichDirection = "R"
         
@@ -2820,7 +2820,7 @@ class ViewControllerLDAR1: UIViewController {
     @IBAction func unwindToViewControllerLDAR1(sender: UIStoryboardSegue) {
     }
     
-   @IBAction func startStopTimer(sender: AnyObject) {
+    @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
             newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
@@ -2897,7 +2897,7 @@ class ViewControllerLDAR1: UIViewController {
                 self.presentViewController(alert!,
                                            animated: true,
                                            completion: nil)
-                
+                return false
             } else {
                 return true
             }
@@ -2933,7 +2933,7 @@ class ViewControllerLDNegPrep2: UIViewController {
     @IBAction func unwindToViewControllerLDNegPrep2(sender: UIStoryboardSegue) {
     }
     
-   @IBAction func startStopTimer(sender: AnyObject) {
+    @IBAction func startStopTimer(sender: AnyObject) {
         if newTimer.startStopwatch == true {
             newTimer.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController1AC.updateStopwatch), userInfo: nil, repeats: true)
             newTimer.startStopwatch = false
@@ -3016,7 +3016,7 @@ class ViewControllerLDNegPrep2: UIViewController {
                 self.presentViewController(alert!,
                                            animated: true,
                                            completion: nil)
-                
+                return false
             } else {
                 return true
             }
@@ -3124,7 +3124,7 @@ class ViewControllerLDNR: UIViewController {
                 self.presentViewController(alert!,
                                            animated: true,
                                            completion: nil)
-                
+                return false
             } else {
                 return true
             }
@@ -3243,14 +3243,14 @@ class ViewControllerLDAffPrep2: UIViewController {
                 self.presentViewController(alert!,
                                            animated: true,
                                            completion: nil)
-                
+                return false
             } else {
                 return true
             }
         }
         return true
     }
-
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         whichDirection = "R"
         
@@ -3352,14 +3352,14 @@ class ViewControllerLDAR2: UIViewController {
                 self.presentViewController(alert!,
                                            animated: true,
                                            completion: nil)
-                
+                return false
             } else {
                 return true
             }
         }
         return true
     }
-
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         whichDirection = "R"
         
@@ -3371,6 +3371,6 @@ class ViewControllerLDAR2: UIViewController {
         toViewController.transitioningDelegate = transitionManager
     }
     
-
+    
 }
 
