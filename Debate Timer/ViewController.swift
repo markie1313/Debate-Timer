@@ -391,6 +391,16 @@ class ViewControllerFirstNegPrep: UIViewController {
         }
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        whichDirection = "R"
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
+    }
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "goHome" || identifier == "goBack" || identifier == "segue1NC" {
@@ -501,6 +511,17 @@ class ViewController1NC: UIViewController {
         timerText.text = newTimer.updateStopwatch()
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        whichDirection = "R"
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
+    }
+
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "goHome" || identifier == "goBack" || identifier == "segue2CX" {
             if newTimer.startStopwatch == false {
@@ -608,14 +629,22 @@ class ViewController2CX: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "segue1AffPrep" {
+        if segue.identifier == "goNext" {
             let svc = segue.destinationViewController as! ViewController1AffPrep
             svc.isNew = "yes"
         }
+            whichDirection = "R"
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
     }
     
-    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
-        if identifier == "goHome" || identifier == "goBack" || identifier == "segue1AffPrep" {
+   override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "goHome" || identifier == "goBack" || identifier == "goNext" {
             if newTimer.startStopwatch == false {
                 var alert:UIAlertController?
                 alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
@@ -729,6 +758,17 @@ class ViewController1AffPrep: UIViewController {
         timerText.text = newTimer.updateStopwatch()
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        whichDirection = "R"
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
+    }
+    
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "goHome" || identifier == "goBack" || identifier == "segue2AC" {
             if newTimer.startStopwatch == false {
@@ -833,6 +873,17 @@ class viewController2AC: UIViewController {
     
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        whichDirection = "R"
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
@@ -941,6 +992,17 @@ class ViewController3CX: UIViewController {
     
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        whichDirection = "R"
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
@@ -1054,7 +1116,18 @@ class ViewControllerNegPrep2: UIViewController {
         timerText.text = newTimer.updateStopwatch()
     }
     
-    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        whichDirection = "R"
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
+    }
+    
+   override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "goHome" || identifier == "goBack" || identifier == "segue2NC" {
             if newTimer.startStopwatch == false {
                 var alert:UIAlertController?
@@ -1156,6 +1229,17 @@ class ViewController2NC: UIViewController {
     
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        whichDirection = "R"
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
@@ -1260,6 +1344,17 @@ class ViewController4CX: UIViewController {
     
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        whichDirection = "R"
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
@@ -1371,6 +1466,17 @@ class ViewControllerNegPrep3: UIViewController {
         timerText.text = newTimer.updateStopwatch()
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        whichDirection = "R"
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
+    }
+    
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "goHome" || identifier == "goBack" || identifier == "segue1NR" {
             if newTimer.startStopwatch == false {
@@ -1473,6 +1579,17 @@ class ViewController1NR: UIViewController {
     
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        whichDirection = "R"
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
@@ -1580,6 +1697,17 @@ class ViewControllerAffPrep2: UIViewController {
         timerText.text = newTimer.updateStopwatch()
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        whichDirection = "R"
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
+    }
+    
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "goHome" || identifier == "goBack" || identifier == "segue1AR" {
             if newTimer.startStopwatch == false {
@@ -1680,6 +1808,17 @@ class ViewController1AR: UIViewController {
     
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        whichDirection = "R"
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
@@ -1786,6 +1925,17 @@ class ViewControllerNegPrep4: UIViewController {
         timerText.text = newTimer.updateStopwatch()
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        whichDirection = "R"
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
+    }
+    
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "goHome" || identifier == "goBack" || identifier == "segue2NR" {
             if newTimer.startStopwatch == false {
@@ -1880,7 +2030,18 @@ class ViewController2NR: UIViewController {
         timerText.text = newTimer.updateStopwatch()
     }
     
-    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        whichDirection = "R"
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
+    }
+    
+   override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "goHome" || identifier == "goBack" || identifier == "segue3AffPrep" {
             if newTimer.startStopwatch == false {
                 var alert:UIAlertController?
@@ -1989,6 +2150,17 @@ class ViewControllerAffPrep3: UIViewController {
         timerText.text = newTimer.updateStopwatch()
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        whichDirection = "R"
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
+    }
+    
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "goHome" || identifier == "goBack" || identifier == "segue2AR" {
             if newTimer.startStopwatch == false {
@@ -2081,6 +2253,17 @@ class ViewController2AR: UIViewController {
     
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        whichDirection = "R"
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
@@ -2643,7 +2826,7 @@ class ViewControllerLD2CX: UIViewController {
     func updateStopwatch() {
         timerText.text = newTimer.updateStopwatch()
     }
-    
+//NEED TO ADD THE 'UNWIND...' AND DO EXITS
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "goNext" {
             let svc = segue.destinationViewController as! ViewControllerLDAffPrep1
