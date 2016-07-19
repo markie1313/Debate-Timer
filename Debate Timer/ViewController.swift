@@ -54,14 +54,6 @@ class ViewController1AC: UIViewController {
     @IBAction func unwindToViewController1AC(sender: UIStoryboardSegue) {
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // this gets a reference to the screen that we're about to transition to
-        let toViewController = segue.destinationViewController as UIViewController
-        // instead of using the default transition animation, we'll ask
-        // the segue to use our custom TransitionManager object to manage the transition animation
-        toViewController.transitioningDelegate = transitionManager
-    }
-    
     @IBAction func resetTimer(sender: AnyObject) {
         
         if newTimer.startStopwatch == true {
@@ -143,7 +135,15 @@ class ViewController1AC: UIViewController {
         newTimer.seconds = 60
         timerText.text = "8:00"
     }
-    
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = transitionManager
+    }
+
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "goBack" || identifier == "goNext" || identifier == "goHome" {
             if identifier == "goBack" {
@@ -275,12 +275,12 @@ class ViewController1CX: UIViewController {
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
-        if identifier == "goBack" {
-            whichDirection = "L"
-        }else{
-            whichDirection = "R"
-        }
         if identifier == "goHome" || identifier == "goBack" || identifier == "goNext" {
+            if identifier == "goBack" {
+                whichDirection = "L"
+            }else{
+                whichDirection = "R"
+            }
             if newTimer.startStopwatch == false {
                 var alert:UIAlertController?
                 alert = UIAlertController(title: "Timer Running", message: "Please stop the timer.", preferredStyle: .Alert)
@@ -390,14 +390,14 @@ class ViewControllerFirstNegPrep: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var negPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("negPrepMin")!
-        var negPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("negPrepSec")!
         if isNew == "yes" {
             newTimer.minutes = 4
             newTimer.seconds = 60
             NSUserDefaults.standardUserDefaults().setObject("5", forKey: "negPrepMin")
             NSUserDefaults.standardUserDefaults().setObject("00", forKey: "negPrepSec")
         } else {
+            let negPrepMin = NSUserDefaults.standardUserDefaults().objectForKey("negPrepMin")!
+            let negPrepSec = NSUserDefaults.standardUserDefaults().objectForKey("negPrepSec")!
             newTimer.minutes = Int(negPrepMin as! String)!
             newTimer.seconds = Int(negPrepSec as! String)!
             timerText.text = "\(negPrepMin):\(negPrepSec)"

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<package xmlns="http://apple.com/itunes/importer" version="software5.2">
+    <metadata_token>1468432947547-0149809d8c241ada50351ef9c086d4248c4151622250a0831f2db5ab43958a31</metadata_token>
+    <provider>MarkLindberg53504808</provider>
+    <team_id>98UGDU6AR7</team_id>
+    <software>
+        <vendor_id>debate-timer</vendor_id>
+        <software_metadata>
+            <in_app_purchases>
+                <in_app_purchase>
+                    <locales>
+                        <locale name="en-us">
+                            <title>Go Debate Timer</title>
+                            <description>Go Debate Timer</description>
+                        </locale>
+                    </locales>
+                    <review_notes>NotNeeded</review_notes>
+                    <review_screenshot>
+                        <file_name>IMG_1609.jpg</file_name>
+                        <size>69072</size>
+                        <checksum type="md5">3fb7f96a1713df915428ef8e281a43ff</checksum>
+                    </review_screenshot>
+                    <product_id>NotNeeded</product_id>
+                    <reference_name>NotNeeded</reference_name>
+                    <type>non-consumable</type>
+                    <products>
+                        <product>
+                            <cleared_for_sale>true</cleared_for_sale>
+                            <intervals>
+                                <interval>
+                                    <start_date>2016-07-13</start_date>
+                                    <wholesale_price_tier>0</wholesale_price_tier>
+                                </interval>
+                            </intervals>
+                        </product>
+                    </products>
+                </in_app_purchase>
+            </in_app_purchases>
+        </software_metadata>
+    </software>
+</package>
