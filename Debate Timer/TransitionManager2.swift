@@ -26,12 +26,12 @@ class TransitionManager2: NSObject,UIViewControllerAnimatedTransitioning, UIView
         // start the toView to the right of the screen
         if (self.presenting){
             toView.transform = offScreenRight
-            print("Please shoot me, 2")
+            //print("Please shoot me, 2")
         }
         else {
             //            toView.transform = offScreenLeft
             //           fromView.transform = offScreenLeft
-            print("Please shoot me")
+            //print("Please shoot me")
         }
         
         // add the both views to our view controller
@@ -52,12 +52,12 @@ class TransitionManager2: NSObject,UIViewControllerAnimatedTransitioning, UIView
             if (self.presenting){
                 fromView.transform = offScreenLeft
                 //toView.transform = offScreenRight
-                print("Please shoot me, 3")
+                //print("Please shoot me, 3")
             }
             else {
                 //            toView.transform = offScreenLeft
                 fromView.transform = offScreenRight
-                print("Please shoot me, 4")
+                //print("Please shoot me, 4")
             }
             
             toView.transform = CGAffineTransformIdentity
