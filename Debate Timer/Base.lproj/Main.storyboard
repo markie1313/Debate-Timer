@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="re2-lv-y5m">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ay1-X3-d53">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -379,25 +379,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xe2-kK-JOZ" userLabel="Home Button">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IbE-oF-o78">
+                                <rect key="frame" x="89" y="130" width="197" height="117"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="100"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xe2-kK-JOZ" userLabel="Home Button">
                                 <rect key="frame" x="157" y="587" width="60" height="60"/>
                                 <state key="normal" image="Icon-76.png"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="AbY-5q-ff7"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3dL-L9-rWK">
-                                <rect key="frame" x="20" y="441" width="343" height="232"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3dL-L9-rWK">
+                                <rect key="frame" x="20" y="441" width="293" height="62"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poN-ml-fop" userLabel="Back Button">
-                                        <rect key="frame" x="0.0" y="86" width="40" height="60"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poN-ml-fop" userLabel="Back Button">
+                                        <rect key="frame" x="0.0" y="1" width="40" height="60"/>
                                         <state key="normal" image="backArrow3_opt.png"/>
                                         <connections>
                                             <segue destination="1v0-33-9wJ" kind="unwind" identifier="goBack" unwindAction="unwindToViewController1CX:" id="6i3-sC-xs6"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wiD-TE-aNk" userLabel="Next Button">
-                                        <rect key="frame" x="303" y="85" width="40" height="62"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wiD-TE-aNk" userLabel="Next Button">
+                                        <rect key="frame" x="253" y="0.0" width="40" height="62"/>
                                         <state key="normal" image="forwardArrow3_opt.png"/>
                                         <connections>
                                             <segue destination="P5X-Rw-BwG" kind="show" identifier="goNext" id="V2T-IX-YFO"/>
@@ -414,18 +420,18 @@
                                 <color key="shadowColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5FV-yj-mER">
-                                <rect key="frame" x="73" y="302" width="263" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5FV-yj-mER">
+                                <rect key="frame" x="73" y="302" width="273" height="64"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVu-pv-AgV">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVu-pv-AgV">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                         <state key="normal" image="reset.png"/>
                                         <connections>
                                             <action selector="resetTimer:" destination="Ay1-X3-d53" eventType="touchUpInside" id="bTA-Mw-aSS"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSI-aR-fHw">
-                                        <rect key="frame" x="199" y="0.0" width="64" height="64"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSI-aR-fHw">
+                                        <rect key="frame" x="209" y="0.0" width="64" height="64"/>
                                         <state key="normal" image="go.png"/>
                                         <connections>
                                             <action selector="startStopTimer:" destination="Ay1-X3-d53" eventType="touchUpInside" id="1JX-Sr-rVt"/>
@@ -433,31 +439,22 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IbE-oF-o78">
-                                <rect key="frame" x="89" y="130" width="197" height="117"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="100"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="3dL-L9-rWK" firstAttribute="leading" secondItem="NK2-0M-br1" secondAttribute="leadingMargin" id="1Ax-du-llH"/>
-                            <constraint firstItem="A9a-32-WMZ" firstAttribute="leading" secondItem="NK2-0M-br1" secondAttribute="leadingMargin" constant="-20" id="3sP-fg-xFe"/>
-                            <constraint firstItem="Xe2-kK-JOZ" firstAttribute="leading" secondItem="NK2-0M-br1" secondAttribute="leadingMargin" constant="40" id="7ad-pk-c1b"/>
-                            <constraint firstItem="3dL-L9-rWK" firstAttribute="top" secondItem="5FV-yj-mER" secondAttribute="bottom" constant="20" id="8KU-m9-fTC"/>
-                            <constraint firstItem="Xe2-kK-JOZ" firstAttribute="top" secondItem="3dL-L9-rWK" secondAttribute="bottom" constant="10" id="9pF-v0-8B1"/>
-                            <constraint firstItem="IbE-oF-o78" firstAttribute="top" secondItem="A9a-32-WMZ" secondAttribute="bottom" constant="54" id="CPf-rU-S1v"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="A9a-32-WMZ" secondAttribute="trailing" constant="-20" id="GnU-DS-Ivs"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="IbE-oF-o78" secondAttribute="trailing" constant="10" id="HDD-iJ-0UD"/>
-                            <constraint firstItem="IbE-oF-o78" firstAttribute="leading" secondItem="NK2-0M-br1" secondAttribute="leadingMargin" constant="10" id="JJn-Ze-HBB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="3dL-L9-rWK" secondAttribute="trailing" id="Ltn-zw-p3I"/>
-                            <constraint firstItem="5FV-yj-mER" firstAttribute="leading" secondItem="NK2-0M-br1" secondAttribute="leadingMargin" constant="40" id="URL-zp-BCd"/>
-                            <constraint firstItem="A9a-32-WMZ" firstAttribute="top" secondItem="ptC-qn-xDL" secondAttribute="bottom" constant="20" id="Wy2-FE-ALZ"/>
-                            <constraint firstItem="WRw-6t-Rej" firstAttribute="top" secondItem="Xe2-kK-JOZ" secondAttribute="bottom" constant="20" id="aYK-C0-Cc0"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="5FV-yj-mER" secondAttribute="trailing" constant="40" id="cIL-nm-ztu"/>
-                            <constraint firstItem="5FV-yj-mER" firstAttribute="top" secondItem="IbE-oF-o78" secondAttribute="bottom" constant="20" id="iqq-mV-ymE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Xe2-kK-JOZ" secondAttribute="trailing" constant="40" id="lO1-Fn-BZ7"/>
+                            <constraint firstItem="3dL-L9-rWK" firstAttribute="top" secondItem="5FV-yj-mER" secondAttribute="bottom" constant="40" id="40C-04-xvP"/>
+                            <constraint firstItem="5FV-yj-mER" firstAttribute="top" secondItem="IbE-oF-o78" secondAttribute="bottom" constant="55" id="6n6-IS-3yJ"/>
+                            <constraint firstItem="5FV-yj-mER" firstAttribute="leading" secondItem="NK2-0M-br1" secondAttribute="leadingMargin" constant="35" id="AIf-DV-J7b"/>
+                            <constraint firstItem="A9a-32-WMZ" firstAttribute="leading" secondItem="NK2-0M-br1" secondAttribute="leadingMargin" constant="-20" id="BBb-xF-Hgk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5FV-yj-mER" secondAttribute="trailing" constant="35" id="FXO-CN-h52"/>
+                            <constraint firstItem="A9a-32-WMZ" firstAttribute="top" secondItem="ptC-qn-xDL" secondAttribute="bottom" id="OrE-bU-vkC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3dL-L9-rWK" secondAttribute="trailing" constant="25" id="RT1-5Q-K7v"/>
+                            <constraint firstItem="IbE-oF-o78" firstAttribute="top" secondItem="A9a-32-WMZ" secondAttribute="bottom" constant="54" id="YEa-zB-vwP"/>
+                            <constraint firstItem="3dL-L9-rWK" firstAttribute="leading" secondItem="NK2-0M-br1" secondAttribute="leadingMargin" constant="25" id="elp-qK-b0L"/>
+                            <constraint firstItem="IbE-oF-o78" firstAttribute="leading" secondItem="NK2-0M-br1" secondAttribute="leadingMargin" constant="69" id="pLQ-sd-7BN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IbE-oF-o78" secondAttribute="trailing" constant="69" id="qdg-vg-nmc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="A9a-32-WMZ" secondAttribute="trailing" constant="-20" id="rxu-uP-ZE8"/>
+                            <constraint firstItem="3dL-L9-rWK" firstAttribute="top" secondItem="5FV-yj-mER" secondAttribute="bottom" constant="40" id="zbx-LR-p7s"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -483,23 +480,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="8:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gF9-ip-tje">
-                                <rect key="frame" x="20" y="119" width="335" height="117"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="8:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gF9-ip-tje">
+                                <rect key="frame" x="89" y="130" width="197" height="117"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="100"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Q2z-Xd-hyK">
-                                <rect key="frame" x="74" y="302" width="128" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Q2z-Xd-hyK">
+                                <rect key="frame" x="74" y="302" width="273" height="64"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D59-mq-IWU" userLabel="Reset Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D59-mq-IWU" userLabel="Reset Button">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                         <state key="normal" image="reset.png"/>
                                         <connections>
                                             <action selector="resetTimer:" destination="P5X-Rw-BwG" eventType="touchUpInside" id="B93-1a-slx"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5s2-lD-RfZ">
-                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5s2-lD-RfZ">
+                                        <rect key="frame" x="209" y="0.0" width="64" height="64"/>
                                         <state key="normal" image="go.png"/>
                                         <connections>
                                             <action selector="startStopTimer:" destination="P5X-Rw-BwG" eventType="touchUpInside" id="qLD-9x-YHb"/>
@@ -514,18 +511,18 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="1KU-yt-JgH"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QMu-34-aJh">
-                                <rect key="frame" x="20" y="441" width="80" height="62"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QMu-34-aJh">
+                                <rect key="frame" x="20" y="441" width="293" height="62"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPm-1D-pq6" userLabel="Back Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPm-1D-pq6" userLabel="Back Button">
                                         <rect key="frame" x="0.0" y="1" width="40" height="60"/>
                                         <state key="normal" image="backArrow3_opt.png"/>
                                         <connections>
                                             <segue destination="U1U-4a-DHF" kind="unwind" identifier="goBack" unwindAction="unwindToViewControllerFirstNegPrep:" id="Mhh-ck-WJ1"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4o-bc-WpF" userLabel="Next Button">
-                                        <rect key="frame" x="40" y="0.0" width="40" height="62"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4o-bc-WpF" userLabel="Next Button">
+                                        <rect key="frame" x="253" y="0.0" width="40" height="62"/>
                                         <state key="normal" image="forwardArrow3_opt.png"/>
                                         <connections>
                                             <segue destination="HaO-By-XlD" kind="presentation" identifier="goNext" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="BYa-O4-hyn"/>
@@ -533,7 +530,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1st Negative Constructive" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Jg-WI-rxg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1st Negative Constructive" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Jg-WI-rxg">
                                 <rect key="frame" x="0.0" y="20" width="375" height="56"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-BlackOblique" family="Avenir" pointSize="24"/>
@@ -544,6 +541,21 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gF9-ip-tje" firstAttribute="leading" secondItem="efj-sR-xYG" secondAttribute="leadingMargin" constant="69" id="7Fd-fM-0tF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gF9-ip-tje" secondAttribute="trailing" constant="69" id="8UW-MY-xNz"/>
+                            <constraint firstItem="Q2z-Xd-hyK" firstAttribute="top" secondItem="gF9-ip-tje" secondAttribute="bottom" constant="55" id="F01-RF-f3P"/>
+                            <constraint firstItem="QMu-34-aJh" firstAttribute="top" secondItem="Q2z-Xd-hyK" secondAttribute="bottom" constant="40" id="FUA-uO-6bk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Q2z-Xd-hyK" secondAttribute="trailing" constant="35" id="G8h-Ql-eBZ"/>
+                            <constraint firstItem="QMu-34-aJh" firstAttribute="top" secondItem="Q2z-Xd-hyK" secondAttribute="bottom" constant="40" id="MrS-BP-c7c"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Jg-WI-rxg" secondAttribute="trailing" constant="-20" id="asY-or-g9h"/>
+                            <constraint firstItem="Q2z-Xd-hyK" firstAttribute="leading" secondItem="efj-sR-xYG" secondAttribute="leadingMargin" constant="35" id="bsp-9O-CMb"/>
+                            <constraint firstItem="3Jg-WI-rxg" firstAttribute="top" secondItem="fj8-3f-Zqh" secondAttribute="bottom" id="iDk-E6-l1V"/>
+                            <constraint firstItem="QMu-34-aJh" firstAttribute="leading" secondItem="efj-sR-xYG" secondAttribute="leadingMargin" constant="25" id="lXk-KY-5PH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QMu-34-aJh" secondAttribute="trailing" constant="25" id="rlJ-Tb-MOP"/>
+                            <constraint firstItem="gF9-ip-tje" firstAttribute="top" secondItem="3Jg-WI-rxg" secondAttribute="bottom" constant="54" id="s7H-kr-cqv"/>
+                            <constraint firstItem="3Jg-WI-rxg" firstAttribute="leading" secondItem="efj-sR-xYG" secondAttribute="leadingMargin" constant="-20" id="sMw-wm-wiT"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -584,7 +596,7 @@
                                             <action selector="resetTimer:" destination="HaO-By-XlD" eventType="touchUpInside" id="65B-BW-RvX"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2h-2s-2tz">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2h-2s-2tz">
                                         <rect key="frame" x="64" y="0.0" width="64" height="64"/>
                                         <state key="normal" image="go.png"/>
                                         <connections>
@@ -660,8 +672,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HE3-sx-pZO">
-                                <rect key="frame" x="74" y="302" width="128" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HE3-sx-pZO">
+                                <rect key="frame" x="74" y="302" width="263" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Vw-vi-iCb">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
@@ -671,7 +683,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X12-Ai-NkB">
-                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
+                                        <rect key="frame" x="199" y="0.0" width="64" height="64"/>
                                         <state key="normal" image="go.png"/>
                                         <connections>
                                             <action selector="startStopTimer:" destination="g0X-t9-hPG" eventType="touchUpInside" id="K0i-U9-gpm"/>
@@ -686,7 +698,7 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="eTg-cQ-aTv"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zQe-ag-71n">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zQe-ag-71n">
                                 <rect key="frame" x="20" y="441" width="80" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAH-W3-Ton" userLabel="Back Button">
@@ -716,6 +728,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zQe-ag-71n" firstAttribute="top" secondItem="HE3-sx-pZO" secondAttribute="bottom" constant="20" id="7Ti-Xl-rpa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HE3-sx-pZO" secondAttribute="trailing" constant="40" id="Krf-n3-fUS"/>
+                            <constraint firstItem="HE3-sx-pZO" firstAttribute="leading" secondItem="n0K-fE-pOG" secondAttribute="leadingMargin" constant="40" id="l5l-o3-267"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -746,8 +763,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vDq-2b-nK7">
-                                <rect key="frame" x="74" y="302" width="128" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vDq-2b-nK7">
+                                <rect key="frame" x="74" y="302" width="263" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Um4-U1-RKh">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
@@ -757,7 +774,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYn-6e-8SE">
-                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
+                                        <rect key="frame" x="199" y="0.0" width="64" height="64"/>
                                         <state key="normal" image="go.png"/>
                                         <connections>
                                             <action selector="startStopTimer:" destination="xlT-9q-47B" eventType="touchUpInside" id="11t-HL-iaV"/>
@@ -772,7 +789,7 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="Rms-l0-Iwc"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZLu-nB-Dmn">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZLu-nB-Dmn">
                                 <rect key="frame" x="20" y="441" width="80" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2b-iD-d5i" userLabel="Back Button">
@@ -802,6 +819,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZLu-nB-Dmn" firstAttribute="top" secondItem="vDq-2b-nK7" secondAttribute="bottom" constant="20" id="AYG-x6-Rdx"/>
+                            <constraint firstItem="vDq-2b-nK7" firstAttribute="leading" secondItem="Wnn-So-VfV" secondAttribute="leadingMargin" constant="40" id="UmB-d5-eaE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vDq-2b-nK7" secondAttribute="trailing" constant="40" id="ybY-8Z-XzM"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -832,8 +854,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hoC-tM-2B7">
-                                <rect key="frame" x="74" y="302" width="128" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hoC-tM-2B7">
+                                <rect key="frame" x="74" y="302" width="263" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMk-T6-VSS">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
@@ -843,7 +865,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njw-pR-9FN">
-                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
+                                        <rect key="frame" x="199" y="0.0" width="64" height="64"/>
                                         <state key="normal" image="go.png"/>
                                         <connections>
                                             <action selector="startStopTimer:" destination="LC8-aH-UlU" eventType="touchUpInside" id="wmX-yz-z7k"/>
@@ -858,7 +880,7 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="KJs-Yj-kb2"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lgZ-2U-LlL">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lgZ-2U-LlL">
                                 <rect key="frame" x="20" y="441" width="80" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7uP-Un-tI8" userLabel="Back Button">
@@ -888,6 +910,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lgZ-2U-LlL" firstAttribute="top" secondItem="hoC-tM-2B7" secondAttribute="bottom" constant="20" id="Ahm-LC-ItY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hoC-tM-2B7" secondAttribute="trailing" constant="40" id="HRF-ml-7Px"/>
+                            <constraint firstItem="hoC-tM-2B7" firstAttribute="leading" secondItem="7qy-6o-BFj" secondAttribute="leadingMargin" constant="40" id="fTc-sz-MNE"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -918,8 +945,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TON-lh-MWY">
-                                <rect key="frame" x="74" y="302" width="128" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TON-lh-MWY">
+                                <rect key="frame" x="74" y="302" width="263" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVo-zM-imz">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
@@ -929,7 +956,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWJ-vB-Abb">
-                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
+                                        <rect key="frame" x="199" y="0.0" width="64" height="64"/>
                                         <state key="normal" image="go.png"/>
                                         <connections>
                                             <action selector="startStopTimer:" destination="63k-Kx-57w" eventType="touchUpInside" id="ZTA-r9-pnl"/>
@@ -944,7 +971,7 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="thU-Gp-1ao"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VLG-do-MIN">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VLG-do-MIN">
                                 <rect key="frame" x="20" y="441" width="80" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icb-kv-P6f" userLabel="Back Button">
@@ -974,6 +1001,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TON-lh-MWY" firstAttribute="leading" secondItem="p8a-vx-GTX" secondAttribute="leadingMargin" constant="40" id="LRT-68-gmm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TON-lh-MWY" secondAttribute="trailing" constant="40" id="SZk-Iv-r0D"/>
+                            <constraint firstItem="VLG-do-MIN" firstAttribute="top" secondItem="TON-lh-MWY" secondAttribute="bottom" constant="20" id="cCq-mu-X1O"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -1004,8 +1036,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xJ9-WN-aHA">
-                                <rect key="frame" x="74" y="302" width="128" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xJ9-WN-aHA">
+                                <rect key="frame" x="74" y="302" width="263" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8H-nu-y0A">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
@@ -1015,7 +1047,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8C-PX-YsG">
-                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
+                                        <rect key="frame" x="199" y="0.0" width="64" height="64"/>
                                         <state key="normal" image="go.png"/>
                                         <connections>
                                             <action selector="startStopTimer:" destination="Cxv-Fz-3mi" eventType="touchUpInside" id="jTL-JK-8EF"/>
@@ -1030,7 +1062,7 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="n9q-xq-ZDg"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eeo-Qq-Oos">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eeo-Qq-Oos">
                                 <rect key="frame" x="20" y="441" width="80" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9u-g3-gIL" userLabel="Back Button">
@@ -1060,6 +1092,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eeo-Qq-Oos" firstAttribute="top" secondItem="xJ9-WN-aHA" secondAttribute="bottom" constant="20" id="RQS-Kc-FBx"/>
+                            <constraint firstItem="xJ9-WN-aHA" firstAttribute="leading" secondItem="A1E-ws-sJv" secondAttribute="leadingMargin" constant="40" id="hhu-uW-YEz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xJ9-WN-aHA" secondAttribute="trailing" constant="40" id="y1I-bP-Ed0"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -1090,8 +1127,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gKn-wm-x4Q">
-                                <rect key="frame" x="74" y="302" width="128" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gKn-wm-x4Q">
+                                <rect key="frame" x="74" y="302" width="263" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fop-ux-qIl">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
@@ -1101,7 +1138,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRw-4b-w5j">
-                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
+                                        <rect key="frame" x="199" y="0.0" width="64" height="64"/>
                                         <state key="normal" image="go.png"/>
                                         <connections>
                                             <action selector="startStopTimer:" destination="vBK-Ty-wbR" eventType="touchUpInside" id="N2T-3S-kEy"/>
@@ -1116,7 +1153,7 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="raq-pX-soE"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TwR-gu-cRn">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TwR-gu-cRn">
                                 <rect key="frame" x="20" y="441" width="80" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZ0-vy-SXM" userLabel="Back Button">
@@ -1146,6 +1183,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="gKn-wm-x4Q" secondAttribute="trailing" constant="40" id="Ge5-EO-Wbo"/>
+                            <constraint firstItem="gKn-wm-x4Q" firstAttribute="leading" secondItem="wQ4-IY-ylz" secondAttribute="leadingMargin" constant="40" id="JOy-aE-4fa"/>
+                            <constraint firstItem="TwR-gu-cRn" firstAttribute="top" secondItem="gKn-wm-x4Q" secondAttribute="bottom" constant="20" id="OLr-TL-6c1"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -1176,8 +1218,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="V5l-r0-bJR">
-                                <rect key="frame" x="74" y="302" width="128" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="V5l-r0-bJR">
+                                <rect key="frame" x="74" y="302" width="263" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHp-OQ-UyD">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
@@ -1187,7 +1229,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="If9-sV-nVq">
-                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
+                                        <rect key="frame" x="199" y="0.0" width="64" height="64"/>
                                         <state key="normal" image="go.png"/>
                                         <connections>
                                             <action selector="startStopTimer:" destination="iX6-qW-6bg" eventType="touchUpInside" id="ING-AC-jLu"/>
@@ -1202,7 +1244,7 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="umx-xC-lEm"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Wj5-P0-A5n">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Wj5-P0-A5n">
                                 <rect key="frame" x="20" y="441" width="80" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19x-JH-BIW" userLabel="Back Button">
@@ -1232,6 +1274,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="V5l-r0-bJR" secondAttribute="trailing" constant="40" id="6YK-d9-V6E"/>
+                            <constraint firstItem="Wj5-P0-A5n" firstAttribute="top" secondItem="V5l-r0-bJR" secondAttribute="bottom" constant="20" id="8f2-FG-KgM"/>
+                            <constraint firstItem="V5l-r0-bJR" firstAttribute="leading" secondItem="9Ce-Pq-VjO" secondAttribute="leadingMargin" constant="40" id="V3X-yq-H5F"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -1262,8 +1309,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bAt-Qy-qpK">
-                                <rect key="frame" x="74" y="302" width="128" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bAt-Qy-qpK">
+                                <rect key="frame" x="74" y="302" width="263" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFy-Aj-HS6">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
@@ -1273,7 +1320,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5p-i9-MUi">
-                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
+                                        <rect key="frame" x="199" y="0.0" width="64" height="64"/>
                                         <state key="normal" image="go.png"/>
                                         <connections>
                                             <action selector="startStopTimer:" destination="DIq-4M-BFv" eventType="touchUpInside" id="q5W-GZ-1R5"/>
@@ -1288,7 +1335,7 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="9cE-eO-LJY"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cWI-i7-96z">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cWI-i7-96z">
                                 <rect key="frame" x="20" y="441" width="80" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B82-sg-XJ7" userLabel="Back Button">
@@ -1318,6 +1365,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bAt-Qy-qpK" firstAttribute="leading" secondItem="hRn-Ua-INh" secondAttribute="leadingMargin" constant="40" id="3Ha-xK-JhZ"/>
+                            <constraint firstItem="cWI-i7-96z" firstAttribute="top" secondItem="bAt-Qy-qpK" secondAttribute="bottom" constant="20" id="P0f-ss-ANd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bAt-Qy-qpK" secondAttribute="trailing" constant="40" id="aag-Iy-Zga"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -1348,8 +1400,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="K7X-5u-uaM">
-                                <rect key="frame" x="74" y="302" width="128" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="K7X-5u-uaM">
+                                <rect key="frame" x="74" y="302" width="263" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXQ-fx-Fth">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
@@ -1359,7 +1411,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjb-70-uxx">
-                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
+                                        <rect key="frame" x="199" y="0.0" width="64" height="64"/>
                                         <state key="normal" image="go.png"/>
                                         <connections>
                                             <action selector="startStopTimer:" destination="gwD-27-ntt" eventType="touchUpInside" id="Mhl-ZZ-ATo"/>
@@ -1374,7 +1426,7 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="kVS-wc-HbO"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JDx-nm-V8H">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JDx-nm-V8H">
                                 <rect key="frame" x="20" y="441" width="80" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8i-8g-84x" userLabel="Back Button">
@@ -1404,6 +1456,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JDx-nm-V8H" firstAttribute="top" secondItem="K7X-5u-uaM" secondAttribute="bottom" constant="20" id="1hU-Xg-ngw"/>
+                            <constraint firstItem="K7X-5u-uaM" firstAttribute="leading" secondItem="0B7-uW-VuT" secondAttribute="leadingMargin" constant="40" id="qEk-09-nbj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="K7X-5u-uaM" secondAttribute="trailing" constant="40" id="ykB-h9-uKc"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -1434,8 +1491,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z0n-xr-jKV">
-                                <rect key="frame" x="74" y="302" width="128" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z0n-xr-jKV">
+                                <rect key="frame" x="74" y="302" width="263" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzz-hN-GZt">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
@@ -1445,7 +1502,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z90-ba-z47">
-                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
+                                        <rect key="frame" x="199" y="0.0" width="64" height="64"/>
                                         <state key="normal" image="go.png"/>
                                         <connections>
                                             <action selector="startStopTimer:" destination="zMk-5g-oSA" eventType="touchUpInside" id="PVR-0X-jKO"/>
@@ -1460,7 +1517,7 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="wYK-N1-xWT"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2dY-PF-KlM">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2dY-PF-KlM">
                                 <rect key="frame" x="20" y="441" width="80" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3FN-2f-wy0" userLabel="Back Button">
@@ -1490,6 +1547,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="z0n-xr-jKV" firstAttribute="leading" secondItem="h0a-OG-gI2" secondAttribute="leadingMargin" constant="40" id="WGU-9z-FHm"/>
+                            <constraint firstItem="2dY-PF-KlM" firstAttribute="top" secondItem="z0n-xr-jKV" secondAttribute="bottom" constant="20" id="Xno-HR-ISW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="z0n-xr-jKV" secondAttribute="trailing" constant="40" id="alj-8b-1bM"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -1520,8 +1582,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LUZ-p6-b5r">
-                                <rect key="frame" x="74" y="302" width="128" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LUZ-p6-b5r">
+                                <rect key="frame" x="74" y="302" width="263" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gF9-Y0-yEx">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
@@ -1531,7 +1593,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIn-9y-m54">
-                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
+                                        <rect key="frame" x="199" y="0.0" width="64" height="64"/>
                                         <state key="normal" image="go.png"/>
                                         <connections>
                                             <action selector="startStopTimer:" destination="Tcz-dQ-tHq" eventType="touchUpInside" id="yUU-rk-3zH"/>
@@ -1546,7 +1608,7 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="wIA-pd-Mk5"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lpk-dD-nKf">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lpk-dD-nKf">
                                 <rect key="frame" x="20" y="441" width="80" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4Q-Ia-ffT" userLabel="Back Button">
@@ -1576,6 +1638,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LUZ-p6-b5r" firstAttribute="leading" secondItem="5GV-WR-ebc" secondAttribute="leadingMargin" constant="40" id="2U5-2W-BRQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LUZ-p6-b5r" secondAttribute="trailing" constant="40" id="oZY-g3-8LG"/>
+                            <constraint firstItem="lpk-dD-nKf" firstAttribute="top" secondItem="LUZ-p6-b5r" secondAttribute="bottom" constant="20" id="uM9-Zq-Opn"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -1606,8 +1673,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JqL-qm-7Eb">
-                                <rect key="frame" x="74" y="302" width="128" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JqL-qm-7Eb">
+                                <rect key="frame" x="74" y="302" width="263" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7I-S3-mKx">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
@@ -1617,7 +1684,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3uR-SH-fBU">
-                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
+                                        <rect key="frame" x="199" y="0.0" width="64" height="64"/>
                                         <state key="normal" image="go.png"/>
                                         <connections>
                                             <action selector="startStopTimer:" destination="XzL-i2-v87" eventType="touchUpInside" id="Z09-Gb-ZWi"/>
@@ -1632,7 +1699,7 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="xMD-b3-9Zq"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gFw-WV-oC2">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gFw-WV-oC2">
                                 <rect key="frame" x="20" y="441" width="80" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eo0-rG-3Xe" userLabel="Back Button">
@@ -1662,6 +1729,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gFw-WV-oC2" firstAttribute="top" secondItem="JqL-qm-7Eb" secondAttribute="bottom" constant="20" id="S8o-K9-7Jy"/>
+                            <constraint firstItem="JqL-qm-7Eb" firstAttribute="leading" secondItem="Pl3-vE-d5R" secondAttribute="leadingMargin" constant="40" id="Ufh-wy-vz4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JqL-qm-7Eb" secondAttribute="trailing" constant="40" id="bie-y4-HVh"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -1692,8 +1764,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zyc-Qn-zE6">
-                                <rect key="frame" x="74" y="302" width="128" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zyc-Qn-zE6">
+                                <rect key="frame" x="74" y="302" width="263" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czk-5G-wxM">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
@@ -1703,7 +1775,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbJ-77-PSN">
-                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
+                                        <rect key="frame" x="199" y="0.0" width="64" height="64"/>
                                         <state key="normal" image="go.png"/>
                                         <connections>
                                             <action selector="startStopTimer:" destination="5w1-t2-Tmz" eventType="touchUpInside" id="qVV-tA-DRY"/>
@@ -1718,7 +1790,7 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="c0b-Q6-dej"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iY8-sB-AUb">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iY8-sB-AUb">
                                 <rect key="frame" x="20" y="441" width="80" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7m-Ps-cKQ" userLabel="Back Button">
@@ -1748,6 +1820,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="zyc-Qn-zE6" secondAttribute="trailing" constant="40" id="57U-JN-3Ua"/>
+                            <constraint firstItem="iY8-sB-AUb" firstAttribute="top" secondItem="zyc-Qn-zE6" secondAttribute="bottom" constant="20" id="DZl-fj-ge9"/>
+                            <constraint firstItem="zyc-Qn-zE6" firstAttribute="leading" secondItem="npH-6X-upd" secondAttribute="leadingMargin" constant="40" id="son-zZ-vNi"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -1778,8 +1855,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ydu-le-yp8">
-                                <rect key="frame" x="74" y="302" width="128" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ydu-le-yp8">
+                                <rect key="frame" x="74" y="302" width="263" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbO-Rt-NrJ">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
@@ -1789,7 +1866,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3p-xz-vxc">
-                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
+                                        <rect key="frame" x="199" y="0.0" width="64" height="64"/>
                                         <state key="normal" image="go.png"/>
                                         <connections>
                                             <action selector="startStopTimer:" destination="5CH-ub-Nmt" eventType="touchUpInside" id="we3-Zq-V41"/>
@@ -1804,7 +1881,7 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="9KY-rb-QSm"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NAl-Zg-iqK">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NAl-Zg-iqK">
                                 <rect key="frame" x="20" y="441" width="80" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARm-c4-xLv" userLabel="Back Button">
@@ -1834,6 +1911,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NAl-Zg-iqK" firstAttribute="top" secondItem="ydu-le-yp8" secondAttribute="bottom" constant="20" id="Fhx-id-p5b"/>
+                            <constraint firstItem="ydu-le-yp8" firstAttribute="leading" secondItem="1wC-QW-lZR" secondAttribute="leadingMargin" constant="40" id="Xm4-AG-vh1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ydu-le-yp8" secondAttribute="trailing" constant="40" id="xLC-UR-A6L"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -1864,8 +1946,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wiu-Id-1pE">
-                                <rect key="frame" x="74" y="302" width="128" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wiu-Id-1pE">
+                                <rect key="frame" x="74" y="302" width="263" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xul-ou-18R">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
@@ -1875,7 +1957,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZj-rK-9im">
-                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
+                                        <rect key="frame" x="199" y="0.0" width="64" height="64"/>
                                         <state key="normal" image="go.png"/>
                                         <connections>
                                             <action selector="startStopTimer:" destination="sqa-oz-cny" eventType="touchUpInside" id="rZ5-1P-weT"/>
@@ -1890,7 +1972,7 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="aNx-Sl-gI2"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="v46-Dx-6eK">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="v46-Dx-6eK">
                                 <rect key="frame" x="20" y="441" width="80" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqa-mi-q5f" userLabel="Back Button">
@@ -1920,6 +2002,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wiu-Id-1pE" firstAttribute="leading" secondItem="Z2p-aR-aw9" secondAttribute="leadingMargin" constant="40" id="BDa-uh-Lnk"/>
+                            <constraint firstItem="v46-Dx-6eK" firstAttribute="top" secondItem="wiu-Id-1pE" secondAttribute="bottom" constant="20" id="YdQ-Nf-cqE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wiu-Id-1pE" secondAttribute="trailing" constant="40" id="wmZ-gz-wan"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -1950,8 +2037,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Aht-PR-PL0">
-                                <rect key="frame" x="74" y="302" width="128" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Aht-PR-PL0">
+                                <rect key="frame" x="74" y="302" width="263" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31z-6j-0FO">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
@@ -1961,7 +2048,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hcl-HN-2FM">
-                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
+                                        <rect key="frame" x="199" y="0.0" width="64" height="64"/>
                                         <state key="normal" image="go.png"/>
                                         <connections>
                                             <action selector="startStopTimer:" destination="kO7-zf-P6l" eventType="touchUpInside" id="WZg-FM-ed4"/>
@@ -1976,7 +2063,7 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="SnZ-Sx-brG"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BzF-6O-26M">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BzF-6O-26M">
                                 <rect key="frame" x="20" y="441" width="80" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Se2-HQ-HS9" userLabel="Back Button">
@@ -2006,6 +2093,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Aht-PR-PL0" secondAttribute="trailing" constant="40" id="DWA-Go-F29"/>
+                            <constraint firstItem="BzF-6O-26M" firstAttribute="top" secondItem="Aht-PR-PL0" secondAttribute="bottom" constant="20" id="NGO-yM-KcG"/>
+                            <constraint firstItem="Aht-PR-PL0" firstAttribute="leading" secondItem="xJp-gu-kDh" secondAttribute="leadingMargin" constant="40" id="vxK-ko-qMk"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -2036,8 +2128,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="G0b-I3-ASp">
-                                <rect key="frame" x="74" y="302" width="128" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="G0b-I3-ASp">
+                                <rect key="frame" x="74" y="302" width="263" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C9a-Lc-Dbe">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
@@ -2047,7 +2139,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3M-pP-FnF">
-                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
+                                        <rect key="frame" x="199" y="0.0" width="64" height="64"/>
                                         <state key="normal" image="go.png"/>
                                         <connections>
                                             <action selector="startStopTimer:" destination="dka-o2-oBf" eventType="touchUpInside" id="VJj-7v-0Rc"/>
@@ -2062,7 +2154,7 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="EKZ-8Z-bUH"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8ua-Ld-ybs">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8ua-Ld-ybs">
                                 <rect key="frame" x="20" y="441" width="80" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5an-Gu-A8k" userLabel="Back Button">
@@ -2092,6 +2184,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8ua-Ld-ybs" firstAttribute="top" secondItem="G0b-I3-ASp" secondAttribute="bottom" constant="20" id="D4i-Dn-Mkv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="G0b-I3-ASp" secondAttribute="trailing" constant="40" id="GJD-BM-jX4"/>
+                            <constraint firstItem="G0b-I3-ASp" firstAttribute="leading" secondItem="T0t-CJ-INU" secondAttribute="leadingMargin" constant="40" id="Pa9-Fh-aXg"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -2122,8 +2219,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cnA-at-jwh">
-                                <rect key="frame" x="74" y="302" width="128" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cnA-at-jwh">
+                                <rect key="frame" x="74" y="302" width="263" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqX-sU-Igk">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
@@ -2133,7 +2230,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZf-6n-Dra">
-                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
+                                        <rect key="frame" x="199" y="0.0" width="64" height="64"/>
                                         <state key="normal" image="go.png"/>
                                         <connections>
                                             <action selector="startStopTimer:" destination="4xM-QE-qOQ" eventType="touchUpInside" id="LZ2-sk-lHd"/>
@@ -2148,7 +2245,7 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="fah-fW-k4C"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fhr-da-CgW">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fhr-da-CgW">
                                 <rect key="frame" x="20" y="441" width="80" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZjZ-1G-MF9" userLabel="Back Button">
@@ -2178,6 +2275,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cnA-at-jwh" firstAttribute="leading" secondItem="huE-zE-Nvf" secondAttribute="leadingMargin" constant="40" id="97l-Dg-8ce"/>
+                            <constraint firstItem="Fhr-da-CgW" firstAttribute="top" secondItem="cnA-at-jwh" secondAttribute="bottom" constant="20" id="kNM-NG-yur"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cnA-at-jwh" secondAttribute="trailing" constant="40" id="xCN-xY-fVX"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -2208,8 +2310,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ht4-0o-PC0">
-                                <rect key="frame" x="74" y="302" width="128" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ht4-0o-PC0">
+                                <rect key="frame" x="74" y="302" width="263" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ef-xe-Blr">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
@@ -2219,7 +2321,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUy-X3-c0A">
-                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
+                                        <rect key="frame" x="199" y="0.0" width="64" height="64"/>
                                         <state key="normal" image="go.png"/>
                                         <connections>
                                             <action selector="startStopTimer:" destination="qXy-6d-WZl" eventType="touchUpInside" id="hvj-mD-I9T"/>
@@ -2234,7 +2336,7 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="Uyd-cB-1WL"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wy2-nl-T6z">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wy2-nl-T6z">
                                 <rect key="frame" x="20" y="441" width="80" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7N-kx-YsC" userLabel="Back Button">
@@ -2264,6 +2366,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wy2-nl-T6z" firstAttribute="top" secondItem="Ht4-0o-PC0" secondAttribute="bottom" constant="20" id="8Eh-bY-Zun"/>
+                            <constraint firstItem="Ht4-0o-PC0" firstAttribute="leading" secondItem="FvT-QQ-nZd" secondAttribute="leadingMargin" constant="40" id="MjP-NZ-KbJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ht4-0o-PC0" secondAttribute="trailing" constant="40" id="m3e-w4-zEH"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -2294,8 +2401,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ozV-bD-4iP">
-                                <rect key="frame" x="74" y="302" width="128" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ozV-bD-4iP">
+                                <rect key="frame" x="74" y="302" width="263" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ib2-UG-r3L">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
@@ -2305,7 +2412,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hu4-8D-Pts">
-                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
+                                        <rect key="frame" x="199" y="0.0" width="64" height="64"/>
                                         <state key="normal" image="go.png"/>
                                         <connections>
                                             <action selector="startStopTimer:" destination="SMI-32-zKO" eventType="touchUpInside" id="yuZ-eL-dhi"/>
@@ -2320,7 +2427,7 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="WUM-Ko-Do4"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bLO-EE-i4d">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bLO-EE-i4d">
                                 <rect key="frame" x="20" y="441" width="80" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGw-uv-rne" userLabel="Back Button">
@@ -2350,6 +2457,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ozV-bD-4iP" secondAttribute="trailing" constant="40" id="43g-4F-Cdk"/>
+                            <constraint firstItem="bLO-EE-i4d" firstAttribute="top" secondItem="ozV-bD-4iP" secondAttribute="bottom" constant="20" id="CYP-qB-WQB"/>
+                            <constraint firstItem="ozV-bD-4iP" firstAttribute="leading" secondItem="JOE-EP-D3q" secondAttribute="leadingMargin" constant="40" id="RfY-bd-umo"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -2380,8 +2492,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PyH-pr-f0G">
-                                <rect key="frame" x="74" y="302" width="128" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PyH-pr-f0G">
+                                <rect key="frame" x="74" y="302" width="263" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pX7-sx-7KQ">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
@@ -2391,7 +2503,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALF-Ys-aIR">
-                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
+                                        <rect key="frame" x="199" y="0.0" width="64" height="64"/>
                                         <state key="normal" image="go.png"/>
                                         <connections>
                                             <action selector="startStopTimer:" destination="mOA-rL-kGi" eventType="touchUpInside" id="NFX-wU-GBd"/>
@@ -2406,7 +2518,7 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="ZHL-po-6ib"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QDX-Ig-Chz">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QDX-Ig-Chz">
                                 <rect key="frame" x="20" y="441" width="80" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeZ-cd-XRU" userLabel="Back Button">
@@ -2436,6 +2548,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PyH-pr-f0G" firstAttribute="leading" secondItem="jA1-xL-MSB" secondAttribute="leadingMargin" constant="40" id="7UD-KA-Kqc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PyH-pr-f0G" secondAttribute="trailing" constant="40" id="IkO-mE-HCX"/>
+                            <constraint firstItem="QDX-Ig-Chz" firstAttribute="top" secondItem="PyH-pr-f0G" secondAttribute="bottom" constant="20" id="YM5-aZ-c8k"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -2466,8 +2583,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OcR-wi-a6m">
-                                <rect key="frame" x="74" y="302" width="128" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OcR-wi-a6m">
+                                <rect key="frame" x="74" y="302" width="263" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOZ-yb-DTm">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
@@ -2477,7 +2594,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAF-mb-H6m">
-                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
+                                        <rect key="frame" x="199" y="0.0" width="64" height="64"/>
                                         <state key="normal" image="go.png"/>
                                         <connections>
                                             <action selector="startStopTimer:" destination="aUp-9F-Wtf" eventType="touchUpInside" id="VjM-8A-SxN"/>
@@ -2492,7 +2609,7 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="0dH-XT-mxd"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Qd8-1b-H3i">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Qd8-1b-H3i">
                                 <rect key="frame" x="20" y="441" width="80" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjS-m5-5sc" userLabel="Back Button">
@@ -2522,6 +2639,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OcR-wi-a6m" firstAttribute="leading" secondItem="zQb-p1-Efh" secondAttribute="leadingMargin" constant="40" id="HPm-aB-hCd"/>
+                            <constraint firstItem="Qd8-1b-H3i" firstAttribute="top" secondItem="OcR-wi-a6m" secondAttribute="bottom" constant="20" id="OQD-cT-orC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OcR-wi-a6m" secondAttribute="trailing" constant="40" id="d5W-8S-tnv"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -2552,8 +2674,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Np0-ZD-dGG">
-                                <rect key="frame" x="74" y="302" width="128" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Np0-ZD-dGG">
+                                <rect key="frame" x="74" y="302" width="263" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9r-Dk-81o">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
@@ -2563,7 +2685,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlD-SH-WVt">
-                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
+                                        <rect key="frame" x="199" y="0.0" width="64" height="64"/>
                                         <state key="normal" image="go.png"/>
                                         <connections>
                                             <action selector="startStopTimer:" destination="nPG-aG-nTi" eventType="touchUpInside" id="nDR-hm-26D"/>
@@ -2578,7 +2700,7 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="9HZ-78-yht"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TmN-dw-wr4">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TmN-dw-wr4">
                                 <rect key="frame" x="20" y="441" width="80" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQG-Y0-apk" userLabel="Back Button">
@@ -2608,6 +2730,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Np0-ZD-dGG" firstAttribute="leading" secondItem="4Rn-Ph-FbW" secondAttribute="leadingMargin" constant="40" id="WCi-CK-56z"/>
+                            <constraint firstItem="TmN-dw-wr4" firstAttribute="top" secondItem="Np0-ZD-dGG" secondAttribute="bottom" constant="20" id="WXT-If-1Sc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Np0-ZD-dGG" secondAttribute="trailing" constant="40" id="za0-nf-Hjq"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -2638,8 +2765,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3nU-PU-3WT">
-                                <rect key="frame" x="74" y="302" width="128" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3nU-PU-3WT">
+                                <rect key="frame" x="74" y="302" width="263" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yu3-jw-gjn">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
@@ -2649,7 +2776,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAU-wm-Eae">
-                                        <rect key="frame" x="64" y="0.0" width="64" height="64"/>
+                                        <rect key="frame" x="199" y="0.0" width="64" height="64"/>
                                         <state key="normal" image="go.png"/>
                                         <connections>
                                             <action selector="startStopTimer:" destination="96r-WU-pqI" eventType="touchUpInside" id="96Y-fH-fdu"/>
@@ -2664,7 +2791,7 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="goHome" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="b5r-SE-OON"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7I8-d7-tN9">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7I8-d7-tN9">
                                 <rect key="frame" x="20" y="441" width="80" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTA-uq-FpW" userLabel="Back Button">
@@ -2694,6 +2821,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="3nU-PU-3WT" secondAttribute="trailing" constant="40" id="HZt-oS-3Be"/>
+                            <constraint firstItem="7I8-d7-tN9" firstAttribute="top" secondItem="3nU-PU-3WT" secondAttribute="bottom" constant="20" id="VJD-8L-Xcq"/>
+                            <constraint firstItem="3nU-PU-3WT" firstAttribute="leading" secondItem="Ez5-IL-R3a" secondAttribute="leadingMargin" constant="40" id="hvJ-Gh-ba7"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -2715,6 +2847,6 @@
         <image name="reset.png" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xMD-b3-9Zq"/>
+        <segue reference="1KU-yt-JgH"/>
     </inferredMetricsTieBreakers>
 </document>
